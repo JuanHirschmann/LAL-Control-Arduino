@@ -10,7 +10,7 @@ float Temperature_sensor::get_reading()
   this->update_readings();
   float var = 0;
   float mean = 0;
-  int count = this->max_ds18_devices;
+  int count = this->available_ds18_devices;
   if (count <= 0)
   {
     mean = -127;
@@ -27,29 +27,25 @@ float Temperature_sensor::get_reading()
 }
 void Temperature_sensor::update_readings()
 {
-  this->max_ds18_devices = this->DS18B20_sensor->getDeviceCount();
+  this->available_ds18_devices = this->DS18B20_sensor->getDeviceCount();
   this->DS18B20_sensor->requestTemperatures();
-  char string_out[24];
-  int max_devices = this->max_ds18_devices;
-  for (int i = 0; i < this->max_ds18_devices; i++)
+  for (int i = 0; i < this->available_ds18_devices; i++)
   {
     this->readings[i] = this->DS18B20_sensor->getTempCByIndex(i);
   }
 }
 void Temperature_sensor::init_sensors(int one_wire_bus)
 {
-  // OneWire *one_wire_aux=
   this->one_wire_interface = new OneWire(one_wire_bus);
   this->DS18B20_sensor = new DallasTemperature(this->one_wire_interface);
   this->DS18B20_sensor->begin();
-  this->max_ds18_devices = this->DS18B20_sensor->getDeviceCount();
+  this->available_ds18_devices = this->DS18B20_sensor->getDeviceCount();
 }
-void Temperature_sensor::serial_print(const HardwareSerial *serial_port)
+void Temperature_sensor::serial_print(HardwareSerial *serial_port)
 {
-  // this->DS18B20_sensor->requestTemperatures();
   this->update_readings();
   char string_out[24];
-  for (int i = 0; i < this->max_ds18_devices; i++)
+  for (int i = 0; i < this->available_ds18_devices; i++)
   {
 
     sprintf(string_out, "Temperatura en el sensor %d: ", i);

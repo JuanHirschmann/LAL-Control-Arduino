@@ -12,6 +12,8 @@ void setup()
   {
   }
   Serial.begin(DEFAULT_BAUD_RATE);
+  LCD_display->set_text("Hola");
+  delay(500);
 }
 void loop()
 {
