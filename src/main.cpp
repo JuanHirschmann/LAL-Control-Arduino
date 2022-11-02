@@ -1,10 +1,5 @@
-#include <Arduino.h>
-#include "config.h"
-#include "Temperature_sensor.h"
-#include "Display_LCM2004.h"
-#include "stdio.h"
-#include "utils.h"
-//
+
+#include "main.h"
 Display_LCM2004 *LCD_display; // No se puede declarar directo en global scope
 Temperature_sensor temp_sensor(ONE_WIRE_BUS);
 int i = 0;
