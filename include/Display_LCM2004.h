@@ -10,8 +10,6 @@ enum display_symbols
   TEMP_SYMBOL,
   NEG_TEMP_SYMBOL,
   FAN_SYMBOL,
-  // autumn = 8,
-  // winter = 12
 };
 
 class Display_LCM2004
@@ -33,6 +31,7 @@ public:
   // void blink_temperature_indicator();
   // void blink_humidity_indicator();
 private:
+  TwoWire *wire_interface = nullptr;
   bool blink_temp_indicator = false;
   void init_display();
   void update_temperature();
@@ -50,12 +49,12 @@ private:
    * @brief Medición de temperatura visualizada en pantalla
    *
    */
-  float on_screen_temp;
+  float on_screen_temp = 0.0;
   /**
    * @brief Velocidad del ventilador visualizada en pantalla. 100 es máxima velocidad, 0 es apagado.
    *
    */
-  int on_screen_fan_speed_pct; // Porcentaje de velocidad en el ventilador (100 es máximo, 0 es apagado)
+  int on_screen_fan_speed_pct = 0; // Porcentaje de velocidad en el ventilador (100 es máximo, 0 es apagado)
 };
 
 #endif

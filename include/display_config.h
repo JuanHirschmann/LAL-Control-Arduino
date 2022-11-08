@@ -19,6 +19,7 @@ const char PERCENTAGE_SIGN = '%';
 const char OVERTEMP_WARNING_MESSAGE[] = "Exceso de temperatura";
 const int DISPLAY_TEMP_DECIMALS = 1;
 
+const int MAX_PROCEDURE_STEPS = 7;
 const int HOME_CURSOR_OFFSET[] = {0, 0};
 const int TEMP_INDICATOR_CURSOR_OFFSET[] = {0, 3};
 const int FAN_INDICATOR_CURSOR_OFFSET[] = {10, 3};
@@ -40,13 +41,13 @@ const char NEG_TEMP_SYMBOL_CHARACTER[] = {
     0b00000,
     0b00000,
     0b10001};
-const char FAN_SYMBOL_CHARACTER[] = {
-    0b00000,
-    0b00100,
-    0b10101,
-    0b01110,
-    0b11111,
-    0b01110,
-    0b10101,
-    0b00100};
+const unsigned char FAN_SYMBOL_CHARACTER[] = {
+    0x04,
+    0x0A,
+    0x0A,
+    0x0A,
+    0x0E,
+    0x1F,
+    0x1F,
+    0x0E};
 #endif

@@ -4,6 +4,13 @@ Temperature_sensor::Temperature_sensor(int one_wire_bus)
 {
   this->init_sensors(one_wire_bus);
 }
+Temperature_sensor::Temperature_sensor(const Temperature_sensor &temp_sensor)
+{
+  *(this->one_wire_interface) = *(temp_sensor.one_wire_interface);
+  this->DS18B20_sensor = new DallasTemperature(this->one_wire_interface);
+  this->DS18B20_sensor->begin();
+  this->available_ds18_devices = this->DS18B20_sensor->getDeviceCount();
+}
 float Temperature_sensor::get_reading()
 {
   // Agregar criterios para considerar mediciones (Descartar -127 y outliers) ¿SMA?

@@ -26,6 +26,7 @@ public:
    * @param one_wire_bus Número de pin a utilizar como interfaz OneWire.
    */
   Temperature_sensor(int one_wire_bus);
+  Temperature_sensor(const Temperature_sensor &temp_sensor);
   /**
    * @brief [sólo para debuggeo] Imprime por interfaz serie la temperatura de todos los sensores conectados
    *

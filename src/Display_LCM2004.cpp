@@ -2,20 +2,22 @@
 Display_LCM2004::Display_LCM2004()
 {
   this->init_display();
-  this->lcd_display->createChar(TEMP_SYMBOL, TEMP_SYMBOL_CHARACTER);
-  this->lcd_display->createChar(NEG_TEMP_SYMBOL, NEG_TEMP_SYMBOL_CHARACTER);
-  this->lcd_display->createChar(FAN_SYMBOL, FAN_SYMBOL_CHARACTER);
+  // this->lcd_display->createChar(TEMP_SYMBOL, TEMP_SYMBOL_CHARACTER);
+  // this->lcd_display->createChar(NEG_TEMP_SYMBOL, NEG_TEMP_SYMBOL_CHARACTER);
+  // this->lcd_display->createChar(FAN_SYMBOL, reinterpret_cast<const char *>(FAN_SYMBOL_CHARACTER));
 };
+
 void Display_LCM2004::init_display()
 {
-  this->lcd_display = new LiquidCrystal_I2C(DISPLAY_I2C_ADDRESS, CHARACTER_DISPLAY_RESOLUTION[0], CHARACTER_DISPLAY_RESOLUTION[1]);
+  this->lcd_display = new LiquidCrystal_I2C(DISPLAY_I2C_ADDRESS, CHARACTER_DISPLAY_RESOLUTION[0], CHARACTER_DISPLAY_RESOLUTION[1]); //, this->wire_interface);
   this->lcd_display->init();
   this->lcd_display->setCursor(0, 0);
   this->lcd_display->backlight();
+  this->lcd_display->noCursor();
 }
 void Display_LCM2004::update_display()
 {
-  this->lcd_display->clear();
+  this->lcd_display->clear(); // Titila
   this->update_text();
   this->update_temperature();
   this->update_fan_speed();
@@ -30,12 +32,12 @@ void Display_LCM2004::update_temperature() // Ver como agregar celsius de una ma
   this->lcd_display->setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0], TEMP_INDICATOR_CURSOR_OFFSET[1]);
   if (blink_temp_indicator)
   {
-    this->lcd_display->write(NEG_TEMP_SYMBOL);
+    // this->lcd_display->write(NEG_TEMP_SYMBOL);
     this->blink_temp_indicator = false;
   }
   else
   {
-    this->lcd_display->write(TEMP_SYMBOL);
+    // this->lcd_display->write(TEMP_SYMBOL);
   }
   this->lcd_display->setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0] + 1, TEMP_INDICATOR_CURSOR_OFFSET[1]);
   char buf[MAX_BUFFER_SIZE];
@@ -46,11 +48,12 @@ void Display_LCM2004::update_temperature() // Ver como agregar celsius de una ma
 void Display_LCM2004::update_fan_speed()
 {
   this->lcd_display->setCursor(FAN_INDICATOR_CURSOR_OFFSET[0], FAN_INDICATOR_CURSOR_OFFSET[1]);
-  this->lcd_display->write(FAN_SYMBOL);
+  // this->lcd_display->write(FAN_SYMBOL);
   this->lcd_display->setCursor(FAN_INDICATOR_CURSOR_OFFSET[0] + 1, FAN_INDICATOR_CURSOR_OFFSET[1]);
   char buf[MAX_BUFFER_SIZE];
   sprintf(buf, "%d", this->on_screen_fan_speed_pct);
   strcat(buf, &PERCENTAGE_SIGN);
+
   this->lcd_display->print(buf);
 }
 void Display_LCM2004::set_temp(float new_temperature)
