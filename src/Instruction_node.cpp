@@ -1,4 +1,5 @@
 #include "Instruction_node.h"
+using namespace std;
 Instruction_node::Instruction_node()
 {
     this->instruction_text = nullptr;
@@ -29,6 +30,7 @@ void Instruction_node::copy(const Instruction_node &target_node)
         this->clear_node();
     }
     this->instruction_text = new char *;
+
     char *aux_string = new char[target_node.instruction_length];
     strncpy(aux_string, *(target_node.instruction_text), target_node.instruction_length);
     *this->instruction_text = aux_string;

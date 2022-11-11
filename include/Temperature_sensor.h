@@ -20,6 +20,7 @@ class Temperature_sensor
    *
    */
 public:
+  Temperature_sensor();
   /**
    * @brief Construye un objeto Temperature_sensor.
    *

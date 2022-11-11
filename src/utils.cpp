@@ -1,10 +1,17 @@
 #include "utils.h"
-
-char * ftoa(double f, char * buf, int precision)
+void clear_string(char *buffer)
 {
-	char * ptr = buf;
-	char * p = ptr;
-	char * p1;
+	int i = 0;
+	for (i = 0; i < strlen(buffer); i++)
+	{
+		buffer[i] = 0;
+	}
+}
+char *ftoa(double f, char *buf, int precision)
+{
+	char *ptr = buf;
+	char *p = ptr;
+	char *p1;
 	char c;
 	long intPart;
 
@@ -19,15 +26,22 @@ char * ftoa(double f, char * buf, int precision)
 		*ptr++ = '-';
 	}
 
-	if (precision < 0)  // negative precision == automatic precision guess
+	if (precision < 0) // negative precision == automatic precision guess
 	{
-		if (f < 1.0) precision = 6;
-		else if (f < 10.0) precision = 5;
-		else if (f < 100.0) precision = 4;
-		else if (f < 1000.0) precision = 3;
-		else if (f < 10000.0) precision = 2;
-		else if (f < 100000.0) precision = 1;
-		else precision = 0;
+		if (f < 1.0)
+			precision = 6;
+		else if (f < 10.0)
+			precision = 5;
+		else if (f < 100.0)
+			precision = 4;
+		else if (f < 1000.0)
+			precision = 3;
+		else if (f < 10000.0)
+			precision = 2;
+		else if (f < 100000.0)
+			precision = 1;
+		else
+			precision = 0;
 	}
 
 	// round value according the precision

@@ -3,11 +3,12 @@
 #define DISPLAY_LCM2004
 #include "display_config.h"
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
+#include <hd44780.h>
+#include <hd44780ioClass/hd44780_I2Cexp.h>
 #include "utils.h"
 enum display_symbols
 {
-  TEMP_SYMBOL,
+  TEMP_SYMBOL = 0,
   NEG_TEMP_SYMBOL,
   FAN_SYMBOL,
 };
@@ -31,7 +32,7 @@ public:
   // void blink_temperature_indicator();
   // void blink_humidity_indicator();
 private:
-  TwoWire *wire_interface = nullptr;
+  // TwoWire *wire_interface = nullptr;
   bool blink_temp_indicator = false;
   void init_display();
   void update_temperature();
@@ -40,11 +41,8 @@ private:
   void update_text();
 
   char on_screen_text[MAX_CHAR_DISPLAY]; // Texto en pantalla
-  /**
-   * @brief Objeto LiquidCrystal_I2C, utilizado para controlar el display LCM2004 por interfaz I2C
-   *
-   */
-  LiquidCrystal_I2C *lcd_display;
+
+  hd44780_I2Cexp lcd_display;
   /**
    * @brief Medición de temperatura visualizada en pantalla
    *

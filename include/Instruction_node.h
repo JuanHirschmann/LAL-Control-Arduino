@@ -1,8 +1,9 @@
 #ifndef INSTRUCTION_NODE_H
 #define INSTRUCTION_NODE_H
+#include "Node.h"
 #include "stdio.h"
 #include <string.h>
-class Instruction_node
+class Instruction_node : public Node
 {
 public:
     Instruction_node();

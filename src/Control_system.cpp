@@ -1,12 +1,12 @@
 #include "Control_system.h"
 
-Control_system::Control_system(TwoWire *wire_interface)
+Control_system::Control_system()
 {
     this->init_instructions();
-    this->display = new Display_LCM2004; //(wire_interface);
+    // this->display = Display_LCM2004; //(wire_interface);
     this->temp_sensor = new Temperature_sensor(ONE_WIRE_BUS);
     this->update_temperature.turn_on();
-    this->display->set_fan_speed_pct(10);
+    this->display.set_fan_speed_pct(10);
 }
 void Control_system::init_instructions()
 {
@@ -30,28 +30,28 @@ void Control_system::init_instructions()
 }
 void Control_system::update()
 {
-    this->display->set_text(procedure_list.get_current_instruction()->get_text());
+
     // this->display->set_fan_speed_pct();
+    this->display.set_text(procedure_list.get_current()->get_text());
     if (this->update_temperature.get_state())
     {
 
-        this->display->set_temp(this->temp_sensor->get_reading());
-        // this->update_temperature.turn_off();
+        this->display.set_fan_speed_pct(10);
+        this->display.set_temp(this->temp_sensor->get_reading());
+        this->update_temperature.turn_off();
+        this->display.update_display();
     }
     if (this->show_next_step.get_state())
     {
-        this->display->set_fan_speed_pct(10);
-    }
-    if (this->show_next_step.get_state())
-    {
-        this->procedure_list.next_instruction();
+
+        this->procedure_list.next();
         this->show_next_step.turn_off();
+        this->display.update_display();
     }
-    this->display->update_display();
 }
 
 Control_system::~Control_system()
 {
-    delete this->display;
+    // delete this->display;
     delete this->temp_sensor;
 }
