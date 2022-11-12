@@ -1,5 +1,5 @@
-#ifndef List_H
-#define List_H
+#ifndef LIST_H
+#define LIST_H
 #include "stdio.h"
 #include <string.h>
 template <typename Data>

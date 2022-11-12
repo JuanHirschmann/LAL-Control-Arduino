@@ -1,5 +1,5 @@
-#ifndef _CHILD_SUBJECT_H_
-#define _CHILD_SUBJECT_H_
+#ifndef _SUBJECT_H_
+#define _SUBJECT_H_
 
 #include "Subject_interface.h"
 #include "Observer_interface.h"

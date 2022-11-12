@@ -1,5 +1,5 @@
-#ifndef CONFIG
-#define CONFIG
+#ifndef CONFIG_H
+#define CONFIG_H
 const int ONE_WIRE_BUS = 5; // D5 como digital in
 const int BUTTON_PIN = 3;   // D3 como digital in
 const int MAX_SENSORS = 10;

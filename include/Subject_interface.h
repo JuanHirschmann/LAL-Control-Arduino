@@ -1,5 +1,5 @@
-#ifndef _SUBJECT_H_
-#define _SUBJECT_H_
+#ifndef _SUBJECT_INTERFACE_H_
+#define _SUBJECT_INTERFACE_H_
 const int MAX_OBSERVERS = 2;
 class Observer_interface;
 class Subject_interface

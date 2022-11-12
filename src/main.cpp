@@ -26,6 +26,7 @@ void setup()
     setup_timer1_interrupt();
     sei();
     Serial.begin(DEFAULT_BAUD_RATE);
+    control->init();
     // delay(1000);
 }
 void loop()

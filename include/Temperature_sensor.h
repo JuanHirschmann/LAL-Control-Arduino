@@ -6,8 +6,8 @@
  * @date 2022-11-02
  *
  */
-#ifndef TEMP_SENSOR
-#define TEMP_SENSOR
+#ifndef TEMPERATURE_SENSOR
+#define TEMPERATURE_SENSOR
 
 #include "config.h"
 #include <OneWire.h>

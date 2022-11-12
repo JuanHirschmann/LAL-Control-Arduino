@@ -1,5 +1,5 @@
-#ifndef _OBSERVER_H_
-#define _OBSERVER_H_
+#ifndef _OBSERVER_INTERFACE_H_
+#define _OBSERVER_INTERFACE_H_
 class Subject_interface;
 class Observer_interface
 {

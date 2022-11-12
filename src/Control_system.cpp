@@ -3,7 +3,6 @@
 Control_system::Control_system()
 {
     this->init_instructions();
-    // this->display = Display_LCM2004; //(wire_interface);
     this->temp_sensor = new Temperature_sensor(ONE_WIRE_BUS);
     this->update_temperature.turn_on();
     this->display.set_fan_speed_pct(10);
@@ -31,7 +30,7 @@ void Control_system::init_instructions()
 void Control_system::update()
 {
 
-    // this->display->set_fan_speed_pct();
+    // this->display.set_fan_speed_pct();
     this->display.set_text(procedure_list.get_current()->get_text());
     if (this->update_temperature.get_state())
     {
@@ -39,14 +38,14 @@ void Control_system::update()
         this->display.set_fan_speed_pct(10);
         this->display.set_temp(this->temp_sensor->get_reading());
         this->update_temperature.turn_off();
-        this->display.update_display();
+        this->display.update();
     }
     if (this->show_next_step.get_state())
     {
 
         this->procedure_list.next();
         this->show_next_step.turn_off();
-        this->display.update_display();
+        this->display.update();
     }
 }
 
