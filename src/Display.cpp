@@ -2,6 +2,7 @@
 void Display::init()
 {
     this->screen_interface.begin(20, 4);
+    // this->screen_interface.createChar(TEMP_SYMBOL, TEMP_SYMBOL_CHARACTER);
 };
 void Display::print(char *string_out)
 {
@@ -9,10 +10,15 @@ void Display::print(char *string_out)
 }
 void Display::update()
 {
-    this->screen_interface.clear(); // Titila
-    this->update_text();
-    this->update_temperature();
-    this->update_fan_speed();
+    this->update_needed = true;
+    if (this->update_needed)
+    {
+        this->screen_interface.clear(); // Titila
+        this->update_text();
+        this->update_temperature();
+        this->update_fan_speed();
+        this->update_needed = false;
+    }
 }
 void Display::update_text()
 {
@@ -51,17 +57,29 @@ void Display::update_fan_speed()
 }
 void Display::set_temp(float new_temperature)
 {
-    this->on_screen_temp = new_temperature;
+    if (new_temperature != this->on_screen_temp)
+    {
+        this->on_screen_temp = new_temperature;
+        update_needed = true;
+    }
 }
 void Display::set_text(const char string_out[])
 {
-    strcpy(this->on_screen_text, string_out);
-    char aux_null = '\0';
-    strncat(this->on_screen_text, &aux_null, 1); // Agrego \0
+    if (true) //! strncmp(this->on_screen_text, string_out, 20))
+    {
+        strcpy(this->on_screen_text, string_out);
+        char aux_null = '\0';
+        strncat(this->on_screen_text, &aux_null, 1);
+        update_needed = true;
+    }
 }
 void Display::set_fan_speed_pct(int new_speed_pct)
 {
-    this->on_screen_fan_speed_pct = new_speed_pct;
+    if (new_speed_pct != this->on_screen_fan_speed_pct)
+    {
+        this->on_screen_fan_speed_pct = new_speed_pct;
+        update_needed = true;
+    }
 }
 void Display::trigger_overtemp_warning()
 {

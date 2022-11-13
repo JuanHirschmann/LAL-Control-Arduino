@@ -22,22 +22,28 @@ public:
     {
         display.init();
     }
-    Flag show_next_step;
-    Flag temperature_warning;
-    Flag temperature_alarm;
-    Flag update_temperature;
-    Flag humidity_alarm;
+    float get_temperature_reading()
+    {
+        return this->temp_sensor->get_reading();
+    }
+    bool poll_sensors = false;
+    bool show_next_step = false;
     // void attach_observer(Observer *obs);
     // void notify();
+    Display display;             // = nullptr;
+    void show_next_instruction() // probs cambiar a error_type
+    {
+        this->procedure_list.get_next();
+        Serial.println(strlen(this->procedure_list.get_current()->get_text()));
+        Serial.println(this->procedure_list.get_current()->get_text());
+        this->display.set_text(this->procedure_list.get_current()->get_text());
+    };
 
 private:
-    // void init_interrupt(int pin, void(*callback), int mode);
-    // List</*class*/ Observer *> sensor_observers;
-
+    void notify_observers(Control_system *control);
     void init_instructions();
     List<Instruction_node> procedure_list;
     Temperature_sensor *temp_sensor = nullptr;
-    Display display;
     //    char **current_step_pointer = nullptr;
 };
 #endif

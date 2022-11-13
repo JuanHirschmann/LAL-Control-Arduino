@@ -27,6 +27,7 @@ public:
 
 private:
     hd44780_I2Cexp screen_interface; //(0x27, 20, 4);
+    bool update_needed = true;
     bool blink_temp_indicator = false;
     void update_temperature();
     void update_fan_speed();

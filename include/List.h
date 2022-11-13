@@ -55,10 +55,17 @@ public:
     {
         return this->current_element;
     };
-    Data *next()
+    void get_next()
     {
-        this->current_element = this->current_element->get_next();
-        return this->current_element;
+        if (this->is_last() != true)
+        {
+            this->current_element = this->current_element->get_next();
+        }
+    }
+    bool is_last()
+    {
+
+        return this->current_element->get_next() == nullptr;
     };
 
     void print()

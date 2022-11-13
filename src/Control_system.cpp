@@ -1,12 +1,13 @@
 #include "Control_system.h"
-
+#include "System_observer.h"
 Control_system::Control_system()
 {
     this->init_instructions();
+    //this->display =new Di
     this->temp_sensor = new Temperature_sensor(ONE_WIRE_BUS);
-    this->update_temperature.turn_on();
     this->display.set_fan_speed_pct(10);
 }
+
 void Control_system::init_instructions()
 {
     const char *OPERATION_PROCEDURE[] = {
@@ -26,29 +27,26 @@ void Control_system::init_instructions()
         aux.set_text(OPERATION_PROCEDURE[i], strlen(OPERATION_PROCEDURE[i]));
         this->procedure_list.append(aux);
     }
+    this->display.set_text(this->procedure_list.get_current()->get_text());
 }
 void Control_system::update()
 {
-
-    // this->display.set_fan_speed_pct();
-    this->display.set_text(procedure_list.get_current()->get_text());
-    if (this->update_temperature.get_state())
+    if (this->poll_sensors)
     {
-
-        this->display.set_fan_speed_pct(10);
-        this->display.set_temp(this->temp_sensor->get_reading());
-        this->update_temperature.turn_off();
-        this->display.update();
+        Serial.println("Avise");
+        this->notify_observers(this);
+        this->poll_sensors = false;
     }
-    if (this->show_next_step.get_state())
-    {
-
-        this->procedure_list.next();
-        this->show_next_step.turn_off();
-        this->display.update();
-    }
+    this->display.update();
 }
-
+void Control_system::notify_observers(Control_system *control)
+{
+    Serial.println(this->current_observers);
+    for (int i = 0; i < this->current_observers + 1; i++)
+    {
+        static_cast<System_observer *>(this->observers[i])->update(control);
+    }
+};
 Control_system::~Control_system()
 {
     // delete this->display;
