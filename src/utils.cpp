@@ -1,12 +1,12 @@
 #include "utils.h"
-void clear_string(char *buffer)
+/* void clear_string(char *buffer)
 {
 	int i = 0;
 	for (i = 0; i < strlen(buffer); i++)
 	{
 		buffer[i] = 0;
 	}
-}
+} */
 char *ftoa(double f, char *buf, int precision)
 {
 	char *ptr = buf;

@@ -1,45 +1,37 @@
 #include "main.h"
-Control_system control = Control_system();
-Temperature_observer temp_obs;
+Control_system control;
 Instruction_observer inst_obs;
+Temperature_observer temp_obs;
 void int0_callback()
 {
-    // cli();
+    cli();
     static unsigned long last_interrupt_time = 0;
     unsigned long interrupt_time = millis();
     if (interrupt_time - last_interrupt_time > DEBOUNCE_CONSTANT)
     {
-        control.show_next_step = true;
-        control.poll_sensors = true;
+        // control.next_step();
+        control.set_next_step_flag(true);
     }
     last_interrupt_time = interrupt_time;
-    // sei();
-}
-ISR(TIMER1_COMPA_vect)
-{
-    // cli();
-    control.poll_sensors = true;
-    // sei();
+    sei();
 }
 void setup()
 {
-
     // cli();
-    control.attach(&temp_obs);
-    control.attach(&inst_obs);
     pinMode(ONE_WIRE_BUS, INPUT);
     setup_int0_interrupt(BUTTON_PIN, INPUT_PULLUP, int0_callback, HIGH);
-    setup_timer1_interrupt();
-
-    Serial.begin(DEFAULT_BAUD_RATE);
-    control.init();
-
-    // sei();
-    //    delay(1000);
+    Serial.begin(9600);
+    control.init_display();
+    control.attach(&inst_obs);
+    control.attach(&temp_obs);
+    //   sei();
 }
 void loop()
 {
-
+    Serial.println("Vivo");
+    // lcd.set_temp(temp_sensor.get_reading());
     control.update();
     // delay(1000);
+    // Serial.println("Update");
+    // control.update();
 };

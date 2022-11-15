@@ -5,7 +5,7 @@ void setup_int0_interrupt(uint8_t pin, uint8_t mode, void (*callback)(), int int
     pinMode(pin, mode);
     attachInterrupt(digitalPinToInterrupt(pin), callback, interrupt_mode);
 }
-void setup_timer1_interrupt()
+/* void setup_timer1_interrupt()
 {
 
     // set timer1 interrupt at 1Hz
@@ -17,4 +17,4 @@ void setup_timer1_interrupt()
     TCCR1B = (1 << WGM12) | (1 << CS12); // Modo CTC y prescale
     TIMSK1 = (1 << OCIE1A);              // habilita interrupciones
     sei();
-}
+} */

@@ -9,6 +9,6 @@ protected:
 
 public:
     virtual void attach(Observer_interface *obs) = 0;
-    virtual void notify_observers(Subject_interface *subj) = 0;
+    virtual void notify_observers() = 0;
 };
 #endif

@@ -9,7 +9,7 @@
 #ifndef TEMPERATURE_SENSOR
 #define TEMPERATURE_SENSOR
 
-#include "config.h"
+#include "port_config.h"
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
@@ -20,28 +20,19 @@ class Temperature_sensor
    *
    */
 public:
-  Temperature_sensor();
+  Temperature_sensor(){};
   /**
    * @brief Construye un objeto Temperature_sensor.
    *
    * @param one_wire_bus Número de pin a utilizar como interfaz OneWire.
    */
   Temperature_sensor(int one_wire_bus);
-  Temperature_sensor(const Temperature_sensor &temp_sensor);
-  /**
-   * @brief [sólo para debuggeo] Imprime por interfaz serie la temperatura de todos los sensores conectados
-   *
-   * @param serial_port Objeto HardwareSerial con la interfaz serie donde imprimir los datos
-   */
-  void serial_print(HardwareSerial *serial_port);
   /**
    * @brief Obtiene la Temperatura de todos los sensores como un promedio simple (Celsius).
    *
    * @return float Temperatura promediado de los sensores (Celsius).
    */
   float get_reading();
-
-  ~Temperature_sensor();
 
 private:
   /**
@@ -66,14 +57,14 @@ private:
    */
   float readings[MAX_SENSORS];
   /**
-   * @brief Puntero a objeto OneWire, utilizado para la interfaz de conexión.
+   * @brief Objeto OneWire, utilizado para la interfaz de conexión.
    *
    */
-  OneWire *one_wire_interface;
+  OneWire one_wire_interface;
   /**
-   * @brief Puntero a objeto DallasTemperature, utilizado para la interacción con sensores
+   * @brief Objeto DallasTemperature, utilizado para la interacción con sensores.
    *
    */
-  DallasTemperature *DS18B20_sensor;
+  DallasTemperature DS18B20_sensor;
 };
 #endif

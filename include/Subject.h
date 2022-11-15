@@ -8,7 +8,7 @@ class Subject : public Subject_interface
 {
 public:
     void attach(Observer_interface *obs);
-    void notify_observers(Subject_interface *subject);
+    void notify_observers();
 
 protected:
     int current_observers = 0;

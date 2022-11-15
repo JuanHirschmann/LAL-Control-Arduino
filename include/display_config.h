@@ -9,7 +9,7 @@
 #ifndef DISPLAY_CONFIG_H
 #define DISPLAY_CONFIG_H
 #include <stdint.h>
-const int MAX_CHAR_DISPLAY = 200;
+const int MAX_CHAR_DISPLAY = 50;
 const int MAX_BUFFER_SIZE = 32;
 const int CHARACTER_DISPLAY_RESOLUTION[] = {20, 4};
 const int DISPLAY_I2C_ADDRESS = 0x27;

@@ -1,95 +1,56 @@
 #include "Display.h"
-void Display::init()
+Display::Display()
 {
-    this->screen_interface.begin(20, 4);
-    // this->screen_interface.createChar(TEMP_SYMBOL, TEMP_SYMBOL_CHARACTER);
-};
+    // No inicializar objecto de interfaz de pantalla en el constructor.
+}
 void Display::print(char *string_out)
 {
     this->screen_interface.print(string_out);
 }
-void Display::update()
+void Display::init()
 {
-    this->update_needed = true;
-    if (this->update_needed)
-    {
-        this->screen_interface.clear(); // Titila
-        this->update_text();
-        this->update_temperature();
-        this->update_fan_speed();
-        this->update_needed = false;
-    }
-}
-void Display::update_text()
-{
-    this->screen_interface.setCursor(HOME_CURSOR_OFFSET[0], HOME_CURSOR_OFFSET[1]);
-    this->screen_interface.print(this->on_screen_text);
-}
-void Display::update_temperature() // Ver como agregar celsius de una manera linda
-{
+
+    this->screen_interface.begin(20, 4);
+    // this->screen_interface.createChar(0, TEMP_SYMBOL_CHARACTER);
     this->screen_interface.setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0], TEMP_INDICATOR_CURSOR_OFFSET[1]);
-    if (blink_temp_indicator)
-    {
-        // this->screen_interface.write(NEG_TEMP_SYMBOL);
-        this->blink_temp_indicator = false;
-    }
-    else
-    {
-        // this->screen_interface.write(TEMP_SYMBOL);
-    }
-    this->screen_interface.setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0] + 1, TEMP_INDICATOR_CURSOR_OFFSET[1]);
-    char buf[MAX_BUFFER_SIZE];
-    ftoa(this->on_screen_temp, buf, DISPLAY_TEMP_DECIMALS);
-    strncat(buf, &CELSIUS_CHARACTER, 1);
-    this->screen_interface.print(buf);
+    // this->screen_interface.print('\000');
 }
-void Display::update_fan_speed()
+void Display::set_temp(float new_temp)
 {
-    this->screen_interface.setCursor(FAN_INDICATOR_CURSOR_OFFSET[0], FAN_INDICATOR_CURSOR_OFFSET[1]);
-    // this->screen_interface.write(FAN_SYMBOL);
-    this->screen_interface.setCursor(FAN_INDICATOR_CURSOR_OFFSET[0] + 1, FAN_INDICATOR_CURSOR_OFFSET[1]);
-    char buf[MAX_BUFFER_SIZE];
-    clear_string(buf);
-    sprintf(buf, "%d", this->on_screen_fan_speed_pct);
-    strcat(buf, &PERCENTAGE_SIGN);
-    // Serial.println(buf); // arregla el porcentaje en la pantalla
-    this->screen_interface.print(buf);
-}
-void Display::set_temp(float new_temperature)
-{
-    if (new_temperature != this->on_screen_temp)
+    if (this->on_screen_temp != new_temp)
     {
-        this->on_screen_temp = new_temperature;
-        update_needed = true;
-    }
-}
-void Display::set_text(const char string_out[])
-{
-    if (true) //! strncmp(this->on_screen_text, string_out, 20))
-    {
-        strcpy(this->on_screen_text, string_out);
-        char aux_null = '\0';
-        strncat(this->on_screen_text, &aux_null, 1);
-        update_needed = true;
+
+        this->on_screen_temp = new_temp;
+        this->update_needed = true;
     }
 }
 void Display::set_fan_speed_pct(int new_speed_pct)
 {
-    if (new_speed_pct != this->on_screen_fan_speed_pct)
+    if (this->on_screen_fan_speed_pct != new_speed_pct)
     {
         this->on_screen_fan_speed_pct = new_speed_pct;
-        update_needed = true;
+        this->update_needed = true;
     }
 }
-void Display::trigger_overtemp_warning()
+void Display::set_text(const char *string_out)
 {
-    this->screen_interface.setCursor(FAN_INDICATOR_CURSOR_OFFSET[0], FAN_INDICATOR_CURSOR_OFFSET[1]);
-    this->blink_temp_indicator = true;
-    // this->screen_interface.clear();
-    // this->set_text(OVERTEMP_WARNING_MESSAGE);
+    if (strncmp(string_out, this->on_screen_text, MAX_DISPLAY_STRING_LENGTH) != 0)
+    {
+        strncpy(this->on_screen_text, string_out, MAX_DISPLAY_STRING_LENGTH);
+        this->update_needed = true;
+    }
 }
-void Display::trigger_overtemp_error()
+void Display::update()
 {
-    this->screen_interface.clear();
-    this->set_text(OVERTEMP_WARNING_MESSAGE); // const_char elimina warning
+    if (this->update_needed)
+    {
+        this->screen_interface.clear();
+        this->screen_interface.home();
+        this->screen_interface.print(this->on_screen_text);
+        this->screen_interface.setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0], TEMP_INDICATOR_CURSOR_OFFSET[1]);
+        this->screen_interface.print(this->on_screen_temp, 1);
+        this->screen_interface.setCursor(FAN_INDICATOR_CURSOR_OFFSET[0], FAN_INDICATOR_CURSOR_OFFSET[1]);
+        this->screen_interface.print(this->on_screen_fan_speed_pct);
+        this->update_needed = false;
+    }
 }

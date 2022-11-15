@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX_PRECISION (10)
-void clear_string(char *buffer);
+// void clear_string(char *buffer);
 static const double rounders[MAX_PRECISION + 1] =
 	{
 		0.5,		  // 0

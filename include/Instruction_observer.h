@@ -6,11 +6,11 @@ class Instruction_observer : public System_observer
 public:
     void update(Control_system *subject)
     {
-        if (subject->show_next_step)
+        if (subject->is_next_step_requested())
         {
-            subject->show_next_instruction();
+            subject->next_step();
+            subject->set_next_step_flag(false);
         }
-        subject->show_next_step = false;
     };
 
 private:
