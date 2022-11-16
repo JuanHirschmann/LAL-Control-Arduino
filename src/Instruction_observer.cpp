@@ -11,9 +11,8 @@
 #include "Instruction_observer.h"
 void Instruction_observer::update(Control_system *subject)
 {
-    if (subject->is_next_step_requested() && !subject->is_alarm_requested())
+    if (subject->is_next_step_requested())
     {
         subject->next_step();
-        subject->set_next_step_flag(false);
     }
 };

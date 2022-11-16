@@ -37,6 +37,7 @@ public:
     bool is_alarm_requested();
     void request_alarm(ALARM_TYPES type_of_alarm);
     void trigger_buzzer_alarm();
+    void request_warning(WARNING_TYPES type_of_warning);
 };
 
 #endif

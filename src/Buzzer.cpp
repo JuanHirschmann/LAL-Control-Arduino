@@ -29,12 +29,10 @@ void Buzzer::toggle(unsigned int duration = 0)
 {
     if (!this->is_ringing)
     {
-        Serial.print("ENCENDI");
         this->turn_on(duration);
     }
     else
     {
-        Serial.print("APAGUE");
         this->turn_off();
     }
 };
@@ -43,3 +41,7 @@ void Buzzer::set_frequency(unsigned int new_frequency)
     noTone(this->buzzer_pin);
     this->frequency = new_frequency;
 };
+bool Buzzer::is_active()
+{
+    return this->is_ringing;
+}

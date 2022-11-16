@@ -53,6 +53,13 @@ public:
      * @param new_frequency nueva frecuencia a emitir
      */
     void set_frequency(unsigned int new_frequency);
+    /**
+     * @brief Devuelve el estado del buzzer
+     *
+     * @return true El buzzer está activo.
+     * @return false El buzzer está inactivo.
+     */
+    bool is_active();
 
 private:
     bool is_ringing = false;

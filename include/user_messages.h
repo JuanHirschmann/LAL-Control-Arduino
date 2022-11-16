@@ -17,7 +17,7 @@ const char PROCEDURE_MESSAGES[][MAX_MESSAGE_LENGTH] = {"HOLA",
                                                        "MENSAJE MAS LARGO PARA VER SI SIGUE",
                                                        "MENSAJE PICOMA",
                                                        "TEXTO MEDIANO",
-                                                       "TEXTO MACROMA 12345678890"
+                                                       "TEXTO MACROMA 12345678890",
                                                        "UNO MAS",
                                                        "OTRO MAS",
                                                        "CONFIRMAR APAGADO"};

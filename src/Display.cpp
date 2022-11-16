@@ -13,7 +13,7 @@ void Display::init()
     this->screen_interface.begin(20, 4);
     this->screen_interface.lineWrap();
     this->screen_interface.setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0], TEMP_INDICATOR_CURSOR_OFFSET[1]);
-    // this->screen_interface.print('\000');
+    this->backlight_on = true;
 }
 void Display::set_temp(float new_temp)
 {
@@ -59,9 +59,26 @@ void Display::turn_off()
 {
     this->screen_interface.clear();
     this->screen_interface.noBacklight();
+    this->backlight_on = false;
 }
 void Display::turn_on()
 {
     this->screen_interface.clear();
     this->screen_interface.backlight();
+    this->backlight_on = true;
+}
+void Display::toggle()
+{
+    if (this->backlight_on)
+    {
+        // this->screen_interface.setBacklight(0);
+        //  this->screen_interface.noBacklight();
+        this->backlight_on = false;
+    }
+    else
+    {
+        // this->screen_interface.setBacklight(255);
+        //  this->screen_interface.backlight();
+        this->backlight_on = true;
+    }
 }

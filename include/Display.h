@@ -24,6 +24,7 @@ public:
     void update();
     void turn_off();
     void turn_on();
+    void toggle();
     //   void trigger_humidity_warning();
     //   void trigger_overtemp_warning();
     //   void trigger_overtemp_error();
@@ -31,6 +32,7 @@ public:
 private:
     hd44780_I2Cexp screen_interface; // = hd44780_I2Cexp; //(0x27, 20, 4);
     bool update_needed = false;
+    bool backlight_on = true;
     // bool blink_temp_indicator = false;
     // void update_temperature();
     // void update_fan_speed();
