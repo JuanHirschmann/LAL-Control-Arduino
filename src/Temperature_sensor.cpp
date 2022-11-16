@@ -1,3 +1,13 @@
+/**
+ * @file Temperature_sensor.cpp
+ * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
+ * @brief
+ * @version 0.1
+ * @date 2022-11-16
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
 #include "Temperature_sensor.h"
 // Uso -127 para avisar error
 Temperature_sensor::Temperature_sensor(int one_wire_bus) : one_wire_interface(one_wire_bus), DS18B20_sensor(&one_wire_interface)
@@ -33,8 +43,6 @@ void Temperature_sensor::update_readings()
 }
 void Temperature_sensor::init_sensors(int one_wire_bus)
 {
-  // this->one_wire_interface = new OneWire(one_wire_bus);
-  // this->DS18B20_sensor = new DallasTemperature(this->one_wire_interface);
   this->DS18B20_sensor.begin();
   this->available_ds18_devices = this->DS18B20_sensor.getDeviceCount();
 }

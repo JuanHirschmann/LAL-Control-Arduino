@@ -9,7 +9,7 @@
 #ifndef TEMPERATURE_SENSOR
 #define TEMPERATURE_SENSOR
 
-#include "port_config.h"
+#include "system_settings.h"
 #include <OneWire.h>
 #include <DallasTemperature.h>
 

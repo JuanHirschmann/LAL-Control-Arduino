@@ -22,6 +22,8 @@ public:
     void set_fan_speed_pct(int new_speed_pct);
     void set_text(const char *string_out);
     void update();
+    void turn_off();
+    void turn_on();
     //   void trigger_humidity_warning();
     //   void trigger_overtemp_warning();
     //   void trigger_overtemp_error();
