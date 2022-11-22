@@ -1,7 +1,17 @@
+/**
+ * @file System_observer.h
+ * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
+ * @brief
+ * @version 0.1
+ * @date 2022-11-16
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
 #ifndef SYSTEM_OBSERVER_H
 #define SYSTEM_OBSERVER_H
 #include "Observer.h"
-class Control_system;
+#include "Control_system.h"
 class System_observer : public Observer
 {
 public:

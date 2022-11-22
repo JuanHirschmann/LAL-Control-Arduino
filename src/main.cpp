@@ -1,5 +1,6 @@
 
 #include "main.h"
+
 Control_system control;
 Instruction_observer inst_obs;
 Temperature_observer temp_obs;
@@ -21,17 +22,18 @@ void int0_callback()
 ISR(TIMER1_COMPA_vect)
 {
     cli();
-    control.trigger_buzzer_alarm();
+    // control.trigger_buzzer_alarm();
     control.set_poll_sensors_flag(true);
     sei();
 }
 void setup()
 {
     // cli();
+    Serial.begin(9600);
     pinMode(ONE_WIRE_BUS, INPUT);
     setup_timer1_interrupt();
     setup_int0_interrupt(BUTTON_PIN, INPUT_PULLUP, int0_callback, HIGH);
-    Serial.begin(9600);
+
     control.init_display();
     control.attach(&inst_obs);
     control.attach(&temp_obs);
@@ -39,10 +41,5 @@ void setup()
 }
 void loop()
 {
-    // Serial.println("Vivo");
-
     control.update();
-    delay(1000);
-    //  Serial.println("Update");
-    //  control.update();
 };

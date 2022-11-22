@@ -10,16 +10,35 @@
  */
 #ifndef USER_MESSAGES_H
 #define USER_MESSAGES_H
-const int MAX_MESSAGE_LENGTH = 40;
-const char PROCEDURE_MESSAGES[][MAX_MESSAGE_LENGTH] = {"HOLA",
-                                                       "COMO",
-                                                       "ESTAS",
-                                                       "MENSAJE MAS LARGO PARA VER SI SIGUE",
-                                                       "MENSAJE PICOMA",
-                                                       "TEXTO MEDIANO",
-                                                       "TEXTO MACROMA 12345678890",
-                                                       "UNO MAS",
-                                                       "OTRO MAS",
-                                                       "CONFIRMAR APAGADO"};
-const int MAX_PROCEDURE_STEPS = 10;
+#include <avr/pgmspace.h>
+const int MAX_MESSAGE_LENGTH = 60;
+const int MAX_PROCEDURE_STEPS = 8;
+const int ERROR_TYPES = 5;
+static const char PROCEDURE_MESSAGES[MAX_PROCEDURE_STEPS][MAX_MESSAGE_LENGTH] PROGMEM = {
+    {"LAL: Sistema de control de procedimiento.\0"},
+    {"Confirmar funcionamiento de canilla de agua.\0"},
+    {"Abrir conexión de vacío/extracción.\0"},
+    {"Encender extractor.\0"},
+    {"Apagar extractor.\0"},
+    {"Motor apagado.Esperando a que baje la temperatura.\0"},
+    {"Cierre la llave de agua\0"},
+    {"CONFIRMAR APAGADO\0"},
+};
+/*enum ALARM_TYPES
+{
+    NO_ALARM=0,
+    OVERTEMP_ALARM,
+    HUMIDITY_ALARM,
+    HALTED_FAN_ALARM,
+    NO_TEMP_SENSOR_ALARM,
+    OVERTEMP_WARNING,
+    SLOW_FAN_WARNING,
+}; DEFINIR ERROR_MESSAGES EN EL ORDEN DE LOS ALARM TYPES*/
+static const char ERROR_MESSAGES[ERROR_TYPES][MAX_MESSAGE_LENGTH] PROGMEM = {
+    {"No hay alarma\0"},
+    {"Exceso de temperatura\0"},
+    {"Humedad en motor\0"},
+    {"Ventilador no detectado\0"},
+    {"Sensor de temperatura no detectado\0"},
+};
 #endif

@@ -34,6 +34,7 @@ void Display::set_fan_speed_pct(int new_speed_pct)
 }
 void Display::set_text(const char *string_out)
 {
+
     if (strncmp(string_out, this->on_screen_text, MAX_DISPLAY_STRING_LENGTH) != 0)
     {
         strncpy(this->on_screen_text, string_out, MAX_DISPLAY_STRING_LENGTH);

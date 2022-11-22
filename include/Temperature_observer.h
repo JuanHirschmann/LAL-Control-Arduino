@@ -25,10 +25,16 @@ class Temperature_observer : public System_observer
 public:
     void update(Control_system *subject)
     {
-        if (subject->is_poll_sensors_requested())
+        if (subject->is_poll_sensors_requested()) // Agregar histéresis?
         {
-            subject->set_alarm_flag(false);
+
             float temperature = subject->measure_temperature();
+            if (temperature < HYSTERESIS_PERCENT * OVERTEMP_ALARM_THRESHOLD || temperature < HYSTERESIS_PERCENT * OVERTEMP_WARNING_THRESHOLD) // Hysteresis
+            {
+
+                subject->set_alarm_flag(false);
+                subject->set_warning_flag(false);
+            }
             if (temperature == ERROR_TEMPERATURE)
             {
                 subject->request_alarm(NO_TEMP_SENSOR_ALARM);

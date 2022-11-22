@@ -18,7 +18,7 @@ Buzzer::Buzzer(int buzzer_pin, unsigned int frequency) // Tiene que tener pwm en
 void Buzzer::turn_on(unsigned long duration = 0)
 {
     this->is_ringing = true;
-    tone(this->buzzer_pin, this->frequency, duration);
+    tone(this->buzzer_pin, this->frequency, duration); // USA TIMER2, ROMPE el color del LED conectado en 3 u 11.
 };
 void Buzzer::turn_off()
 {
@@ -44,4 +44,4 @@ void Buzzer::set_frequency(unsigned int new_frequency)
 bool Buzzer::is_active()
 {
     return this->is_ringing;
-}
+};

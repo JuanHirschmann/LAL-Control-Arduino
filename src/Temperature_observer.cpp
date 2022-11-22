@@ -23,6 +23,8 @@ void update(Control_system *subject)
         else if (temperature > OVERTEMP_WARNING_THRESHOLD)
         {
             Serial.print("CALORCITO");
+            subject->request_warning(OVERTEMP_WARNING);
+            subject->set_warning_flag(true);
         }
         subject->set_poll_sensors_flag(false);
     }
