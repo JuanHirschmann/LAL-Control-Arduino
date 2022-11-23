@@ -6,5 +6,6 @@
 #include "interrupts.h"
 #include "Instruction_observer.h"
 #include "Temperature_observer.h"
+#include "Moisture_observer.h"
 // #include "ArduinoLowPower.h"
 #endif

@@ -22,26 +22,15 @@ void Idle_state::exit(Control_system *machine)
 Abstract_state *Idle_state::transition(Control_system *machine)
 {
 
-    if (machine->context.alarm_request)
-    {
-        /*Estado de alarma*/
-        this->exit(machine);
-        return new Alarm_state();
-    }
-    else if (machine->context.warning_request)
+    if (machine->context.warning_request || machine->context.alarm_request || (machine->context.current_step >= MOTOR_ON_STEP && machine->context.current_step < MOTOR_COOLDOWN_STEP))
     { /*Estado de warning*/
 
         this->exit(machine);
-        return new Warning_state();
+        return new Motor_control_state();
     }
     else if (machine->context.shutdown_request)
     {
         /*Estado de apagado de sistema*/
-    }
-    else if (machine->context.current_step >= MOTOR_ON_STEP && machine->context.current_step <= MOTOR_ON_STEP)
-    {
-        this->exit(machine);
-        return new Motor_control_state();
     }
     return nullptr;
 }

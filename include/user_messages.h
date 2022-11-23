@@ -36,9 +36,9 @@ static const char PROCEDURE_MESSAGES[MAX_PROCEDURE_STEPS][MAX_MESSAGE_LENGTH] PR
 }; DEFINIR ERROR_MESSAGES EN EL ORDEN DE LOS ALARM TYPES*/
 static const char ERROR_MESSAGES[ERROR_TYPES][MAX_MESSAGE_LENGTH] PROGMEM = {
     {"No hay alarma\0"},
-    {"Exceso de temperatura\0"},
-    {"Humedad en motor\0"},
-    {"Ventilador no detectado\0"},
-    {"Sensor de temperatura no detectado\0"},
+    {"Exceso de temperatura. Extractor apagado.\0"},
+    {"Humedad en motor. Extractor apagado.\0"},
+    {"Ventilador no detectado. Extractor apagado.\0"},
+    {"Sensor de temperatura no detectado. Extractor apagado.\0"},
 };
 #endif

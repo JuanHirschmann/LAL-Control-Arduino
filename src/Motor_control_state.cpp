@@ -4,56 +4,90 @@ void Motor_control_state::enter(Control_system *machine)
 {
 
     Serial.println(F("Estado motor control"));
-    // machine->motor_status_led.turn_green();
+    machine->motor_status_led.turn_green();
 
     char buf[MAX_MESSAGE_LENGTH];
     strncpy_P(buf, PROCEDURE_MESSAGES[machine->context.current_step], MAX_MESSAGE_LENGTH);
     if (machine->context.temperature < OVERTEMP_ALARM_THRESHOLD)
     {
         machine->display.set_text(buf);
-        this->overtemp_override = false;
+        this->alarm_override = false;
     }
     else
     {
-        this->overtemp_override = true;
+        this->alarm_override = true;
     }
 }
 void Motor_control_state::update(Control_system *machine)
 {
-    // machine->motor_status_led.toggle();
-    if (machine->context.temperature > OVERTEMP_ALARM_THRESHOLD)
+
+    if (machine->context.alarm_request)
     {
+        machine->buzzer.toggle();
+        machine->motor_status_led.turn_red();
         machine->motor.turn_off();
         machine->context.current_step = MOTOR_COOLDOWN_STEP;
-        this->overtemp_override = true;
+        char buf[MAX_MESSAGE_LENGTH];
+        strncpy_P(buf, ERROR_MESSAGES[machine->context.current_alarm], MAX_MESSAGE_LENGTH);
+        this->alarm_override = true;
+        switch (machine->context.current_alarm)
+        {
+        case OVERTEMP_ALARM:
+
+            machine->display.set_text(buf);
+            break;
+
+        case HUMIDITY_ALARM:
+            machine->display.set_text(buf);
+            break;
+        case HALTED_FAN_ALARM:
+            machine->display.set_text(buf);
+            break;
+        case NO_TEMP_SENSOR_ALARM:
+            machine->display.set_text(buf);
+        case OVERTEMP_WARNING:
+            break;
+        case SLOW_FAN_WARNING:
+            break;
+        case NO_ALARM:
+            break;
+        default:
+            machine->display.set_text("No se reconoció el error");
+            break;
+        }
+    }
+    else if (machine->context.warning_request)
+    {
+        machine->buzzer.turn_off();
+        machine->motor_status_led.turn_yellow();
     }
     else
     {
-        char buf[MAX_MESSAGE_LENGTH];
-        strncpy_P(buf, PROCEDURE_MESSAGES[machine->context.current_step], MAX_MESSAGE_LENGTH);
-        machine->display.set_text(buf);
-        if (machine->is_next_step_requested())
+        machine->motor_status_led.turn_green();
+    }
+
+    if (machine->is_next_step_requested() || this->alarm_override)
+    {
+        switch (machine->context.current_step)
         {
-            switch (machine->context.current_step)
+        case MOTOR_ON_STEP:
+            machine->motor.turn_on();
+            break;
+
+        case MOTOR_OFF_STEP:
+            machine->motor.turn_off();
+            break;
+        case MOTOR_COOLDOWN_STEP:
+            machine->context.override_next_step = true;
+            machine->buzzer.turn_off();
+            if (!machine->context.alarm_request)
             {
-            case MOTOR_ON_STEP:
-                machine->motor.turn_on();
-                break;
-
-            case MOTOR_OFF_STEP:
-                machine->motor.turn_off();
-                break;
-            case MOTOR_COOLDOWN_STEP:
-                machine->context.override_next_step = true;
-                if (machine->context.temperature < OVERTEMP_ALARM_THRESHOLD * HYSTERESIS_PERCENT)
-                {
-                    machine->context.override_next_step = false;
-                    machine->next_step();
-                }
-
-            default:
-                break;
+                machine->context.override_next_step = false;
+                machine->next_step();
             }
+
+        default:
+            break;
         }
     }
 }
@@ -65,7 +99,7 @@ void Motor_control_state::exit(Control_system *machine)
 Abstract_state *Motor_control_state::transition(Control_system *machine)
 {
 
-    if (machine->context.current_step > MOTOR_COOLDOWN_STEP)
+    if ((machine->context.current_step < MOTOR_ON_STEP || machine->context.current_step > MOTOR_COOLDOWN_STEP) && !(machine->context.warning_request || machine->context.alarm_request))
     {
         Serial.println(machine->context.current_step);
         this->exit(machine);

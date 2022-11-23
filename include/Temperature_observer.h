@@ -47,7 +47,6 @@ public:
             {
                 subject->request_warning(OVERTEMP_WARNING);
             }
-            subject->set_poll_sensors_flag(false);
         }
     };
 

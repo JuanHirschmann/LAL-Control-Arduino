@@ -25,6 +25,8 @@ const float OVERTEMP_WARNING_THRESHOLD = 27;
 const float OVERTEMP_ALARM_THRESHOLD = 28;
 const float ERROR_TEMPERATURE = -127;
 const float HYSTERESIS_PERCENT = 0.95;
+/* Sensor de humedad*/
+const int MOISTURE_ALARM_THRESHOLD = 255;
 /* LED dual*/
 const float RED_COLOR_DUTY_CYCLE[] = {0, 1}; //{0, 1};
 const float YELLOW_COLOR_DUTY_CYCLE[] = {0.25, 1};

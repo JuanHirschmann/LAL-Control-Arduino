@@ -4,6 +4,7 @@
 Control_system control;
 Instruction_observer inst_obs;
 Temperature_observer temp_obs;
+Moisture_observer mois_obs;
 void int0_callback()
 {
     cli();
@@ -37,6 +38,7 @@ void setup()
     control.init_display();
     control.attach(&inst_obs);
     control.attach(&temp_obs);
+    control.attach(&mois_obs);
     //   sei();
 }
 void loop()

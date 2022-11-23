@@ -3,7 +3,7 @@
 {
     this->current_step = control.current_step;
 } */
-Control_system::Control_system(/* args */) : temp_sensor(ONE_WIRE_BUS), buzzer(BUZZER_PIN, BUZZER_HIGH_FREQ), motor_status_led(MOTOR_GREEN_LED_PIN, MOTOR_RED_LED_PIN), motor(MOTOR_CONTROL_PIN)
+Control_system::Control_system(/* args */) : temp_sensor(ONE_WIRE_BUS), buzzer(BUZZER_PIN, BUZZER_HIGH_FREQ), motor_status_led(MOTOR_GREEN_LED_PIN, MOTOR_RED_LED_PIN), motor(MOTOR_CONTROL_PIN), mois_sensor(MOISTURE_SENSOR_PIN)
 {
 }
 
@@ -35,6 +35,7 @@ void Control_system::update()
 
         this->notify_observers();
         this->display.update();
+        this->set_poll_sensors_flag(false);
     }
 }
 void Control_system::next_step()
@@ -50,7 +51,7 @@ void Control_system::next_step()
         strncpy_P(buf, PROCEDURE_MESSAGES[this->context.current_step], MAX_MESSAGE_LENGTH);
         this->display.set_text(buf);
         this->context.next_step_request = false;
-        }
+    }
     else
     {
         this->context.shutdown_request = true;
@@ -70,7 +71,10 @@ float Control_system::measure_temperature()
     this->display.set_temp(new_temperature);
     return new_temperature;
 }
-
+int Control_system::measure_moisture()
+{
+    return this->mois_sensor.get_reading();
+}
 void Control_system::set_next_step_flag(bool new_state)
 {
     if (!this->is_alarm_requested())

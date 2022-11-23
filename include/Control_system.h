@@ -6,6 +6,7 @@
 #include "user_messages.h"
 #include "System_observer.h"
 #include "Temperature_sensor.h"
+#include "Moisture_sensor.h"
 #include "types.h"
 #include "Buzzer.h"
 #include "Motor.h"
@@ -15,8 +16,6 @@
 class Control_system : public Subject, public Machine
 {
     friend class Idle_state;
-    friend class Alarm_state;
-    friend class Warning_state;
     friend class Motor_control_state;
 
 public:
@@ -27,6 +26,7 @@ public:
     Control_system(/* args */);
     void notify_observers() override;
     float measure_temperature();
+    int measure_moisture();
     void set_next_step_flag(bool new_state);
     bool is_next_step_requested();
     void set_poll_sensors_flag(bool new_state);
@@ -51,6 +51,7 @@ private:
     Temperature_sensor temp_sensor;
     Buzzer buzzer;
     Motor motor;
+    Moisture_sensor mois_sensor;
     // Dual_LED water_status_led;
     Dual_LED motor_status_led;
 };

@@ -19,7 +19,7 @@ const int MOTOR_CONTROL_PIN = 2;
 const int MOTOR_RED_LED_PIN = 10;   // D10
 const int MOTOR_GREEN_LED_PIN = 11; // D11, Ambos con PWM
 
-const int WATER_SENSOR_PIN = A6;
+const int MOISTURE_SENSOR_PIN = A6;
 
 const int FAN_2_STATE_RED_LED = A3;
 const int FAN_2_STATE_GREEN_LED = A2;

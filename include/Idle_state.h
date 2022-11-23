@@ -2,8 +2,6 @@
 #define IDLE_STATE_H
 #include "Control_system.h"
 #include "Abstract_state.h"
-#include "Alarm_state.h"
-#include "Warning_state.h"
 #include "Motor_control_state.h"
 class Idle_state : public Abstract_state
 {
