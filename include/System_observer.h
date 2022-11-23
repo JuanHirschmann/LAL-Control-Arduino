@@ -12,6 +12,11 @@
 #define SYSTEM_OBSERVER_H
 #include "Observer.h"
 #include "Control_system.h"
+/**
+ * @brief Clase interfaz para implementar observadores para sujetos de
+ * la clase Control_system
+ *
+ */
 class System_observer : public Observer
 {
 public:

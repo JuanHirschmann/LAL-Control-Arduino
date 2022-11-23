@@ -10,6 +10,17 @@
  */
 #ifndef TYPES_H
 #define TYPES_H
+enum STEPS
+{
+    WELCOME_STEP = 0,
+    WATER_ON_STEP = 1,
+    OPEN_FAUCET_STEP = 2,
+    MOTOR_ON_STEP = 3,
+    MOTOR_OFF_STEP = 4,
+    MOTOR_COOLDOWN_STEP = 5,
+    WATER_OFF_STEP = 6,
+    LAST_STEP = 7,
+};
 enum ALARM_TYPES
 {
     NO_ALARM = 0,
@@ -25,6 +36,7 @@ typedef struct
     float temperature;
     int current_step;
     bool shutdown_request;
+    bool wake_request;
     bool warning_request;
     bool alarm_request;
     bool next_step_request;

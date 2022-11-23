@@ -5,38 +5,24 @@
 } */
 Control_system::Control_system(/* args */) : temp_sensor(ONE_WIRE_BUS), buzzer(BUZZER_PIN, BUZZER_HIGH_FREQ), motor_status_led(MOTOR_GREEN_LED_PIN, MOTOR_RED_LED_PIN), motor(MOTOR_CONTROL_PIN), mois_sensor(MOISTURE_SENSOR_PIN)
 {
+    this->reset_context();
 }
 
 void Control_system::print(const char *string_out)
 {
-    this->display.print(string_out);
 }
 void Control_system::init_display()
 {
 
     this->display.init();
 
-    this->current_state = new Idle_state();
+    this->current_state = new Shutdown_state();
     this->current_state->enter(this);
 }
 void Control_system::update()
 {
     this->transition_state();
     this->current_state->update(this);
-    if (this->context.shutdown_request)
-    {
-        this->buzzer.turn_off();
-        this->display.turn_off();
-        this->motor_status_led.turn_off();
-        // apagar arduino;
-    }
-    else
-    {
-
-        this->notify_observers();
-        this->display.update();
-        this->set_poll_sensors_flag(false);
-    }
 }
 void Control_system::next_step()
 {
@@ -44,7 +30,7 @@ void Control_system::next_step()
     this->buzzer.turn_on(100); // Esto rompe el color del led
 
     this->context.current_step++;
-    if (this->context.current_step < MAX_PROCEDURE_STEPS)
+    if (this->context.current_step <= LAST_STEP + 1)
     {
 
         char buf[MAX_MESSAGE_LENGTH];

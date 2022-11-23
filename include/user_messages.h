@@ -11,7 +11,7 @@
 #ifndef USER_MESSAGES_H
 #define USER_MESSAGES_H
 #include <avr/pgmspace.h>
-const int MAX_MESSAGE_LENGTH = 60;
+const int MAX_MESSAGE_LENGTH = 70;
 const int MAX_PROCEDURE_STEPS = 8;
 const int ERROR_TYPES = 5;
 static const char PROCEDURE_MESSAGES[MAX_PROCEDURE_STEPS][MAX_MESSAGE_LENGTH] PROGMEM = {
@@ -36,9 +36,9 @@ static const char PROCEDURE_MESSAGES[MAX_PROCEDURE_STEPS][MAX_MESSAGE_LENGTH] PR
 }; DEFINIR ERROR_MESSAGES EN EL ORDEN DE LOS ALARM TYPES*/
 static const char ERROR_MESSAGES[ERROR_TYPES][MAX_MESSAGE_LENGTH] PROGMEM = {
     {"No hay alarma\0"},
-    {"Exceso de temperatura. Extractor apagado.\0"},
-    {"Humedad en motor. Extractor apagado.\0"},
-    {"Ventilador no detectado. Extractor apagado.\0"},
-    {"Sensor de temperatura no detectado. Extractor apagado.\0"},
+    {"Exceso de temperatura. El sistema se apagara.\0"},
+    {"Humedad en motor. El sistema se apagara.\0"},
+    {"Ventilador no detectado. El sistema se apagara.\0"},
+    {"Sensor de temperatura no detectado. El sistema se apagara.\0"},
 };
 #endif

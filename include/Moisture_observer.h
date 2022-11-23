@@ -13,20 +13,13 @@
 class Moisture_observer : public System_observer
 {
 public:
-    void update(Control_system *subject)
-    {
-        if (subject->is_poll_sensors_requested())
-        {
-
-            int moisture = subject->measure_moisture();
-            subject->set_alarm_flag(false);
-            if (moisture < MOISTURE_ALARM_THRESHOLD)
-            {
-
-                subject->request_alarm(HUMIDITY_ALARM);
-            }
-        }
-    };
+    /**
+     * @brief Actualización del observador, mide la humedad y, si excede el umbral
+     * MOISTURE_ALARM_THRESHOLD, solicita una alarma del tipo HUMIDITY_ALARM.
+     *
+     * @param subject sujeto a observar
+     */
+    void update(Control_system *subject);
 
 private:
 };

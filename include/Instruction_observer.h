@@ -21,10 +21,10 @@ class Instruction_observer : public System_observer
 {
 public:
     /**
-     * @brief Si el flag de próximo paso del usuario está activado y
-     * no existe una solicitud de alarma, avanza hacia la siguiente instrucción.
+     * @brief Si el indicador de próximo paso del usuario está activo y
+     * el acceso a la próxima instrucción no esté bloqueado, avanza hacia la siguiente instrucción.
      *
-     * @param subject
+     * @param subject sujeto a observar.
      */
     void update(Control_system *subject);
 

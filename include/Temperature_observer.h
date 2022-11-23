@@ -23,32 +23,14 @@
 class Temperature_observer : public System_observer
 {
 public:
-    void update(Control_system *subject)
-    {
-        if (subject->is_poll_sensors_requested()) // Agregar histéresis?
-        {
-
-            float temperature = subject->measure_temperature();
-            if (temperature < HYSTERESIS_PERCENT * OVERTEMP_ALARM_THRESHOLD || temperature < HYSTERESIS_PERCENT * OVERTEMP_WARNING_THRESHOLD) // Hysteresis
-            {
-
-                subject->set_alarm_flag(false);
-                subject->set_warning_flag(false);
-            }
-            if (temperature == ERROR_TEMPERATURE)
-            {
-                subject->request_alarm(NO_TEMP_SENSOR_ALARM);
-            }
-            else if (temperature > OVERTEMP_ALARM_THRESHOLD)
-            {
-                subject->request_alarm(OVERTEMP_ALARM);
-            }
-            else if (temperature > OVERTEMP_WARNING_THRESHOLD)
-            {
-                subject->request_warning(OVERTEMP_WARNING);
-            }
-        }
-    };
+    /**
+     * @brief Actualización del observador, mide la temperatura:
+     * si excede el umbral OVERTEMP_ALARM_TRESHOLD, solicita una alarma del tipo OVERTEMP_ALARM.
+     * si excede el umbral OVERTEMP_WARNING_TRESHOLD, solicita una advertencia del tipo OVERTEMP_WARNING.
+     * Para desactivar las alarmas, la temperatura debe HYSTERESIS_PERCENT veces menor del umbral que le corresponde.
+     * @param subject sujeto a observar
+     */
+    void update(Control_system *subject);
 
 private:
 };

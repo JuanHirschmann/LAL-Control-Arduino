@@ -32,7 +32,4 @@ const float RED_COLOR_DUTY_CYCLE[] = {0, 1}; //{0, 1};
 const float YELLOW_COLOR_DUTY_CYCLE[] = {0.25, 1};
 const float GREEN_COLOR_DUTY_CYCLE[] = {1, 0}; //{1, 0};
 const int MAX_ANALOG_WRITE_VALUE = 255;
-const int MOTOR_ON_STEP = 3;
-const int MOTOR_OFF_STEP = 4;
-const int MOTOR_COOLDOWN_STEP = 5;
 #endif

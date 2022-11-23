@@ -11,15 +11,35 @@
 #include "Buzzer.h"
 #include "Motor.h"
 #include "Dual_led.h"
-#include "Idle_state.h"
+#include "Shutdown_state.h"
 #include "utils.h"
 class Control_system : public Subject, public Machine
 {
     friend class Idle_state;
     friend class Motor_control_state;
+    friend class Shutdown_state;
 
 public:
     void update();
+    void wake()
+    {
+        this->context.wake_request = true;
+    };
+    bool is_off()
+    {
+        return this->context.shutdown_request;
+    }
+    void reset_context()
+    {
+        this->context.alarm_request = false;
+        this->context.warning_request = false;
+        this->context.current_step = 0;
+        this->context.current_alarm = NO_ALARM;
+        this->context.override_next_step = false;
+        this->context.shutdown_request = true;
+        this->context.wake_request = false;
+        this->context.warning_request = false;
+    }
     void next_step();
     void print(const char *string_out);
     void init_display();

@@ -13,8 +13,15 @@ void int0_callback()
 
     if (interrupt_time - last_interrupt_time > DEBOUNCE_CONSTANT)
     {
+        if (control.is_off())
+        {
+            control.wake();
+        }
+        else
+        {
 
-        control.set_next_step_flag(true);
+            control.set_next_step_flag(true);
+        }
     }
     last_interrupt_time = interrupt_time;
 
@@ -23,7 +30,6 @@ void int0_callback()
 ISR(TIMER1_COMPA_vect)
 {
     cli();
-    // control.trigger_buzzer_alarm();
     control.set_poll_sensors_flag(true);
     sei();
 }

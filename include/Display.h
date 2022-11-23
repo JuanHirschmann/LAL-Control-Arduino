@@ -1,42 +1,86 @@
+/**
+ * @file Display.h
+ * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
+ * @brief
+ * @version 0.1
+ * @date 2022-11-23
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
 #ifndef _DISPLAY_H
 #define _DISPLAY_H
 #include "Wire.h"
 #include <hd44780.h>
 #include <hd44780ioClass/hd44780_I2Cexp.h>
 #include "display_settings.h"
-/* enum display_symbols
-{
-    TEMP_SYMBOL = 0,
-    NEG_TEMP_SYMBOL,
-    FAN_SYMBOL,
-}; */
-
+/**
+ * @brief Clase Display, internamente utiliza la clase hd44780ioClass para resolver
+ * la interfaz i2c con el monitor.
+ *
+ */
 class Display
 {
 public:
-    // void init();
+    /**
+     * @brief Método para inicializar el objeto, sólo se puede luego o en setup().
+     *
+     */
     void init();
+    /**
+     * @brief Construye un nuevo objecto Display
+     *
+     */
     Display();
-    void print(char *string_out);
+    /**
+     * @brief Fija el valor de temperatura a actualizar (no la imprime en pantalla), la ubicación se da con
+     * las constantes de offset de temperatura definidas en display_settings.h
+     *
+     * @param new_temperature Nueva temperatura a fijar.
+     */
     void set_temp(float new_temperature);
+    /**
+     * @brief Fija el valor del porcentaje de velocidad, no lo imprie en pantalla. La ubicación se da con
+     * las constantes de offset de temperatura definidas en display_settings.h
+     *
+     * @param new_speed_pct Nuevo valor a fijar
+     */
     void set_fan_speed_pct(int new_speed_pct);
+    /**
+     * @brief Fija el el texto a actualizar, no lo imprime en pantalla. La ubicación se da con
+     * las constantes de offset de temperatura definidas en display_settings.h
+     *
+     * @param string_out Nuevo texto a fijar, no puede exceder el máximo establecido en display_settings.h
+     */
     void set_text(const char *string_out);
+    /**
+     * @brief Actualiza los valores en pantalla con los parámetros previamente fijados. Solo actualiza la pantalla
+     * cuando uno o más valores hayan cambiado.
+     *
+     */
     void update();
+    /**
+     * @brief limpia los caracteres de la pantalla y apaga la retroiluminación, no inhibe la escritura en pantalla.
+     *
+     */
     void turn_off();
+    /**
+     * @brief Enciende la retroiluminación y limpia los caracteres de la pantalla.
+     *
+     */
     void turn_on();
-    void toggle();
-    //   void trigger_humidity_warning();
-    //   void trigger_overtemp_warning();
-    //   void trigger_overtemp_error();
 
 private:
-    hd44780_I2Cexp screen_interface; // = hd44780_I2Cexp; //(0x27, 20, 4);
+    /**
+     * @brief Objeto hd44780_I2Cexp
+     *
+     */
+    hd44780_I2Cexp screen_interface;
+    /**
+     * @brief variable para saber cuando es necesario actualizar la pantalla con nuevos valores.
+     *
+     */
     bool update_needed = false;
-    bool backlight_on = true;
-    // bool blink_temp_indicator = false;
-    // void update_temperature();
-    // void update_fan_speed();
-    // void update_text();
     char on_screen_text[MAX_DISPLAY_STRING_LENGTH];
     /**
      * @brief Medición de temperatura visualizada en pantalla

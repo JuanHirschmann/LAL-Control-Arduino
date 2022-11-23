@@ -30,17 +30,20 @@ void Motor_control_state::update(Control_system *machine)
         char buf[MAX_MESSAGE_LENGTH];
         strncpy_P(buf, ERROR_MESSAGES[machine->context.current_alarm], MAX_MESSAGE_LENGTH);
         this->alarm_override = true;
+        Serial.println(buf);
         switch (machine->context.current_alarm)
         {
         case OVERTEMP_ALARM:
-
+            machine->context.shutdown_request = true;
             machine->display.set_text(buf);
             break;
 
         case HUMIDITY_ALARM:
+            machine->context.shutdown_request = true;
             machine->display.set_text(buf);
             break;
         case HALTED_FAN_ALARM:
+            machine->context.shutdown_request = true;
             machine->display.set_text(buf);
             break;
         case NO_TEMP_SENSOR_ALARM:
@@ -79,17 +82,19 @@ void Motor_control_state::update(Control_system *machine)
             break;
         case MOTOR_COOLDOWN_STEP:
             machine->context.override_next_step = true;
-            machine->buzzer.turn_off();
             if (!machine->context.alarm_request)
             {
                 machine->context.override_next_step = false;
                 machine->next_step();
             }
-
+        case LAST_STEP:
+            machine->context.shutdown_request = true;
         default:
             break;
         }
     }
+    machine->notify_observers();
+    machine->display.update();
 }
 void Motor_control_state::exit(Control_system *machine)
 {
@@ -104,6 +109,21 @@ Abstract_state *Motor_control_state::transition(Control_system *machine)
         Serial.println(machine->context.current_step);
         this->exit(machine);
         return new Idle_state();
+    }
+    else if (machine->context.shutdown_request)
+    {
+        unsigned long current_millis_call = millis();
+        static unsigned long prev_millis_call = current_millis_call;
+        Serial.println(current_millis_call);
+        Serial.println(prev_millis_call);
+        if (prev_millis_call != 0 && current_millis_call - prev_millis_call > 5000)
+        {
+            Serial.println(current_millis_call);
+            Serial.println(prev_millis_call);
+            prev_millis_call = current_millis_call;
+            this->exit(machine);
+            return new Shutdown_state();
+        }
     }
     return nullptr;
 }
