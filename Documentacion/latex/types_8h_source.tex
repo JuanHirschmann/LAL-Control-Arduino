@@ -1,0 +1,53 @@
+\hypertarget{types_8h_source}{}\doxysection{types.\+h}
+\label{types_8h_source}\index{include/types.h@{include/types.h}}
+\mbox{\hyperlink{types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef TYPES\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define TYPES\_H}}
+\DoxyCodeLine{13 \textcolor{keyword}{enum} STEPS}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     WELCOME\_STEP = 0,}
+\DoxyCodeLine{16     WATER\_ON\_STEP = 1,}
+\DoxyCodeLine{17     OPEN\_FAUCET\_STEP = 2,}
+\DoxyCodeLine{18     MOTOR\_ON\_STEP = 3,}
+\DoxyCodeLine{19     MOTOR\_OFF\_STEP = 4,}
+\DoxyCodeLine{20     MOTOR\_COOLDOWN\_STEP = 5,}
+\DoxyCodeLine{21     WATER\_OFF\_STEP = 6,}
+\DoxyCodeLine{22     LAST\_STEP = 7,}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 \textcolor{keyword}{enum} ALARM\_TYPES}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     NO\_ALARM = 0,}
+\DoxyCodeLine{27     OVERTEMP\_ALARM,}
+\DoxyCodeLine{28     HUMIDITY\_ALARM,}
+\DoxyCodeLine{29     HALTED\_FAN\_ALARM,}
+\DoxyCodeLine{30     NO\_TEMP\_SENSOR\_ALARM,}
+\DoxyCodeLine{31     OVERTEMP\_WARNING,}
+\DoxyCodeLine{32     SLOW\_FAN\_WARNING,}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     \textcolor{keywordtype}{float} temperature;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} current\_step;}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} shutdown\_request;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} wake\_request;}
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} warning\_request;}
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} alarm\_request;}
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} next\_step\_request;}
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} poll\_sensors\_request;}
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} override\_next\_step;}
+\DoxyCodeLine{45     ALARM\_TYPES current\_alarm;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \} \mbox{\hyperlink{struct_context__t}{Context\_t}};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{enum} COLOR\_TYPES}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51     RED,}
+\DoxyCodeLine{52     YELLOW,}
+\DoxyCodeLine{53     GREEN,}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

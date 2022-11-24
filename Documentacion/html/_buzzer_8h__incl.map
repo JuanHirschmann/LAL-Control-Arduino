@@ -1,0 +1,5 @@
+<map id="include/Buzzer.h" name="include/Buzzer.h">
+<area shape="rect" id="node1" title=" " coords="39,5,158,31"/>
+<area shape="rect" id="node2" title=" " coords="5,79,83,104"/>
+<area shape="rect" id="node3" href="$port__config_8h.html" title="Archivo de configuración para los puertos de la placa donde se implementará el sistema." coords="107,79,203,104"/>
+</map>
