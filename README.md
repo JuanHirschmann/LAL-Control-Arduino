@@ -15,7 +15,7 @@ LAL Control es un sistema para el control del procedimiento para operar el láse
 - Sistema de alarmas para alertar por exceso de temperatura, humedad en el recinto o fallas en los sensores.
 
 ## Instalación
-Para ser cargado en Arduino, el sistema requiere utilizar el plugin de Visual Studio Code [PlatformIO](https://platformio.org/).
+Para ser cargado en la placa de desarrollo el sistema requiere utilizar el plugin de Visual Studio Code [PlatformIO](https://platformio.org/).
 
 ## Licencia
 
