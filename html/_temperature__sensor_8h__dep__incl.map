@@ -1,0 +1,12 @@
+<map id="include/Temperature_sensor.h" name="include/Temperature_sensor.h">
+<area shape="rect" id="node1" title="Módulo de gestión de sensores de temperatura por interfaz OneWire." coords="419,5,557,45"/>
+<area shape="rect" id="node2" href="$_control__system_8h_source.html" title=" " coords="403,93,573,119"/>
+<area shape="rect" id="node3" href="$_idle__state_8h.html" title=" " coords="155,167,290,192"/>
+<area shape="rect" id="node4" href="$_motor__control__state_8h_source.html" title=" " coords="5,240,152,280"/>
+<area shape="rect" id="node5" href="$_shutdown__state_8h_source.html" title=" " coords="176,247,347,273"/>
+<area shape="rect" id="node6" href="$_instruction__observer_8h.html" title=" " coords="742,240,869,280"/>
+<area shape="rect" id="node7" href="$main_8h_source.html" title=" " coords="673,328,780,353"/>
+<area shape="rect" id="node8" href="$_moisture__observer_8h_source.html" title=" " coords="371,247,554,273"/>
+<area shape="rect" id="node9" href="$_system__observer_8h.html" title=" " coords="551,167,729,192"/>
+<area shape="rect" id="node10" href="$_temperature__observer_8h.html" title=" " coords="579,240,717,280"/>
+</map>

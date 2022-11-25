@@ -1,0 +1,85 @@
+\hypertarget{_control__system_8h_source}{}\doxysection{Control\+\_\+system.\+h}
+\label{_control__system_8h_source}\index{include/Control\_system.h@{include/Control\_system.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CONTROL\_SYSTEM\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CONTROL\_SYSTEM\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_subject_8h}{Subject.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_machine_8h}{Machine.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_display_8h}{Display.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{user__messages_8h}{user\_messages.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_system__observer_8h}{System\_observer.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_temperature__sensor_8h}{Temperature\_sensor.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Moisture\_sensor.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{types_8h}{types.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_buzzer_8h}{Buzzer.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_motor_8h}{Motor.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_dual___l_e_d_8h}{Dual\_led.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}Shutdown\_state.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}utils.h"{}}}
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_control__system}{Control\_system}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_subject}{Subject}}, \textcolor{keyword}{public} \mbox{\hyperlink{class_machine}{Machine}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_idle__state}{Idle\_state}};}
+\DoxyCodeLine{19     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_motor__control__state}{Motor\_control\_state}};}
+\DoxyCodeLine{20     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_shutdown__state}{Shutdown\_state}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} update();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} wake()}
+\DoxyCodeLine{25     \{}
+\DoxyCodeLine{26         this-\/>context.wake\_request = \textcolor{keyword}{true};}
+\DoxyCodeLine{27     \};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} is\_off()}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} this-\/>context.shutdown\_request;}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} reset\_context()}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         this-\/>context.alarm\_request = \textcolor{keyword}{false};}
+\DoxyCodeLine{35         this-\/>context.warning\_request = \textcolor{keyword}{false};}
+\DoxyCodeLine{36         this-\/>context.current\_step = 0;}
+\DoxyCodeLine{37         this-\/>context.current\_alarm = NO\_ALARM;}
+\DoxyCodeLine{38         this-\/>context.override\_next\_step = \textcolor{keyword}{false};}
+\DoxyCodeLine{39         this-\/>context.shutdown\_request = \textcolor{keyword}{true};}
+\DoxyCodeLine{40         this-\/>context.wake\_request = \textcolor{keyword}{false};}
+\DoxyCodeLine{41         this-\/>context.warning\_request = \textcolor{keyword}{false};}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} next\_step();}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} print(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *string\_out);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} init\_display();}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_control__system}{Control\_system}}(\textcolor{comment}{/* args */});}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control__system_ab7912068a11d44b07eef3b3f56ce0598}{notify\_observers}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{48     \textcolor{keywordtype}{float} measure\_temperature();}
+\DoxyCodeLine{49     \textcolor{keywordtype}{int} measure\_moisture();}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} set\_next\_step\_flag(\textcolor{keywordtype}{bool} new\_state);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{bool} is\_next\_step\_requested();}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} set\_poll\_sensors\_flag(\textcolor{keywordtype}{bool} new\_state);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{bool} is\_poll\_sensors\_requested();}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} set\_alarm\_flag(\textcolor{keywordtype}{bool} new\_state);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{bool} is\_alarm\_requested();}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} request\_alarm(ALARM\_TYPES type\_of\_alarm);}
+\DoxyCodeLine{57     \textcolor{comment}{// void trigger\_buzzer\_alarm();}}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} request\_warning(ALARM\_TYPES type\_of\_warning);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} set\_warning\_flag(\textcolor{keywordtype}{bool} new\_state);}
+\DoxyCodeLine{60     \textcolor{keywordtype}{bool} is\_warning\_requested();}
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_control__system_ab3a3e36bda029f2a5d0c4ffdf8ff984c}{transition\_state}}();}
+\DoxyCodeLine{62     \mbox{\hyperlink{struct_context__t}{Context\_t}} get\_context() \{ \textcolor{keywordflow}{return} this-\/>context; \};}
+\DoxyCodeLine{63     \mbox{\hyperlink{class_control__system}{\string~Control\_system}}();}
+\DoxyCodeLine{64     \textcolor{keywordtype}{bool} is\_next\_step\_overriden() \{ \textcolor{keywordflow}{return} this-\/>context.override\_next\_step; \};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{keyword}{private}:}
+\DoxyCodeLine{67     \mbox{\hyperlink{struct_context__t}{Context\_t}} context;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \mbox{\hyperlink{class_display}{Display}} display;}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \mbox{\hyperlink{class_temperature__sensor}{Temperature\_sensor}} temp\_sensor;}
+\DoxyCodeLine{72     \mbox{\hyperlink{class_buzzer}{Buzzer}} buzzer;}
+\DoxyCodeLine{73     \mbox{\hyperlink{class_motor}{Motor}} motor;}
+\DoxyCodeLine{74     \mbox{\hyperlink{class_moisture__sensor}{Moisture\_sensor}} mois\_sensor;}
+\DoxyCodeLine{75     \textcolor{comment}{// Dual\_LED water\_status\_led;}}
+\DoxyCodeLine{76     \mbox{\hyperlink{class_dual___l_e_d}{Dual\_LED}} motor\_status\_led;}
+\DoxyCodeLine{77 \};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,11 @@
+<map id="include/System_observer.h" name="include/System_observer.h">
+<area shape="rect" id="node1" title=" " coords="357,5,536,31"/>
+<area shape="rect" id="node2" href="$_control__system_8h_source.html" title=" " coords="239,79,409,104"/>
+<area shape="rect" id="node6" href="$_instruction__observer_8h.html" title=" " coords="362,152,489,192"/>
+<area shape="rect" id="node8" href="$_moisture__observer_8h_source.html" title=" " coords="513,159,695,185"/>
+<area shape="rect" id="node9" href="$_temperature__observer_8h.html" title=" " coords="720,152,859,192"/>
+<area shape="rect" id="node3" href="$_idle__state_8h.html" title=" " coords="77,159,211,185"/>
+<area shape="rect" id="node4" href="$_motor__control__state_8h_source.html" title=" " coords="5,240,152,280"/>
+<area shape="rect" id="node5" href="$_shutdown__state_8h_source.html" title=" " coords="176,247,347,273"/>
+<area shape="rect" id="node7" href="$main_8h_source.html" title=" " coords="461,247,568,273"/>
+</map>
