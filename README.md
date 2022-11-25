@@ -5,7 +5,7 @@
 
 [![LSA](https://es.expensereduction.com/wp-content/uploads/2018/02/logo-placeholder.png)](https://www.fi.uba.ar/investigacion/areas-de-investigacion/materiales-y-nanotecnologia/laboratorio-de-solidos-amorfos)
 
-LAL Control es un sistema para el control del procedimiento para operar el láser de ablación pulsada del laboratorio de Sólidos amorfos de la facultad de ingeniería de la UBA. Esta versión del sistema se encuentra desarrollada en el entorno Arduino para ser implementada en una placa Atmega328p o equivalentes.
+LAL Control es un sistema para el control del procedimiento para operar el láser de ablación pulsada del laboratorio de Sólidos amorfos de la facultad de ingeniería de la UBA. Esta versión del sistema se encuentra desarrollada en el entorno Arduino para ser implementada en una placa basada en el microcontrolador Atmega328p o equivalentes.
 
 ## Características del sistema
 
