@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_abstract__state.html" title="Clase base para implementar los estados de Control_system. Cada estado se debe ocupar de su comportam..." coords="5,55,112,80"/>
-<area shape="rect" id="node2" href="$class_idle__state.html" title="Clase para implementar el estado de reposo del sistema (Sin alarmas ni advertencias,..." coords="189,5,268,31"/>
-<area shape="rect" id="node3" href="$class_motor__control__state.html" title=" " coords="160,55,297,80"/>
-<area shape="rect" id="node4" href="$class_shutdown__state.html" title=" " coords="171,104,286,129"/>
-</map>

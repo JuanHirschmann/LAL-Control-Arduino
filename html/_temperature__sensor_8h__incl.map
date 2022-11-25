@@ -1,6 +1,0 @@
-<map id="include/Temperature_sensor.h" name="include/Temperature_sensor.h">
-<area shape="rect" id="node1" title="Módulo de gestión de sensores de temperatura por interfaz OneWire." coords="131,5,270,45"/>
-<area shape="rect" id="node2" href="$system__settings_8h.html" title="Archivo para la definición de constantes del sistema." coords="5,93,135,119"/>
-<area shape="rect" id="node3" title=" " coords="159,93,243,119"/>
-<area shape="rect" id="node4" title=" " coords="267,93,409,119"/>
-</map>
