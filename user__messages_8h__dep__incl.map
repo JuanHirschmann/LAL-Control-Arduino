@@ -1,0 +1,13 @@
+<map id="include/user_messages.h" name="include/user_messages.h">
+<area shape="rect" id="node1" title="Archivo para la configuración de interfaz con el usuario." coords="403,5,573,31"/>
+<area shape="rect" id="node2" href="$_control__system_8h_source.html" title=" " coords="403,152,573,177"/>
+<area shape="rect" id="node11" href="$utils_8h_source.html" title=" " coords="482,79,585,104"/>
+<area shape="rect" id="node3" href="$_idle__state_8h.html" title=" " coords="155,225,290,251"/>
+<area shape="rect" id="node4" href="$_motor__control__state_8h_source.html" title=" " coords="5,299,152,339"/>
+<area shape="rect" id="node5" href="$_shutdown__state_8h_source.html" title=" " coords="176,306,347,331"/>
+<area shape="rect" id="node6" href="$_instruction__observer_8h.html" title=" " coords="742,299,869,339"/>
+<area shape="rect" id="node7" href="$main_8h_source.html" title=" " coords="673,387,780,412"/>
+<area shape="rect" id="node8" href="$_moisture__observer_8h_source.html" title=" " coords="371,306,554,331"/>
+<area shape="rect" id="node9" href="$_system__observer_8h.html" title=" " coords="551,225,729,251"/>
+<area shape="rect" id="node10" href="$_temperature__observer_8h.html" title=" " coords="579,299,717,339"/>
+</map>
