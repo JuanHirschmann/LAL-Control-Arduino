@@ -1,9 +1,10 @@
+![image](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)![image](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
 # LAL Control
+<a href="https://www.fi.uba.ar/"><img src="https://confedi.org.ar/wp-content/uploads/2020/09/fiuba_logo.jpg" width="600" height="173" align="center">
+</a>
+<a href="https://www.fi.uba.ar/investigacion/areas-de-investigacion/materiales-y-nanotecnologia/laboratorio-de-solidos-amorfos"><img src="https://es.expensereduction.com/wp-content/uploads/2018/02/logo-placeholder.png"  width="600" height="173" align="center">
+</a>
 ## Sistema de control de procedimiento y monitoreo para un láser de ablación pulsada.
-
-[![FIUBA](https://campus.fi.uba.ar/pluginfile.php/263695/course/section/26610/banner-fiuba.jpg)](https://www.fi.uba.ar/)
-
-[![LSA](https://es.expensereduction.com/wp-content/uploads/2018/02/logo-placeholder.png)](https://www.fi.uba.ar/investigacion/areas-de-investigacion/materiales-y-nanotecnologia/laboratorio-de-solidos-amorfos)
 
 LAL Control es un sistema para el control del procedimiento para operar el láser de ablación pulsada del laboratorio de Sólidos amorfos de la facultad de ingeniería de la UBA. Esta versión del sistema se encuentra desarrollada en el entorno Arduino para ser implementada en una placa basada en el microcontrolador Atmega328p o equivalentes.
 
@@ -20,4 +21,3 @@ Para ser cargado en la placa de desarrollo el sistema requiere utilizar el plugi
 ## Licencia
 
 MIT
-
