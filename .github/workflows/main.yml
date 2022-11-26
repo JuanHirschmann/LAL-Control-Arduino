@@ -30,7 +30,7 @@ jobs:
       with:
           # Path to Doxyfile
           additional-packages: font-fira-code
-          doxyfile-path: 'docs/Doxygen' # default is ./Doxyfile
+          doxyfile-path: 'docs/' # default is ./Doxyfile
           # Working directory
           working-directory: "." # default is .
     
