@@ -27,8 +27,6 @@ jobs:
         
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.9.4
-      with:
-        additional-packages: font-fira-code
         # Path to Doxyfile
         doxyfile-path: "./Doxyfile" # default is ./Doxyfile
         # Working directory
