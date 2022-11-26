@@ -1,0 +1,23 @@
+\hypertarget{_shutdown__state_8h_source}{}\doxysection{Shutdown\+\_\+state.\+h}
+\label{_shutdown__state_8h_source}\index{include/Shutdown\_state.h@{include/Shutdown\_state.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SHUTDOWN\_STATE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SHUTDOWN\_STATE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Control\_system.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_abstract__state_8h}{Abstract\_state.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_idle__state_8h}{Idle\_state.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_shutdown__state}{Shutdown\_state}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_abstract__state}{Abstract\_state}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{private}:}
+\DoxyCodeLine{9     \textcolor{keywordtype}{bool} alarm\_override = \textcolor{keyword}{false};}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shutdown__state_a4cf5de974875a59527b14b4ca2c90855}{update}}(\mbox{\hyperlink{class_control__system}{Control\_system}} *machine);}
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shutdown__state_ad4e70c7ba007977fd0a1f30d8bc13766}{enter}}(\mbox{\hyperlink{class_control__system}{Control\_system}} *machine);}
+\DoxyCodeLine{14     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shutdown__state_a75110a3a71ad653a0fbd1dff2cd53e90}{exit}}(\mbox{\hyperlink{class_control__system}{Control\_system}} *machine);}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_abstract__state}{Abstract\_state}} *\mbox{\hyperlink{class_shutdown__state_a5867c2324e8f29a66f0e701592af0734}{transition}}(\mbox{\hyperlink{class_control__system}{Control\_system}} *machine);}
+\DoxyCodeLine{16 \};}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
