@@ -1,12 +1,13 @@
-<map id="include/Dual_LED.h" name="include/Dual_LED.h">
-<area shape="rect" id="node1" title=" " coords="420,5,556,31"/>
-<area shape="rect" id="node2" href="$_control__system_8h_source.html" title=" " coords="403,79,573,104"/>
-<area shape="rect" id="node3" href="$_idle__state_8h.html" title=" " coords="155,152,290,177"/>
-<area shape="rect" id="node4" href="$_motor__control__state_8h_source.html" title=" " coords="5,225,152,265"/>
-<area shape="rect" id="node5" href="$_shutdown__state_8h_source.html" title=" " coords="176,233,347,258"/>
-<area shape="rect" id="node6" href="$_instruction__observer_8h.html" title=" " coords="742,225,869,265"/>
-<area shape="rect" id="node7" href="$main_8h_source.html" title=" " coords="673,313,780,339"/>
-<area shape="rect" id="node8" href="$_moisture__observer_8h_source.html" title=" " coords="371,233,554,258"/>
-<area shape="rect" id="node9" href="$_system__observer_8h.html" title=" " coords="551,152,729,177"/>
-<area shape="rect" id="node10" href="$_temperature__observer_8h.html" title=" " coords="579,225,717,265"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Dual_LED.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Dual_LED.h">
+<area shape="rect" id="node1" title=" " coords="496,5,695,75"/>
+<area shape="rect" id="node2" href="$_control__system_8h_source.html" title=" " coords="496,123,695,192"/>
+<area shape="rect" id="node3" href="$_idle__state_8h.html" title=" " coords="207,240,405,309"/>
+<area shape="rect" id="node4" href="$_motor__control__state_8h_source.html" title=" " coords="5,357,204,427"/>
+<area shape="rect" id="node5" href="$_shutdown__state_8h_source.html" title=" " coords="228,357,427,427"/>
+<area shape="rect" id="node6" href="$_instruction__observer_8h.html" title=" " coords="451,357,649,427"/>
+<area shape="rect" id="node7" href="$main_8h_source.html" title=" " coords="683,482,924,537"/>
+<area shape="rect" id="node9" href="$_moisture__observer_8h_source.html" title=" " coords="725,357,924,427"/>
+<area shape="rect" id="node10" href="$_system__observer_8h.html" title=" " coords="701,240,900,309"/>
+<area shape="rect" id="node11" href="$_temperature__observer_8h.html" title=" " coords="948,357,1147,427"/>
+<area shape="rect" id="node8" href="$_instruction__observer_8cpp.html" title=" " coords="463,475,637,544"/>
 </map>

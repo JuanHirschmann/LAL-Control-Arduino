@@ -1,13 +1,15 @@
-<map id="include/display_settings.h" name="include/display_settings.h">
-<area shape="rect" id="node1" title="Archivo de configuración de la pantalla." coords="402,5,574,31"/>
-<area shape="rect" id="node2" href="$_display_8h.html" title=" " coords="427,79,549,104"/>
-<area shape="rect" id="node3" href="$_control__system_8h_source.html" title=" " coords="403,152,573,177"/>
-<area shape="rect" id="node4" href="$_idle__state_8h.html" title=" " coords="155,225,290,251"/>
-<area shape="rect" id="node5" href="$_motor__control__state_8h_source.html" title=" " coords="5,299,152,339"/>
-<area shape="rect" id="node6" href="$_shutdown__state_8h_source.html" title=" " coords="176,306,347,331"/>
-<area shape="rect" id="node7" href="$_instruction__observer_8h.html" title=" " coords="742,299,869,339"/>
-<area shape="rect" id="node8" href="$main_8h_source.html" title=" " coords="673,387,780,412"/>
-<area shape="rect" id="node9" href="$_moisture__observer_8h_source.html" title=" " coords="371,306,554,331"/>
-<area shape="rect" id="node10" href="$_system__observer_8h.html" title=" " coords="551,225,729,251"/>
-<area shape="rect" id="node11" href="$_temperature__observer_8h.html" title=" " coords="579,299,717,339"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/display_settings.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/display_settings.h">
+<area shape="rect" id="node1" title="Archivo de configuración de la pantalla." coords="601,5,800,75"/>
+<area shape="rect" id="node2" href="$_display_8h.html" title=" " coords="601,123,800,192"/>
+<area shape="rect" id="node3" href="$_control__system_8h_source.html" title=" " coords="496,240,695,309"/>
+<area shape="rect" id="node13" href="$_display_8cpp.html" title=" " coords="719,240,893,309"/>
+<area shape="rect" id="node4" href="$_idle__state_8h.html" title=" " coords="207,357,405,427"/>
+<area shape="rect" id="node5" href="$_motor__control__state_8h_source.html" title=" " coords="5,475,204,544"/>
+<area shape="rect" id="node6" href="$_shutdown__state_8h_source.html" title=" " coords="228,475,427,544"/>
+<area shape="rect" id="node7" href="$_instruction__observer_8h.html" title=" " coords="451,475,649,544"/>
+<area shape="rect" id="node8" href="$main_8h_source.html" title=" " coords="683,599,924,654"/>
+<area shape="rect" id="node10" href="$_moisture__observer_8h_source.html" title=" " coords="725,475,924,544"/>
+<area shape="rect" id="node11" href="$_system__observer_8h.html" title=" " coords="701,357,900,427"/>
+<area shape="rect" id="node12" href="$_temperature__observer_8h.html" title=" " coords="948,475,1147,544"/>
+<area shape="rect" id="node9" href="$_instruction__observer_8cpp.html" title=" " coords="463,592,637,661"/>
 </map>
