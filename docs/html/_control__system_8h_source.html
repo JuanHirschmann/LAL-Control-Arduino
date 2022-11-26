@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LAL_control: include/Control_system.h Source File</title>
+<title>LAL_control: C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Control_system.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -122,7 +122,7 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> print(<span class="keyword">const</span> <span class="keywordtype">char</span> *string_out);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> init_display();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="class_control__system.html">Control_system</a>(<span class="comment">/* args */</span>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_control__system.html#ab7912068a11d44b07eef3b3f56ce0598">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_control__system.html#ab7912068a11d44b07eef3b3f56ce0598">notify_observers</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_control__system.html#ab7912068a11d44b07eef3b3f56ce0598">notify_observers</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">float</span> measure_temperature();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> measure_moisture();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> set_next_step_flag(<span class="keywordtype">bool</span> new_state);</div>
@@ -136,7 +136,7 @@ $(function() {
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> request_warning(ALARM_TYPES type_of_warning);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> set_warning_flag(<span class="keywordtype">bool</span> new_state);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> is_warning_requested();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_control__system.html#ab3a3e36bda029f2a5d0c4ffdf8ff984c">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_control__system.html#ab3a3e36bda029f2a5d0c4ffdf8ff984c">transition_state</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_control__system.html#ab3a3e36bda029f2a5d0c4ffdf8ff984c">transition_state</a>();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_struct" href="struct_context__t.html">Context_t</a> get_context() { <span class="keywordflow">return</span> this-&gt;context; };</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="class_control__system.html">~Control_system</a>();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">bool</span> is_next_step_overriden() { <span class="keywordflow">return</span> this-&gt;context.override_next_step; };</div>
@@ -165,8 +165,8 @@ $(function() {
 <div class="ttc" id="a_temperature__sensor_8h_html"><div class="ttname"><a href="_temperature__sensor_8h.html">Temperature_sensor.h</a></div><div class="ttdoc">Módulo de gestión de sensores de temperatura por interfaz OneWire.</div></div>
 <div class="ttc" id="aclass_buzzer_html"><div class="ttname"><a href="class_buzzer.html">Buzzer</a></div><div class="ttdoc">Clase para el manejo del buzzer por PWM manual, no utiliza pines PWM de Arduino. Sólo admite pines di...</div><div class="ttdef"><b>Definition:</b> Buzzer.h:22</div></div>
 <div class="ttc" id="aclass_control__system_html"><div class="ttname"><a href="class_control__system.html">Control_system</a></div><div class="ttdef"><b>Definition:</b> Control_system.h:17</div></div>
-<div class="ttc" id="aclass_control__system_html_ab3a3e36bda029f2a5d0c4ffdf8ff984c"><div class="ttname"><a href="class_control__system.html#ab3a3e36bda029f2a5d0c4ffdf8ff984c">Control_system::transition_state</a></div><div class="ttdeci">void transition_state()</div><div class="ttdoc">Método virtual para llamar al método de transición del estado actual.</div></div>
-<div class="ttc" id="aclass_control__system_html_ab7912068a11d44b07eef3b3f56ce0598"><div class="ttname"><a href="class_control__system.html#ab7912068a11d44b07eef3b3f56ce0598">Control_system::notify_observers</a></div><div class="ttdeci">void notify_observers() override</div><div class="ttdoc">Método virtual puro para que las clases herederas implementen la actualización de observadores.</div></div>
+<div class="ttc" id="aclass_control__system_html_ab3a3e36bda029f2a5d0c4ffdf8ff984c"><div class="ttname"><a href="class_control__system.html#ab3a3e36bda029f2a5d0c4ffdf8ff984c">Control_system::transition_state</a></div><div class="ttdeci">void transition_state()</div><div class="ttdoc">Método virtual para llamar al método de transición del estado actual.</div><div class="ttdef"><b>Definition:</b> Control_system.cpp:117</div></div>
+<div class="ttc" id="aclass_control__system_html_ab7912068a11d44b07eef3b3f56ce0598"><div class="ttname"><a href="class_control__system.html#ab7912068a11d44b07eef3b3f56ce0598">Control_system::notify_observers</a></div><div class="ttdeci">void notify_observers() override</div><div class="ttdoc">Método virtual puro para que las clases herederas implementen la actualización de observadores.</div><div class="ttdef"><b>Definition:</b> Control_system.cpp:46</div></div>
 <div class="ttc" id="aclass_display_html"><div class="ttname"><a href="class_display.html">Display</a></div><div class="ttdoc">Clase Display, internamente utiliza la clase hd44780ioClass para resolver la interfaz i2c con el moni...</div><div class="ttdef"><b>Definition:</b> Display.h:23</div></div>
 <div class="ttc" id="aclass_dual___l_e_d_html"><div class="ttname"><a href="class_dual___l_e_d.html">Dual_LED</a></div><div class="ttdoc">Clase para el manejo de un indicador LED RG.</div><div class="ttdef"><b>Definition:</b> Dual_LED.h:21</div></div>
 <div class="ttc" id="aclass_idle__state_html"><div class="ttname"><a href="class_idle__state.html">Idle_state</a></div><div class="ttdoc">Clase para implementar el estado de reposo del sistema (Sin alarmas ni advertencias,...</div><div class="ttdef"><b>Definition:</b> Idle_state.h:22</div></div>

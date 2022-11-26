@@ -1,0 +1,7 @@
+<map id="Idle_state::enter" name="Idle_state::enter">
+<area shape="rect" id="node1" title="Método llamado al ingresar al estado. Actualiza la pantalla con el paso del procedimiento actual." coords="5,31,120,56"/>
+<area shape="rect" id="node2" href="$class_display.html#a87d1e7bf73a1d14b5e76c9ab647a9e93" title="Fija el el texto a actualizar, no lo imprime en pantalla. La ubicación se da con las constantes de of..." coords="183,5,303,31"/>
+<area shape="rect" id="node3" href="$class_dual___l_e_d.html#ab1cd238e00901ca9556914a38d3a064c" title="Enciende el LED en verde." coords="168,55,317,80"/>
+<area shape="rect" id="node4" href="$class_dual___l_e_d.html#aeb163748acf071a1652c56ae1dff9d52" title="Fija el color del led, no enciende el led,." coords="365,29,507,55"/>
+<area shape="rect" id="node5" href="$class_dual___l_e_d.html#a8b13294b883897eb83f91bf90a3a11cd" title="Enciende el LED en el color actual." coords="371,79,501,104"/>
+</map>

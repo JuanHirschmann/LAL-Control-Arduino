@@ -1,0 +1,4 @@
+<map id="Dual_LED::turn_red" name="Dual_LED::turn_red">
+<area shape="rect" id="node1" title="Enciende el LED en rojo." coords="191,13,325,38"/>
+<area shape="rect" id="node2" href="$class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" title="Método para actualizar el estado." coords="5,5,143,45"/>
+</map>

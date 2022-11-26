@@ -30,13 +30,13 @@ Collaboration diagram for Idle\+\_\+state\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{class_idle__state_a9141b4c6865abd6518a2af5bb3d86a82}{update}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
+virtual void \mbox{\hyperlink{class_idle__state_a92217c98eda8e3bd47eb3a8ff602efc2}{update}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
 \begin{DoxyCompactList}\small\item\em Método para actualizar el sistema cuando está en estado de reposo. Actualiza la pantalla y los observadores. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_idle__state_a815ceb353614a672ed37afa3f6ac6250}{enter}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
+virtual void \mbox{\hyperlink{class_idle__state_ad6d70e591dd39da724656a4261013e4f}{enter}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
 \begin{DoxyCompactList}\small\item\em Método llamado al ingresar al estado. Actualiza la pantalla con el paso del procedimiento actual. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_idle__state_a9c7f464ccfcb8339759b2e2b0e2808f3}{exit}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
+virtual void \mbox{\hyperlink{class_idle__state_aad83cf5a4d37cbb4b45b64dd6d632c53}{exit}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
 \begin{DoxyCompactList}\small\item\em Método llamada al salir del estado. Apaga los led indicadores y el buzzer. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{class_abstract__state}{Abstract\+\_\+state}} $\ast$ \mbox{\hyperlink{class_idle__state_af6d2d88fb49ebea48f1a30132feb5270}{transition}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
+virtual \mbox{\hyperlink{class_abstract__state}{Abstract\+\_\+state}} $\ast$ \mbox{\hyperlink{class_idle__state_a422b51d100fee2411f6ea972b13cc2e8}{transition}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
 \begin{DoxyCompactList}\small\item\em Transición hacia nuevo estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -46,11 +46,11 @@ Clase para implementar el estado de reposo del sistema (Sin alarmas ni advertenc
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_idle__state_a815ceb353614a672ed37afa3f6ac6250}\label{class_idle__state_a815ceb353614a672ed37afa3f6ac6250}} 
+\mbox{\Hypertarget{class_idle__state_ad6d70e591dd39da724656a4261013e4f}\label{class_idle__state_ad6d70e591dd39da724656a4261013e4f}} 
 \index{Idle\_state@{Idle\_state}!enter@{enter}}
 \index{enter@{enter}!Idle\_state@{Idle\_state}}
 \doxysubsubsection{\texorpdfstring{enter()}{enter()}}
-{\footnotesize\ttfamily virtual void Idle\+\_\+state\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Idle\+\_\+state\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -65,11 +65,19 @@ Método llamado al ingresar al estado. Actualiza la pantalla con el paso del pro
 
 Implements \mbox{\hyperlink{class_abstract__state_a1c001b0cb46c11126cb9ff77f8ad3016}{Abstract\+\_\+state}}.
 
-\mbox{\Hypertarget{class_idle__state_a9c7f464ccfcb8339759b2e2b0e2808f3}\label{class_idle__state_a9c7f464ccfcb8339759b2e2b0e2808f3}} 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_idle__state_ad6d70e591dd39da724656a4261013e4f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_idle__state_aad83cf5a4d37cbb4b45b64dd6d632c53}\label{class_idle__state_aad83cf5a4d37cbb4b45b64dd6d632c53}} 
 \index{Idle\_state@{Idle\_state}!exit@{exit}}
 \index{exit@{exit}!Idle\_state@{Idle\_state}}
 \doxysubsubsection{\texorpdfstring{exit()}{exit()}}
-{\footnotesize\ttfamily virtual void Idle\+\_\+state\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Idle\+\_\+state\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -84,11 +92,27 @@ Método llamada al salir del estado. Apaga los led indicadores y el buzzer.
 
 Implements \mbox{\hyperlink{class_abstract__state_ae91c3148b1f2337e1f9465bc27f7ef63}{Abstract\+\_\+state}}.
 
-\mbox{\Hypertarget{class_idle__state_af6d2d88fb49ebea48f1a30132feb5270}\label{class_idle__state_af6d2d88fb49ebea48f1a30132feb5270}} 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_idle__state_aad83cf5a4d37cbb4b45b64dd6d632c53_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_idle__state_aad83cf5a4d37cbb4b45b64dd6d632c53_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_idle__state_a422b51d100fee2411f6ea972b13cc2e8}\label{class_idle__state_a422b51d100fee2411f6ea972b13cc2e8}} 
 \index{Idle\_state@{Idle\_state}!transition@{transition}}
 \index{transition@{transition}!Idle\_state@{Idle\_state}}
 \doxysubsubsection{\texorpdfstring{transition()}{transition()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_abstract__state}{Abstract\+\_\+state}} $\ast$ Idle\+\_\+state\+::transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_abstract__state}{Abstract\+\_\+state}} $\ast$ Idle\+\_\+state\+::transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -106,11 +130,19 @@ Abstract\+\_\+state$\ast$ Nuevo estado
 
 Implements \mbox{\hyperlink{class_abstract__state_a130d61765e2fcdf3bb0500943221efbe}{Abstract\+\_\+state}}.
 
-\mbox{\Hypertarget{class_idle__state_a9141b4c6865abd6518a2af5bb3d86a82}\label{class_idle__state_a9141b4c6865abd6518a2af5bb3d86a82}} 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_idle__state_a422b51d100fee2411f6ea972b13cc2e8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_idle__state_a92217c98eda8e3bd47eb3a8ff602efc2}\label{class_idle__state_a92217c98eda8e3bd47eb3a8ff602efc2}} 
 \index{Idle\_state@{Idle\_state}!update@{update}}
 \index{update@{update}!Idle\_state@{Idle\_state}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily virtual void Idle\+\_\+state\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Idle\+\_\+state\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -125,8 +157,17 @@ Método para actualizar el sistema cuando está en estado de reposo. Actualiza l
 
 Implements \mbox{\hyperlink{class_abstract__state_a993232854cd166a601b6c5b4ba7befcc}{Abstract\+\_\+state}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_idle__state_a92217c98eda8e3bd47eb3a8ff602efc2_cgraph}
+\end{center}
+\end{figure}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{_idle__state_8h}{Idle\+\_\+state.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL\+\_\+\+Control/include/\mbox{\hyperlink{_idle__state_8h}{Idle\+\_\+state.\+h}}\item 
+C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL\+\_\+\+Control/src/Idle\+\_\+state.\+cpp\end{DoxyCompactItemize}

@@ -5,6 +5,6 @@ var searchData=
   ['set_5ffrequency_2',['set_frequency',['../class_buzzer.html#a867957295569b6b67cd8266288f68fe7',1,'Buzzer']]],
   ['set_5ftemp_3',['set_temp',['../class_display.html#abe8e63e4def12a48cde5679ce008f402',1,'Display']]],
   ['set_5ftext_4',['set_text',['../class_display.html#a87d1e7bf73a1d14b5e76c9ab647a9e93',1,'Display']]],
-  ['setup_5fint0_5finterrupt_5',['setup_int0_interrupt',['../interrupts_8h.html#a7151cd85a371816bdc91bbf05ae1825f',1,'interrupts.h']]],
-  ['setup_5ftimer1_5finterrupt_6',['setup_timer1_interrupt',['../interrupts_8h.html#a7677b0aead77a2f0b17f45fca7f6b0c5',1,'interrupts.h']]]
+  ['setup_5fint0_5finterrupt_5',['setup_int0_interrupt',['../interrupts_8h.html#a7151cd85a371816bdc91bbf05ae1825f',1,'interrupts.cpp']]],
+  ['setup_5ftimer1_5finterrupt_6',['setup_timer1_interrupt',['../interrupts_8h.html#a7677b0aead77a2f0b17f45fca7f6b0c5',1,'interrupts.cpp']]]
 ];

@@ -1,0 +1,6 @@
+<map id="Dual_LED::turn_green" name="Dual_LED::turn_green">
+<area shape="rect" id="node1" title="Enciende el LED en verde." coords="191,63,340,88"/>
+<area shape="rect" id="node2" href="$class_idle__state.html#ad6d70e591dd39da724656a4261013e4f" title="Método llamado al ingresar al estado. Actualiza la pantalla con el paso del procedimiento actual." coords="17,5,131,31"/>
+<area shape="rect" id="node3" href="$class_motor__control__state.html#af0415304cf9bd1ac5c8de677c6156793" title="Método que se llama al ingresar al estado." coords="5,55,143,95"/>
+<area shape="rect" id="node4" href="$class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" title="Método para actualizar el estado." coords="5,119,143,159"/>
+</map>
