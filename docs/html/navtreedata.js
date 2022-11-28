@@ -29,7 +29,7 @@ var NAVTREE =
       [ "Sistema de control de procedimiento y monitoreo para un láser de ablación pulsada.", "index.html#autotoc_md1", null ],
       [ "Características del sistema", "index.html#autotoc_md2", null ],
       [ "Instalación", "index.html#autotoc_md3", null ],
-      [ "Documentación de código", "index.html#autotoc_md4", null ],
+      [ "Documentación", "index.html#autotoc_md4", null ],
       [ "Licencia", "index.html#autotoc_md5", null ]
     ] ],
     [ "Classes", "annotated.html", [

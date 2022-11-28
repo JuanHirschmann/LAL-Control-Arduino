@@ -1,0 +1,14 @@
+html {
+    /* primary theme color. This will affect the entire websites color scheme: links, arrows, labels, ... */
+    --primary-color: #1779c4;
+    --primary-dark-color: #335c80;
+    --primary-light-color: #ff0000;
+
+    /* page base colors */
+    --page-background-color: #ffffff;
+    --page-foreground-color: #2f4153;
+    --page-secondary-foreground-color: #6f7e8e;
+
+    /* color for all separators on the website: hr, borders, ... */
+    --separator-color: #dedede;
+}
