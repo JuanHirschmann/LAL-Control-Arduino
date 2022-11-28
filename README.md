@@ -2,7 +2,7 @@
 <a href="https://www.fi.uba.ar/investigacion/areas-de-investigacion/materiales-y-nanotecnologia/laboratorio-de-solidos-amorfos"><img src="https://confedi.org.ar/wp-content/uploads/2020/09/fiuba_logo.jpg" width="600" height="173" align="center">
 </a>
 # LAL Control
-####Laboratorio de sólidos amorfos - FIUBA
+###Laboratorio de sólidos amorfos - FIUBA
 
 ## Sistema de control de procedimiento y monitoreo para un láser de ablación pulsada.
 
