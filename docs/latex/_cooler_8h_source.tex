@@ -1,0 +1,76 @@
+\hypertarget{_cooler_8h_source}{}\doxysection{Cooler.\+h}
+\label{_cooler_8h_source}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL\_Control/include/drivers/Cooler.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL\_Control/include/drivers/Cooler.h}}
+\mbox{\hyperlink{_cooler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Arduino.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{system__settings_8h}{system\_settings.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_cooler}{Cooler}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_cooler}{Cooler}}(\textcolor{keywordtype}{int} power\_pin, \textcolor{keywordtype}{int} speed\_measurement\_pin)}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18         this-\/>power\_pin = power\_pin;}
+\DoxyCodeLine{19         this-\/>speed\_measurement\_pint = speed\_measurement\_pin;}
+\DoxyCodeLine{20         pinMode(power\_pin, OUTPUT);}
+\DoxyCodeLine{21         pinMode(speed\_measurement\_pin, INPUT\_PULLUP);}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} turn\_on(\textcolor{keywordtype}{float} duty\_cycle = 1.0)}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{if} (duty\_cycle < FAN\_MINIMUM\_DUTY\_CYCLE) \textcolor{comment}{//}}
+\DoxyCodeLine{26         \{}
+\DoxyCodeLine{27             Serial.println(\textcolor{stringliteral}{"{}Te apague"{}});}
+\DoxyCodeLine{28             this-\/>turn\_off();}
+\DoxyCodeLine{29         \}}
+\DoxyCodeLine{30         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{31         \{}
+\DoxyCodeLine{32             \textcolor{keywordflow}{if} (!this-\/>is\_on \&\& duty\_cycle < FAN\_AUTONOMOUS\_DUTY\_CYCLE)}
+\DoxyCodeLine{33             \{}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35                 Serial.println(\textcolor{stringliteral}{"{}Te ayudé"{}});}
+\DoxyCodeLine{36                 this-\/>turn\_on(1.0); \textcolor{comment}{// Necesita inercia}}
+\DoxyCodeLine{37                 delay(DEFAULT\_DELAY);}
+\DoxyCodeLine{38             \}}
+\DoxyCodeLine{39             this-\/>is\_on = \textcolor{keyword}{true};}
+\DoxyCodeLine{40             this-\/>current\_duty\_cycle = duty\_cycle;}
+\DoxyCodeLine{41             analogWrite(this-\/>power\_pin, \textcolor{keywordtype}{int}(MAX\_ANALOG\_WRITE\_VALUE * this-\/>current\_duty\_cycle));}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} turn\_off()}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         this-\/>is\_on = \textcolor{keyword}{false};}
+\DoxyCodeLine{47         analogWrite(this-\/>power\_pin, 0);}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49     \textcolor{keywordtype}{float} get\_speed()}
+\DoxyCodeLine{50     \{}
+\DoxyCodeLine{51         \textcolor{keywordflow}{return} this-\/>current\_RPS;}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     \textcolor{keywordtype}{bool} rotation\_detected()}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         \textcolor{keywordflow}{return} digitalRead(this-\/>speed\_measurement\_pint);}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} count\_rotation()}
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{59         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} current\_millis\_call = millis();}
+\DoxyCodeLine{60         \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} prev\_millis\_call = current\_millis\_call;}
+\DoxyCodeLine{61         this-\/>rotations\_in\_sample\_period++;}
+\DoxyCodeLine{62         \textcolor{keywordflow}{if} (prev\_millis\_call != 0 \&\& current\_millis\_call -\/ prev\_millis\_call > FAN\_SPEED\_SAMPLE\_PERIOD)}
+\DoxyCodeLine{63         \{}
+\DoxyCodeLine{64             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} time\_diff = current\_millis\_call -\/ prev\_millis\_call;}
+\DoxyCodeLine{65             prev\_millis\_call = current\_millis\_call;}
+\DoxyCodeLine{66             this-\/>rotations\_in\_sample\_period /= 2;                                   \textcolor{comment}{// 2 estados altos por rotación.}}
+\DoxyCodeLine{67             this-\/>current\_RPS = float(this-\/>rotations\_in\_sample\_period) / time\_diff; \textcolor{comment}{// 6000/2}}
+\DoxyCodeLine{68             this-\/>rotations\_in\_sample\_period = 0;}
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{keyword}{private}:}
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} is\_on = \textcolor{keyword}{false};}
+\DoxyCodeLine{74     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} rotations\_in\_sample\_period = 0;}
+\DoxyCodeLine{75     \textcolor{keywordtype}{int} power\_pin;}
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} speed\_measurement\_pint;}
+\DoxyCodeLine{77     \textcolor{keywordtype}{float} current\_duty\_cycle = 0;}
+\DoxyCodeLine{78     \textcolor{keywordtype}{float} current\_RPS = 0;}
+\DoxyCodeLine{79 \};}
+
+\end{DoxyCode}

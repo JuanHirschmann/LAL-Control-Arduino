@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Método que se llama al salir del estado.">
+<g id="a_node1"><a xlink:title="Salida del estado, apaga LEDs y Buzzer.">
 <polygon fill="#999999" stroke="#666666" points="242,-30 139,-30 139,0 242,0 242,-30"/>
 <text text-anchor="start" x="147" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="190.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::exit</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb" target="_top" xlink:title="Método para cambiar de estado.">
+<g id="a_node2"><a xlink:href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb" target="_top" xlink:title="Transición de estados.">
 <polygon fill="white" stroke="#666666" points="103,-30 0,-30 0,0 103,0 103,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="51.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::transition</text>

@@ -1,3 +1,13 @@
+/**
+ * @file Subject_interface.h
+ * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
+ * @brief Clase para interfaz para implementar el sujeto.
+ * @version 0.1
+ * @date 2022-11-30
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
 #ifndef _SUBJECT_INTERFACE_H_
 #define _SUBJECT_INTERFACE_H_
 const int MAX_OBSERVERS = 10;

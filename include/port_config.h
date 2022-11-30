@@ -26,10 +26,10 @@ const int FAN_2_STATE_GREEN_LED = A2;
 const int FAN_1_STATE_RED_LED = A1;
 const int FAN_1_STATE_GREEN_LED = A0;
 
-const int FAN_1_CONTROL_PIN = 6; // Con PWM
-const int FAN_1_SPEED_MEAS_PIN = 8;
+const int REAR_COOLER_CONTROL_PIN = 6; // Con PWM
+const int REAR_COOLER_SPEED_MEAS_PIN = 8;
 
-const int FAN_2_CONTROL_PIN = 5; // Con PWM
-const int FAN_2_SPEED_MEAS_PIN = 9;
+const int FRONT_COOLER_CONTROL_PIN = 5; // Con PWM
+const int FRONT_COOLER_SPEED_MEAS_PIN = 9;
 
 #endif

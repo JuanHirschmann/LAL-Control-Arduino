@@ -1,7 +1,7 @@
 /**
  * @file Display.h
  * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
- * @brief
+ * @brief Controlador de LCD hd44780 por interfaz I2C
  * @version 0.1
  * @date 2022-11-23
  *

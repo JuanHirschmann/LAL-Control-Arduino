@@ -1,4 +1,4 @@
-<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Machine.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Machine.h">
-<area shape="rect" id="node1" title=" " coords="5,5,204,75"/>
-<area shape="rect" id="node2" href="$_abstract__state_8h.html" title=" " coords="45,123,164,148"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/machine_state_pattern/Machine.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/machine_state_pattern/Machine.h">
+<area shape="rect" id="node1" title="Clase de máquina abstracta." coords="5,5,228,75"/>
+<area shape="rect" id="node2" href="$_abstract__state_8h.html" title="Clase de estado abstracta." coords="31,123,202,177"/>
 </map>

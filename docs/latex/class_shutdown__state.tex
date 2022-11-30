@@ -22,13 +22,13 @@ Collaboration diagram for Shutdown\+\_\+state\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_shutdown__state_abcd870b0687903912a3df5151464236f}{update}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
-\begin{DoxyCompactList}\small\item\em Método para actualizar el estado. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Actualización de estado, no hace nada. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_shutdown__state_a2756e0a67cb9371a3c8d722b2a661efa}{enter}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
-\begin{DoxyCompactList}\small\item\em Método que se llama al ingresar al estado. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Entrada al estado, apaga los LEDS, la pantalla y apaga el motor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_shutdown__state_accbc4c856709e26453e2e23c5c1e4f8e}{exit}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
-\begin{DoxyCompactList}\small\item\em Método que se llama al salir del estado. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Salida del estado, resetea las variables del sistema e incializa la pantalla. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_abstract__state}{Abstract\+\_\+state}} $\ast$ \mbox{\hyperlink{class_shutdown__state_ae02b2fd80173aa50afcd73faba01b9be}{transition}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$machine)
-\begin{DoxyCompactList}\small\item\em Método para cambiar de estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Transicion de estados. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -40,18 +40,19 @@ virtual \mbox{\hyperlink{class_abstract__state}{Abstract\+\_\+state}} $\ast$ \mb
 
 
 
-Método que se llama al ingresar al estado. 
+Entrada al estado, apaga los LEDS, la pantalla y apaga el motor. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em machine} & máquina de estados. \\
+{\em machine} & \\
 \hline
 \end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{class_abstract__state_a1c001b0cb46c11126cb9ff77f8ad3016}{Abstract\+\_\+state}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -66,25 +67,19 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Método que se llama al salir del estado. 
+Salida del estado, resetea las variables del sistema e incializa la pantalla. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em machine} & máquina de estados. \\
+{\em machine} & \\
 \hline
 \end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{class_abstract__state_ae91c3148b1f2337e1f9465bc27f7ef63}{Abstract\+\_\+state}}.
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=322pt]{class_shutdown__state_accbc4c856709e26453e2e23c5c1e4f8e_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -99,21 +94,22 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Método para cambiar de estado. 
+Transicion de estados. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em machine} & máquina de estados. \\
+{\em machine} & Máquina de estados \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Abstract\+\_\+state$\ast$ Nuevo estado 
+Abstract\+\_\+state$\ast$ Transiciones posibles\+: La única transición posible es hacia \mbox{\hyperlink{class_idle__state}{Idle\+\_\+state}} cuando se haya bajado la solicitud de apagado (machine-\/\texorpdfstring{$>$}{>}context.\+shutdown\+\_\+request==false) 
 \end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{class_abstract__state_a130d61765e2fcdf3bb0500943221efbe}{Abstract\+\_\+state}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -128,11 +124,11 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Método para actualizar el estado. 
+Actualización de estado, no hace nada. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em machine} & máquina de estados. \\
+{\em machine} & Máquina de estados. \\
 \hline
 \end{DoxyParams}
 
@@ -143,5 +139,5 @@ Implements \mbox{\hyperlink{class_abstract__state_a993232854cd166a601b6c5b4ba7be
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL\+\_\+\+Control/include/Shutdown\+\_\+state.\+h\item 
-C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL\+\_\+\+Control/src/Shutdown\+\_\+state.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL\+\_\+\+Control/include/machine\+\_\+state\+\_\+pattern/machine\+\_\+states/\mbox{\hyperlink{_shutdown__state_8h}{Shutdown\+\_\+state.\+h}}\item 
+C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL\+\_\+\+Control/src/machine\+\_\+state\+\_\+pattern/Shutdown\+\_\+state.\+cpp\end{DoxyCompactItemize}

@@ -1,7 +1,7 @@
 /**
  * @file Idle_state.h
  * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
- * @brief
+ * @brief Clase de estado de reposo.
  * @version 0.1
  * @date 2022-11-23
  *

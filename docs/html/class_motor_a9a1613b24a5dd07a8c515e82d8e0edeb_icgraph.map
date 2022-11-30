@@ -1,5 +1,5 @@
 <map id="Motor::turn_off" name="Motor::turn_off">
 <area shape="rect" id="node1" title="Apaga el motor." coords="205,35,311,60"/>
-<area shape="rect" id="node2" href="$class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" title="Método que se llama al ingresar al estado." coords="5,5,157,31"/>
-<area shape="rect" id="node3" href="$class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" title="Método para actualizar el estado." coords="13,55,150,95"/>
+<area shape="rect" id="node2" href="$class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" title="Entrada al estado, apaga los LEDS, la pantalla y apaga el motor." coords="5,5,157,31"/>
+<area shape="rect" id="node3" href="$class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" title="Actualización, cambia el color del LED según el estado del motor y hace sonar la alarma...." coords="13,55,150,95"/>
 </map>

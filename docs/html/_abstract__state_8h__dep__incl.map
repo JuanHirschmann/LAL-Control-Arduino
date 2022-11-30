@@ -1,14 +1,14 @@
-<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Abstract_state.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Abstract_state.h">
-<area shape="rect" id="node1" title=" " coords="173,5,372,75"/>
-<area shape="rect" id="node2" href="$_idle__state_8h.html" title=" " coords="105,123,304,192"/>
-<area shape="rect" id="node3" href="$_motor__control__state_8h_source.html" title=" " coords="5,475,204,544"/>
-<area shape="rect" id="node4" href="$_shutdown__state_8h_source.html" title=" " coords="243,240,441,309"/>
-<area shape="rect" id="node12" href="$_machine_8h.html" title=" " coords="465,240,664,309"/>
-<area shape="rect" id="node5" href="$_control__system_8h_source.html" title=" " coords="243,357,441,427"/>
-<area shape="rect" id="node6" href="$_instruction__observer_8h.html" title=" " coords="23,592,221,661"/>
-<area shape="rect" id="node7" href="$main_8h_source.html" title=" " coords="340,717,581,771"/>
-<area shape="rect" id="node9" href="$_moisture__observer_8h_source.html" title=" " coords="468,592,667,661"/>
-<area shape="rect" id="node10" href="$_system__observer_8h.html" title=" " coords="331,475,529,544"/>
-<area shape="rect" id="node11" href="$_temperature__observer_8h.html" title=" " coords="245,592,444,661"/>
-<area shape="rect" id="node8" href="$_instruction__observer_8cpp.html" title=" " coords="35,709,209,779"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/machine_state_pattern/machine_states/Abstract_state.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/machine_state_pattern/machine_states/Abstract_state.h">
+<area shape="rect" id="node1" title="Clase de estado abstracta." coords="171,5,381,89"/>
+<area shape="rect" id="node2" href="$_machine_8h.html" title="Clase de máquina abstracta." coords="363,137,586,207"/>
+<area shape="rect" id="node4" href="$_idle__state_8h.html" title="Clase de estado de reposo." coords="64,372,275,456"/>
+<area shape="rect" id="node5" href="$_motor__control__state_8h.html" title="Clase de estado de control del motor." coords="5,504,216,588"/>
+<area shape="rect" id="node6" href="$_shutdown__state_8h.html" title="Clase de estado de apagado del sistema." coords="240,504,451,588"/>
+<area shape="rect" id="node3" href="$_control__system_8h_source.html" title=" " coords="389,255,587,324"/>
+<area shape="rect" id="node7" href="$main_8h.html" title="Archivo principal del programa." coords="609,651,850,705"/>
+<area shape="rect" id="node8" href="$_instruction__observer_8h.html" title="Observador de instrucciones." coords="971,504,1170,588"/>
+<area shape="rect" id="node10" href="$_moisture__observer_8h.html" title="Observador del sensor de temperatura." coords="526,504,725,588"/>
+<area shape="rect" id="node11" href="$_system__observer_8h.html" title="Clase observador del sistema de control." coords="627,372,826,456"/>
+<area shape="rect" id="node12" href="$_temperature__observer_8h.html" title="Observador del sensor de temperatura." coords="749,504,947,588"/>
+<area shape="rect" id="node9" href="$_instruction__observer_8cpp.html" title=" " coords="978,636,1163,720"/>
 </map>

@@ -1,7 +1,7 @@
 /**
  * @file Buzzer.h
  * @author Juan Hirschmann (jhirschmann@gmail.com)
- * @brief
+ * @brief Controlador de Buzzer de 12 milimetros.
  * @version 0.1
  * @date 2022-11-16
  *

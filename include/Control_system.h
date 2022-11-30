@@ -11,6 +11,8 @@
 #include "drivers/Buzzer.h"
 #include "drivers/Motor.h"
 #include "drivers/Dual_led.h"
+
+#include "drivers/Cooler.h"
 #include "machine_state_pattern/machine_states/Shutdown_state.h"
 class Control_system : public Subject, public Machine
 {
@@ -19,10 +21,42 @@ class Control_system : public Subject, public Machine
     friend class Shutdown_state;
 
 public:
+    void init();
+    void handle_alarm()
+    {
+        switch (this->context.current_alarm)
+        {
+        case OVERTEMP_ALARM:
+            this->context.shutdown_request = true;
+            this->show_error_msg();
+            break;
+
+        case HUMIDITY_ALARM:
+            this->context.shutdown_request = true;
+            this->show_error_msg();
+            break;
+        case HALTED_FAN_ALARM:
+            this->context.shutdown_request = true;
+            this->show_error_msg();
+            break;
+        case NO_TEMP_SENSOR_ALARM:
+            this->show_error_msg();
+            this->context.shutdown_request = true;
+        case OVERTEMP_WARNING:
+            break;
+        case SLOW_FAN_WARNING:
+            break;
+        case NO_ALARM:
+            break;
+        default:
+            this->display.set_text("No se reconoció el error");
+            break;
+        }
+    }
     void update();
     void wake()
     {
-        this->context.wake_request = true;
+        this->context.shutdown_request = false;
     };
     bool is_off()
     {
@@ -35,9 +69,28 @@ public:
         this->context.current_step = 0;
         this->context.current_alarm = NO_ALARM;
         this->context.override_next_step = false;
-        this->context.shutdown_request = true;
-        this->context.wake_request = false;
+        this->context.shutdown_request = false;
         this->context.warning_request = false;
+        this->context.next_step_request = false;
+    }
+    void count_cooler_rotation()
+    {
+        if (this->front_cooler.rotation_detected() == HIGH)
+        {
+            this->front_cooler.count_rotation();
+        }
+    }
+    void show_current_step()
+    {
+        char buf[MAX_MESSAGE_LENGTH];
+        strncpy_P(buf, PROCEDURE_MESSAGES[this->context.current_step], MAX_MESSAGE_LENGTH);
+        this->display.set_text(buf);
+    }
+    void show_error_msg()
+    {
+        char buf[MAX_MESSAGE_LENGTH];
+        strncpy_P(buf, ERROR_MESSAGES[this->context.current_alarm], MAX_MESSAGE_LENGTH);
+        this->display.set_text(buf);
     }
     void next_step();
     void print(const char *string_out);
@@ -71,8 +124,9 @@ private:
     Buzzer buzzer;
     Motor motor;
     Moisture_sensor mois_sensor;
-    // Dual_LED water_status_led;
     Dual_LED motor_status_led;
+    Cooler rear_cooler;
+    Cooler front_cooler;
 };
 
 #endif

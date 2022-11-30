@@ -2,97 +2,55 @@
 #include "Arduino.h"
 void Motor_control_state::enter(Control_system *machine)
 {
-
     Serial.println(F("Estado motor control"));
-    machine->motor_status_led.turn_green();
-
-    char buf[MAX_MESSAGE_LENGTH];
-    strncpy_P(buf, PROCEDURE_MESSAGES[machine->context.current_step], MAX_MESSAGE_LENGTH);
-    if (machine->context.temperature < OVERTEMP_ALARM_THRESHOLD)
-    {
-        machine->display.set_text(buf);
-        this->alarm_override = false;
-    }
-    else
-    {
-        this->alarm_override = true;
-    }
+    machine->motor_status_led.turn_red();
 }
 void Motor_control_state::update(Control_system *machine)
 {
 
-    if (machine->context.alarm_request)
+    if (!machine->context.alarm_request)
+    {
+        machine->buzzer.turn_off();
+        if (machine->context.warning_request)
+        {
+
+            machine->motor_status_led.turn_yellow();
+        }
+        else
+        {
+            machine->motor_status_led.turn_green();
+        }
+        machine->show_current_step();
+    }
+    else
     {
         machine->buzzer.toggle();
         machine->motor_status_led.turn_red();
         machine->motor.turn_off();
-        machine->context.current_step = MOTOR_COOLDOWN_STEP;
-        char buf[MAX_MESSAGE_LENGTH];
-        strncpy_P(buf, ERROR_MESSAGES[machine->context.current_alarm], MAX_MESSAGE_LENGTH);
-        this->alarm_override = true;
-        Serial.println(buf);
-        switch (machine->context.current_alarm)
+        machine->context.override_next_step = true;
+        machine->handle_alarm();
+    }
+
+    switch (machine->context.current_step)
+    {
+    case MOTOR_ON_STEP:
+        machine->motor.turn_on();
+        break;
+
+    case MOTOR_OFF_STEP:
+        machine->motor.turn_off();
+        break;
+    case MOTOR_COOLDOWN_STEP:
+        machine->context.override_next_step = true;
+        if (!machine->context.warning_request && !machine->context.alarm_request)
         {
-        case OVERTEMP_ALARM:
-            machine->context.shutdown_request = true;
-            machine->display.set_text(buf);
-            break;
-
-        case HUMIDITY_ALARM:
-            machine->context.shutdown_request = true;
-            machine->display.set_text(buf);
-            break;
-        case HALTED_FAN_ALARM:
-            machine->context.shutdown_request = true;
-            machine->display.set_text(buf);
-            break;
-        case NO_TEMP_SENSOR_ALARM:
-            machine->display.set_text(buf);
-        case OVERTEMP_WARNING:
-            break;
-        case SLOW_FAN_WARNING:
-            break;
-        case NO_ALARM:
-            break;
-        default:
-            machine->display.set_text("No se reconoció el error");
-            break;
+            machine->context.override_next_step = false;
+            machine->next_step();
         }
-    }
-    else if (machine->context.warning_request)
-    {
-        machine->buzzer.turn_off();
-        machine->motor_status_led.turn_yellow();
-    }
-    else
-    {
-        machine->motor_status_led.turn_green();
+    default:
+        break;
     }
 
-    if (machine->is_next_step_requested() || this->alarm_override)
-    {
-        switch (machine->context.current_step)
-        {
-        case MOTOR_ON_STEP:
-            machine->motor.turn_on();
-            break;
-
-        case MOTOR_OFF_STEP:
-            machine->motor.turn_off();
-            break;
-        case MOTOR_COOLDOWN_STEP:
-            machine->context.override_next_step = true;
-            if (!machine->context.alarm_request)
-            {
-                machine->context.override_next_step = false;
-                machine->next_step();
-            }
-        case LAST_STEP:
-            machine->context.shutdown_request = true;
-        default:
-            break;
-        }
-    }
     machine->notify_observers();
     machine->display.update();
 }
@@ -106,7 +64,6 @@ Abstract_state *Motor_control_state::transition(Control_system *machine)
 
     if ((machine->context.current_step < MOTOR_ON_STEP || machine->context.current_step > MOTOR_COOLDOWN_STEP) && !(machine->context.warning_request || machine->context.alarm_request))
     {
-        Serial.println(machine->context.current_step);
         this->exit(machine);
         return new Idle_state();
     }

@@ -1,3 +1,13 @@
+/**
+ * @file Cooler.h
+ * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
+ * @brief Controlador de ventilador de 12 volts y 5 milímteros.
+ * @version 0.1
+ * @date 2022-11-30
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
 #include "Arduino.h"
 #include "system_settings.h"
 class Cooler

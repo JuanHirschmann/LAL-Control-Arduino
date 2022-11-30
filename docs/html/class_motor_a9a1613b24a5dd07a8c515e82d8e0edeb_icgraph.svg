@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" target="_top" xlink:title="Método que se llama al ingresar al estado.">
+<g id="a_node2"><a xlink:href="class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" target="_top" xlink:title="Entrada al estado, apaga los LEDS, la pantalla y apaga el motor.">
 <polygon fill="white" stroke="#666666" points="114,-67.5 0,-67.5 0,-48.5 114,-48.5 114,-67.5"/>
 <text text-anchor="middle" x="57" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">Shutdown_state::enter</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" target="_top" xlink:title="Método para actualizar el estado.">
+<g id="a_node3"><a xlink:href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" target="_top" xlink:title="Actualización, cambia el color del LED según el estado del motor y hace sonar la alarma....">
 <polygon fill="white" stroke="#666666" points="108.5,-30 5.5,-30 5.5,0 108.5,0 108.5,-30"/>
 <text text-anchor="start" x="13.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="57" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::update</text>

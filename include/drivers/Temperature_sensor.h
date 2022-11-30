@@ -1,7 +1,7 @@
 /**
  * @file Temperature_sensor.h
  * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
- * @brief Módulo de gestión de sensores de temperatura por interfaz OneWire
+ * @brief Controlador para sensor de temperatura DS18B20
  * @version 0.1
  * @date 2022-11-02
  *

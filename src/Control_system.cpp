@@ -3,21 +3,20 @@
 {
     this->current_step = control.current_step;
 } */
-Control_system::Control_system(/* args */) : temp_sensor(ONE_WIRE_BUS), buzzer(BUZZER_PIN, BUZZER_HIGH_FREQ), motor_status_led(MOTOR_GREEN_LED_PIN, MOTOR_RED_LED_PIN), motor(MOTOR_CONTROL_PIN), mois_sensor(MOISTURE_SENSOR_PIN)
+Control_system::Control_system(/* args */) : temp_sensor(ONE_WIRE_BUS), buzzer(BUZZER_PIN, BUZZER_HIGH_FREQ), motor_status_led(MOTOR_GREEN_LED_PIN, MOTOR_RED_LED_PIN), motor(MOTOR_CONTROL_PIN), mois_sensor(MOISTURE_SENSOR_PIN), rear_cooler(REAR_COOLER_CONTROL_PIN, REAR_COOLER_SPEED_MEAS_PIN), front_cooler(FRONT_COOLER_CONTROL_PIN, FRONT_COOLER_SPEED_MEAS_PIN)
 {
-    this->reset_context();
 }
 
-void Control_system::print(const char *string_out)
+void Control_system::init()
 {
-}
+    this->current_state = new Shutdown_state();
+    this->current_state->enter(this);
+    this->reset_context();
+};
 void Control_system::init_display()
 {
 
     this->display.init();
-
-    this->current_state = new Shutdown_state();
-    this->current_state->enter(this);
 }
 void Control_system::update()
 {
@@ -30,12 +29,10 @@ void Control_system::next_step()
     this->buzzer.turn_on(100); // Esto rompe el color del led
 
     this->context.current_step++;
-    if (this->context.current_step <= LAST_STEP + 1)
+    if (this->context.current_step < LAST_STEP + 1)
     {
 
-        char buf[MAX_MESSAGE_LENGTH];
-        strncpy_P(buf, PROCEDURE_MESSAGES[this->context.current_step], MAX_MESSAGE_LENGTH);
-        this->display.set_text(buf);
+        this->show_current_step();
         this->context.next_step_request = false;
     }
     else
@@ -49,6 +46,7 @@ void Control_system::notify_observers()
     {
         static_cast<System_observer *>(this->observers[i])->update(this);
     }
+    this->set_poll_sensors_flag(false);
 };
 float Control_system::measure_temperature()
 {

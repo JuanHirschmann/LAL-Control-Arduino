@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LAL_control<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">LAL_control<span id="projectnumber">&#160;0.2</span>
    </div>
   </td>
  </tr>
@@ -111,16 +111,16 @@ Collaboration diagram for Motor_control_state:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a958e3393b9937ddea35e85efdd21e342"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342">update</a> (<a class="el" href="class_control__system.html">Control_system</a> *machine)</td></tr>
-<tr class="memdesc:a958e3393b9937ddea35e85efdd21e342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para actualizar el estado.  <a href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342">More...</a><br /></td></tr>
+<tr class="memdesc:a958e3393b9937ddea35e85efdd21e342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualización, cambia el color del LED según el estado del motor y hace sonar la alarma. Si no hay alarma muestra el texto de la actualización. Enciende o apaga el motor según en que paso del procedimiento se encuentra. BLOQUEA LA INTERFAZ HASTA QUE LA TEMPERATURA EN EL MOTOR SE REDUZCA POR DEBAJO DEL UMBRAL DE ADVERTENCIA.  <a href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342">More...</a><br /></td></tr>
 <tr class="separator:a958e3393b9937ddea35e85efdd21e342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0415304cf9bd1ac5c8de677c6156793"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor__control__state.html#af0415304cf9bd1ac5c8de677c6156793">enter</a> (<a class="el" href="class_control__system.html">Control_system</a> *machine)</td></tr>
-<tr class="memdesc:af0415304cf9bd1ac5c8de677c6156793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que se llama al ingresar al estado.  <a href="class_motor__control__state.html#af0415304cf9bd1ac5c8de677c6156793">More...</a><br /></td></tr>
+<tr class="memdesc:af0415304cf9bd1ac5c8de677c6156793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entrada al estado, enciende el LED de estado del motor.  <a href="class_motor__control__state.html#af0415304cf9bd1ac5c8de677c6156793">More...</a><br /></td></tr>
 <tr class="separator:af0415304cf9bd1ac5c8de677c6156793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad1d65bba61eca448757e07e4e7dcb2b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b">exit</a> (<a class="el" href="class_control__system.html">Control_system</a> *machine)</td></tr>
-<tr class="memdesc:aad1d65bba61eca448757e07e4e7dcb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que se llama al salir del estado.  <a href="class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b">More...</a><br /></td></tr>
+<tr class="memdesc:aad1d65bba61eca448757e07e4e7dcb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salida del estado, apaga LEDs y <a class="el" href="class_buzzer.html" title="Clase para el manejo del buzzer por PWM manual, no utiliza pines PWM de Arduino. Sólo admite pines di...">Buzzer</a>.  <a href="class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b">More...</a><br /></td></tr>
 <tr class="separator:aad1d65bba61eca448757e07e4e7dcb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a399ab3c70b5a5d98f7b6ca5f5dfd5ecb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_abstract__state.html">Abstract_state</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb">transition</a> (<a class="el" href="class_control__system.html">Control_system</a> *machine)</td></tr>
-<tr class="memdesc:a399ab3c70b5a5d98f7b6ca5f5dfd5ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para cambiar de estado.  <a href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb">More...</a><br /></td></tr>
+<tr class="memdesc:a399ab3c70b5a5d98f7b6ca5f5dfd5ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transición de estados.  <a href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb">More...</a><br /></td></tr>
 <tr class="separator:a399ab3c70b5a5d98f7b6ca5f5dfd5ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a993232854cd166a601b6c5b4ba7befcc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract__state.html#a993232854cd166a601b6c5b4ba7befcc">update</a> (<a class="el" href="class_control__system.html">Control_system</a> *machine)=0</td></tr>
 <tr class="memdesc:a993232854cd166a601b6c5b4ba7befcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para actualizar el estado.  <a href="class_abstract__state.html#a993232854cd166a601b6c5b4ba7befcc">More...</a><br /></td></tr>
@@ -160,10 +160,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Método que se llama al ingresar al estado. </p>
+<p>Entrada al estado, enciende el LED de estado del motor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">machine</td><td>máquina de estados. </td></tr>
+    <tr><td class="paramname">machine</td><td>Máquina de estados. </td></tr>
   </table>
   </dd>
 </dl>
@@ -172,7 +172,8 @@ Public Member Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_af0415304cf9bd1ac5c8de677c6156793_cgraph.svg" width="535" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_af0415304cf9bd1ac5c8de677c6156793_cgraph.svg" width="520" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -201,10 +202,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Método que se llama al salir del estado. </p>
+<p>Salida del estado, apaga LEDs y <a class="el" href="class_buzzer.html" title="Clase para el manejo del buzzer por PWM manual, no utiliza pines PWM de Arduino. Sólo admite pines di...">Buzzer</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">machine</td><td>máquina de estados. </td></tr>
+    <tr><td class="paramname">machine</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -213,12 +214,14 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_aad1d65bba61eca448757e07e4e7dcb2b_cgraph.svg" width="327" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_aad1d65bba61eca448757e07e4e7dcb2b_cgraph.svg" width="327" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_aad1d65bba61eca448757e07e4e7dcb2b_icgraph.svg" width="334" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_aad1d65bba61eca448757e07e4e7dcb2b_icgraph.svg" width="334" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -247,20 +250,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Método para cambiar de estado. </p>
+<p>Transición de estados. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">machine</td><td>máquina de estados. </td></tr>
+    <tr><td class="paramname">machine</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Abstract_state* Nuevo estado </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Abstract_state* Transiciones posibles: Si existe una alarma el sistema transiciona hacia <a class="el" href="class_shutdown__state.html">Shutdown_state</a>. Si no existe alarama, cuando se supere el paso de enfriamiento del motor o no haya advertencia el sistema transiciona hacia <a class="el" href="class_idle__state.html" title="Clase para implementar el estado de reposo del sistema (Sin alarmas ni advertencias,...">Idle_state</a>. </dd></dl>
 
 <p>Implements <a class="el" href="class_abstract__state.html#a130d61765e2fcdf3bb0500943221efbe">Abstract_state</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_a399ab3c70b5a5d98f7b6ca5f5dfd5ecb_cgraph.svg" width="512" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_a399ab3c70b5a5d98f7b6ca5f5dfd5ecb_cgraph.svg" width="512" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -289,10 +293,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Método para actualizar el estado. </p>
+<p>Actualización, cambia el color del LED según el estado del motor y hace sonar la alarma. Si no hay alarma muestra el texto de la actualización. Enciende o apaga el motor según en que paso del procedimiento se encuentra. BLOQUEA LA INTERFAZ HASTA QUE LA TEMPERATURA EN EL MOTOR SE REDUZCA POR DEBAJO DEL UMBRAL DE ADVERTENCIA. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">machine</td><td>máquina de estados. </td></tr>
+    <tr><td class="paramname">machine</td><td>Máquina de estados. </td></tr>
   </table>
   </dd>
 </dl>
@@ -301,14 +305,15 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_a958e3393b9937ddea35e85efdd21e342_cgraph.svg" width="539" height="499"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_motor__control__state_a958e3393b9937ddea35e85efdd21e342_cgraph.svg" width="539" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/<a class="el" href="_motor__control__state_8h_source.html">Motor_control_state.h</a></li>
-<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/src/Motor_control_state.cpp</li>
+<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/machine_state_pattern/machine_states/<a class="el" href="_motor__control__state_8h_source.html">Motor_control_state.h</a></li>
+<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/src/machine_state_pattern/Motor_control_state.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

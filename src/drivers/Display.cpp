@@ -18,7 +18,7 @@ void Display::init()
 
     this->screen_interface.begin(20, 4);
     this->screen_interface.lineWrap();
-    this->screen_interface.setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0], TEMP_INDICATOR_CURSOR_OFFSET[1]);
+    this->screen_interface.home();
 }
 void Display::set_temp(float new_temp)
 {

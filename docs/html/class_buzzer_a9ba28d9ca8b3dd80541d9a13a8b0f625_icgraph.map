@@ -1,5 +1,5 @@
 <map id="Buzzer::turn_on" name="Buzzer::turn_on">
 <area shape="rect" id="node1" title="Enciende el buzzer con con una duración en milisegundos duration, por defecto enciende el buzzer por ..." coords="345,13,460,38"/>
 <area shape="rect" id="node2" href="$class_buzzer.html#a7d0275af89ab487903752edc29a5bf2c" title="Permuta el estado del led, si estaba encendido pasará a apagado y viceversa." coords="191,13,297,38"/>
-<area shape="rect" id="node3" href="$class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" title="Método para actualizar el estado." coords="5,5,143,45"/>
+<area shape="rect" id="node3" href="$class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" title="Actualización, cambia el color del LED según el estado del motor y hace sonar la alarma...." coords="5,5,143,45"/>
 </map>

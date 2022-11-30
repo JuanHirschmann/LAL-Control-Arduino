@@ -21,6 +21,12 @@ Collaboration diagram for Control\+\_\+system\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_control__system_a660ab5ac86df7cdefbbfe0942b00e13b}\label{class_control__system_a660ab5ac86df7cdefbbfe0942b00e13b}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{class_control__system_ab4bd82b7c907b415fdc102ed1fa89c7c}\label{class_control__system_ab4bd82b7c907b415fdc102ed1fa89c7c}} 
+void {\bfseries handle\+\_\+alarm} ()
+\item 
 \mbox{\Hypertarget{class_control__system_a4bfd2d8427f35a8cd4e4e10573aa5604}\label{class_control__system_a4bfd2d8427f35a8cd4e4e10573aa5604}} 
 void {\bfseries update} ()
 \item 
@@ -32,6 +38,15 @@ bool {\bfseries is\+\_\+off} ()
 \item 
 \mbox{\Hypertarget{class_control__system_aeb1d67b1383d77bd11276f0eef97228b}\label{class_control__system_aeb1d67b1383d77bd11276f0eef97228b}} 
 void {\bfseries reset\+\_\+context} ()
+\item 
+\mbox{\Hypertarget{class_control__system_af5cf3969d3f7b995cc7b9421839db415}\label{class_control__system_af5cf3969d3f7b995cc7b9421839db415}} 
+void {\bfseries count\+\_\+cooler\+\_\+rotation} ()
+\item 
+\mbox{\Hypertarget{class_control__system_ac1cd148e897c5ce2ef405dd45ddf964f}\label{class_control__system_ac1cd148e897c5ce2ef405dd45ddf964f}} 
+void {\bfseries show\+\_\+current\+\_\+step} ()
+\item 
+\mbox{\Hypertarget{class_control__system_a62a2c6a8167ade6a6ae054393b91d381}\label{class_control__system_a62a2c6a8167ade6a6ae054393b91d381}} 
+void {\bfseries show\+\_\+error\+\_\+msg} ()
 \item 
 \mbox{\Hypertarget{class_control__system_aa98b33b5c57a47fb55e211516e49088b}\label{class_control__system_aa98b33b5c57a47fb55e211516e49088b}} 
 void {\bfseries next\+\_\+step} ()
@@ -69,10 +84,10 @@ void {\bfseries set\+\_\+alarm\+\_\+flag} (bool new\+\_\+state)
 bool {\bfseries is\+\_\+alarm\+\_\+requested} ()
 \item 
 \mbox{\Hypertarget{class_control__system_af5985ea3ad848a1631ff6c12ef4b3941}\label{class_control__system_af5985ea3ad848a1631ff6c12ef4b3941}} 
-void {\bfseries request\+\_\+alarm} (ALARM\+\_\+\+TYPES type\+\_\+of\+\_\+alarm)
+void {\bfseries request\+\_\+alarm} (\mbox{\hyperlink{types_8h_a71ef44a7b1de581d625d82b37bed6c80}{ALARM\+\_\+\+TYPES}} type\+\_\+of\+\_\+alarm)
 \item 
 \mbox{\Hypertarget{class_control__system_a331f6ac8aca48fcc0b7cd23a3510911c}\label{class_control__system_a331f6ac8aca48fcc0b7cd23a3510911c}} 
-void {\bfseries request\+\_\+warning} (ALARM\+\_\+\+TYPES type\+\_\+of\+\_\+warning)
+void {\bfseries request\+\_\+warning} (\mbox{\hyperlink{types_8h_a71ef44a7b1de581d625d82b37bed6c80}{ALARM\+\_\+\+TYPES}} type\+\_\+of\+\_\+warning)
 \item 
 \mbox{\Hypertarget{class_control__system_a2d34912d34a642c819356bf566612686}\label{class_control__system_a2d34912d34a642c819356bf566612686}} 
 void {\bfseries set\+\_\+warning\+\_\+flag} (bool new\+\_\+state)
@@ -118,7 +133,8 @@ Método virtual puro para que las clases herederas implementen la actualización
 
 Implements \mbox{\hyperlink{class_subject__interface_a0ccc901c01cb515babedaaeec8c4cbe3}{Subject\+\_\+interface}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

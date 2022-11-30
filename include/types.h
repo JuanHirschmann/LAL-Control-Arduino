@@ -10,6 +10,10 @@
  */
 #ifndef TYPES_H
 #define TYPES_H
+/**
+ * @brief Enumeración de pasos a realizar del procedimiento
+ *
+ */
 enum STEPS
 {
     WELCOME_STEP = 0,
@@ -21,6 +25,10 @@ enum STEPS
     WATER_OFF_STEP = 6,
     LAST_STEP = 7,
 };
+/**
+ * @brief Tipos de alarmas y advertencias del sistema
+ *
+ */
 enum ALARM_TYPES
 {
     NO_ALARM = 0,
@@ -31,12 +39,24 @@ enum ALARM_TYPES
     OVERTEMP_WARNING,
     SLOW_FAN_WARNING,
 };
+/**
+ * @brief Variables de contexto del sistema
+ *  @param temperature Última temperatura medida
+    @param current_step Paso de procedimiento actual
+    @param shutdown_request Booleano con el estado de la solicitud de apagado
+    @param warning_request Booleano con el estado de la solicitud de advertencia
+    @param alarm_request Booleano con el estado de la solicitud de alarma
+    @param next_step_request Booleano con el estado de la solicitud de siguiente paso
+    @param poll_sensors_request Booleano con el estado de la solicitud de nueva medicions
+    @param override_next_step Booleano para bloquear nuevas solicitudes de siguiente paso
+    @param current_alarm Alarma actual
+ *
+ */
 typedef struct
 {
     float temperature;
     int current_step;
     bool shutdown_request;
-    bool wake_request;
     bool warning_request;
     bool alarm_request;
     bool next_step_request;

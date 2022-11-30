@@ -1,7 +1,7 @@
-<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/src/Temperature_sensor.cpp" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/src/Temperature_sensor.cpp">
-<area shape="rect" id="node1" title=" " coords="113,5,288,75"/>
-<area shape="rect" id="node2" href="$_temperature__sensor_8h.html" title="Módulo de gestión de sensores de temperatura por interfaz OneWire." coords="125,123,276,148"/>
-<area shape="rect" id="node3" href="$system__settings_8h.html" title="Archivo para la definición de constantes del sistema." coords="5,196,135,221"/>
-<area shape="rect" id="node4" title=" " coords="159,196,243,221"/>
-<area shape="rect" id="node5" title=" " coords="267,196,409,221"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/src/drivers/Temperature_sensor.cpp" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/src/drivers/Temperature_sensor.cpp">
+<area shape="rect" id="node1" title=" " coords="95,5,306,75"/>
+<area shape="rect" id="node2" href="$_temperature__sensor_8h.html" title="Controlador para sensor de temperatura DS18B20." coords="133,123,268,163"/>
+<area shape="rect" id="node3" href="$system__settings_8h.html" title="Archivo para la definición de constantes del sistema." coords="5,211,135,236"/>
+<area shape="rect" id="node4" title=" " coords="159,211,243,236"/>
+<area shape="rect" id="node5" title=" " coords="267,211,409,236"/>
 </map>

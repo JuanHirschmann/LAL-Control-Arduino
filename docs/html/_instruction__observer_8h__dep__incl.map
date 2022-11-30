@@ -1,5 +1,5 @@
-<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Instruction_observer.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Instruction_observer.h">
-<area shape="rect" id="node1" title=" " coords="143,5,341,75"/>
-<area shape="rect" id="node2" href="$main_8h_source.html" title=" " coords="5,130,247,185"/>
-<area shape="rect" id="node3" href="$_instruction__observer_8cpp.html" title=" " coords="271,123,445,192"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/observer_pattern/observers/Instruction_observer.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/observer_pattern/observers/Instruction_observer.h">
+<area shape="rect" id="node1" title="Observador de instrucciones." coords="145,5,344,89"/>
+<area shape="rect" id="node2" href="$main_8h.html" title="Archivo principal del programa." coords="5,152,247,207"/>
+<area shape="rect" id="node3" href="$_instruction__observer_8cpp.html" title=" " coords="271,137,456,221"/>
 </map>

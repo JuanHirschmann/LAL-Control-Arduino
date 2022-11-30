@@ -1,14 +1,21 @@
 \hypertarget{interrupts_8h}{}\doxysection{C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL\+\_\+\+Control/include/interrupts.h File Reference}
 \label{interrupts_8h}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL\_Control/include/interrupts.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL\_Control/include/interrupts.h}}
+
+
+Configuración de interrupciones.  
+
+
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
-Include dependency graph for interrupts.\+h\+:\nopagebreak
+Include dependency graph for interrupts.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=229pt]{interrupts_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,10 +28,15 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 void \mbox{\hyperlink{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f}{setup\+\_\+int0\+\_\+interrupt}} (uint8\+\_\+t pin, uint8\+\_\+t mode, void($\ast$callback)(), int interrupt\+\_\+mode)
 \begin{DoxyCompactList}\small\item\em configura la interrupción interna en int0 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interrupts_8h_a7677b0aead77a2f0b17f45fca7f6b0c5}{setup\+\_\+timer1\+\_\+interrupt}} ()
-\begin{DoxyCompactList}\small\item\em Configura la interrupción del timer 1 para realizarse cada 1 segundo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Configura la interrupción del timer 1 para realizarse cada 1 segundo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interrupts_8h_a170c14b4a8721745f9816e7a7824c711}\label{interrupts_8h_a170c14b4a8721745f9816e7a7824c711}} 
+void {\bfseries setup\+\_\+pinct\+\_\+portb\+\_\+interrupt} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Configuración de interrupciones. 
+
 \begin{DoxyAuthor}{Author}
 Juan Hirschmann (\href{mailto:jhirschmann@fi.uba.ar}{\texttt{ jhirschmann@fi.\+uba.\+ar}}) 
 \end{DoxyAuthor}

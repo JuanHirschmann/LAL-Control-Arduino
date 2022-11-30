@@ -4,16 +4,11 @@ void Idle_state::enter(Control_system *machine)
 {
 
     Serial.println(F("Estado idle"));
-    machine->motor_status_led.turn_green();
-    char buf[MAX_MESSAGE_LENGTH];
-    strncpy_P(buf, PROCEDURE_MESSAGES[machine->context.current_step], MAX_MESSAGE_LENGTH);
-    machine->display.set_text(buf);
+    machine->show_current_step();
 }
 void Idle_state::update(Control_system *machine)
 {
-    char buf[MAX_MESSAGE_LENGTH];
-    strncpy_P(buf, PROCEDURE_MESSAGES[machine->context.current_step], MAX_MESSAGE_LENGTH);
-    machine->display.set_text(buf);
+    machine->show_current_step();
     machine->notify_observers();
     machine->display.update();
 }

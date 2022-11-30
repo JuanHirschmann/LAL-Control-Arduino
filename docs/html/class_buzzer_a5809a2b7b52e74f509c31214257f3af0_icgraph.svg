@@ -35,7 +35,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b" target="_top" xlink:title="Método que se llama al salir del estado.">
+<g id="a_node4"><a xlink:href="class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b" target="_top" xlink:title="Salida del estado, apaga LEDs y Buzzer.">
 <polygon fill="white" stroke="#666666" points="243,-94 140,-94 140,-64 243,-64 243,-94"/>
 <text text-anchor="start" x="148" y="-82" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="191.5" y="-71" font-family="Helvetica,sans-Serif" font-size="10.00">::exit</text>
@@ -66,7 +66,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" target="_top" xlink:title="Método para actualizar el estado.">
+<g id="a_node7"><a xlink:href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" target="_top" xlink:title="Actualización, cambia el color del LED según el estado del motor y hace sonar la alarma....">
 <polygon fill="white" stroke="#666666" points="103.5,-30 0.5,-30 0.5,0 103.5,0 103.5,-30"/>
 <text text-anchor="start" x="8.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="52" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::update</text>
@@ -97,7 +97,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb" target="_top" xlink:title="Método para cambiar de estado.">
+<g id="a_node5"><a xlink:href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb" target="_top" xlink:title="Transición de estados.">
 <polygon fill="white" stroke="#666666" points="103.5,-94 0.5,-94 0.5,-64 103.5,-64 103.5,-94"/>
 <text text-anchor="start" x="8.5" y="-82" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="52" y="-71" font-family="Helvetica,sans-Serif" font-size="10.00">::transition</text>

@@ -1,7 +1,7 @@
 /**
  * @file Motor.h
  * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
- * @brief
+ * @brief Controlador de motor de 220 VAC
  * @version 0.1
  * @date 2022-11-22
  *

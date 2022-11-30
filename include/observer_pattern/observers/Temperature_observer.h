@@ -1,7 +1,7 @@
 /**
  * @file Temperature_observer.h
  * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
- * @brief
+ * @brief Observador del sensor de temperatura.
  * @version 0.1
  * @date 2022-11-16
  *

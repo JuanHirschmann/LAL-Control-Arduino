@@ -1,7 +1,7 @@
 /**
  * @file Machine.h
  * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
- * @brief
+ * @brief Clase de máquina abstracta.
  * @version 0.1
  * @date 2022-11-23
  *

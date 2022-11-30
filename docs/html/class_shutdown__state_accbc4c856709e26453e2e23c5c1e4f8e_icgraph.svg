@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Método que se llama al salir del estado.">
+<g id="a_node1"><a xlink:title="Salida del estado, resetea las variables del sistema e incializa la pantalla.">
 <polygon fill="#999999" stroke="#666666" points="276,-19 168,-19 168,0 276,0 276,-19"/>
 <text text-anchor="middle" x="222" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Shutdown_state::exit</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_shutdown__state.html#ae02b2fd80173aa50afcd73faba01b9be" target="_top" xlink:title="Método para cambiar de estado.">
+<g id="a_node2"><a xlink:href="class_shutdown__state.html#ae02b2fd80173aa50afcd73faba01b9be" target="_top" xlink:title="Transicion de estados.">
 <polygon fill="white" stroke="#666666" points="132,-19 0,-19 0,0 132,0 132,-19"/>
 <text text-anchor="middle" x="66" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Shutdown_state::transition</text>
 </a>

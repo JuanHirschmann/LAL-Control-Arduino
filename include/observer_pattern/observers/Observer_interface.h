@@ -1,7 +1,7 @@
 /**
  * @file Observer_interface.h
  * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
- * @brief
+ * @brief Clase para interfaz para implementar el observador.
  * @version 0.1
  * @date 2022-11-16
  *

@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" target="_top" xlink:title="Método para actualizar el estado.">
+<g id="a_node2"><a xlink:href="class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" target="_top" xlink:title="Actualización, cambia el color del LED según el estado del motor y hace sonar la alarma....">
 <polygon fill="white" stroke="#666666" points="103,-30 0,-30 0,0 103,0 103,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="51.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::update</text>

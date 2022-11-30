@@ -12,7 +12,7 @@ void Temperature_observer::update(Control_system *subject)
         else if (temperature < HYSTERESIS_PERCENT * OVERTEMP_ALARM_THRESHOLD) // Histeresis
         {
 
-            subject->set_alarm_flag(false);
+            // subject->set_alarm_flag(false); ¿La alarma obliga a apgagar el sistema?
         }
 
         if (temperature == ERROR_TEMPERATURE)
@@ -29,5 +29,4 @@ void Temperature_observer::update(Control_system *subject)
             subject->request_warning(OVERTEMP_WARNING);
         }
     }
-    // subject->set_poll_sensors_flag(false);
 };

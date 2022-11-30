@@ -1,3 +1,13 @@
+/**
+ * @file Moisture_sensor.h
+ * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
+ * @brief Controlador de sensor de humedad analógico.
+ * @version 0.1
+ * @date 2022-11-30
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
 #ifndef MOISTURE_SENSOR_H
 #define MOISTURE_SENSOR_H
 #include "Arduino.h"

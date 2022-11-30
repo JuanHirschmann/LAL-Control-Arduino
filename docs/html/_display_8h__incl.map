@@ -1,5 +1,5 @@
-<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Display.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Display.h">
-<area shape="rect" id="node1" title=" " coords="107,5,305,75"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/drivers/Display.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/drivers/Display.h">
+<area shape="rect" id="node1" title="Controlador de LCD hd44780 por interfaz I2C." coords="107,5,305,75"/>
 <area shape="rect" id="node2" title=" " coords="5,130,65,155"/>
 <area shape="rect" id="node3" title=" " coords="90,130,173,155"/>
 <area shape="rect" id="node4" title=" " coords="197,123,364,163"/>
