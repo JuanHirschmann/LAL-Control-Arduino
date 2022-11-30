@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2022
  *
  */
-#include "Subject.h"
+#include "observer_pattern/subjects/Subject.h"
 void Subject::attach(Observer_interface *obs)
 {
 

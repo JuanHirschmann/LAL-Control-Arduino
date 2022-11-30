@@ -1,4 +1,4 @@
-#include "Idle_state.h"
+#include "machine_state_pattern/machine_states/Idle_state.h"
 #include "Arduino.h"
 void Idle_state::enter(Control_system *machine)
 {

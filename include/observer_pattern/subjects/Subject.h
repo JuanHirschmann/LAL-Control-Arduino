@@ -11,8 +11,8 @@
 #ifndef _SUBJECT_H_
 #define _SUBJECT_H_
 
-#include "Subject_interface.h"
-#include "Observer_interface.h"
+#include "observer_pattern/subjects/Subject_interface.h"
+#include "observer_pattern/observers/Observer_interface.h"
 /**
  * @brief Clase base para crear sujetos a observar, hereda
  * de la interfaz Subject_interface.

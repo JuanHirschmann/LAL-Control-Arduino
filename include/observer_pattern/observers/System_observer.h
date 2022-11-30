@@ -10,7 +10,7 @@
  */
 #ifndef SYSTEM_OBSERVER_H
 #define SYSTEM_OBSERVER_H
-#include "Observer.h"
+#include "observer_pattern/observers/Observer.h"
 #include "Control_system.h"
 /**
  * @brief Clase interfaz para implementar observadores para sujetos de

@@ -11,8 +11,8 @@
 #ifndef IDLE_STATE_H
 #define IDLE_STATE_H
 #include "Control_system.h"
-#include "Abstract_state.h"
-#include "Motor_control_state.h"
+#include "machine_state_pattern/machine_states/Abstract_state.h"
+#include "machine_state_pattern/machine_states/Motor_control_state.h"
 /**
  * @brief Clase para implementar el estado de reposo del sistema
  * (Sin alarmas ni advertencias, actualiza todos los observadores y la pantalla)

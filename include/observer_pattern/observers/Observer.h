@@ -10,8 +10,8 @@
  */
 #ifndef _OBSERVER_H_
 #define _OBSERVER_H_
-#include "Subject_interface.h"
-#include "Observer_interface.h"
+#include "observer_pattern/subjects/Subject_interface.h"
+#include "observer_pattern/observers/Observer_interface.h"
 /**
  * @brief Clase Observer, utilizada como base del observador
  * en una implementación del patrón de diseño Observer.Hereda

@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2022
  *
  */
-#include "Buzzer.h"
+#include "drivers/Buzzer.h"
 Buzzer::Buzzer(int buzzer_pin, unsigned int frequency) // Tiene que tener pwm en el pinout
 {
     pinMode(buzzer_pin, OUTPUT);

@@ -1,4 +1,4 @@
-#include "Motor_control_state.h"
+#include "machine_state_pattern/machine_states/Motor_control_state.h"
 #include "Arduino.h"
 void Motor_control_state::enter(Control_system *machine)
 {
@@ -114,12 +114,8 @@ Abstract_state *Motor_control_state::transition(Control_system *machine)
     {
         unsigned long current_millis_call = millis();
         static unsigned long prev_millis_call = current_millis_call;
-        Serial.println(current_millis_call);
-        Serial.println(prev_millis_call);
         if (prev_millis_call != 0 && current_millis_call - prev_millis_call > 5000)
         {
-            Serial.println(current_millis_call);
-            Serial.println(prev_millis_call);
             prev_millis_call = current_millis_call;
             this->exit(machine);
             return new Shutdown_state();

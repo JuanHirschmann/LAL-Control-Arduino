@@ -10,7 +10,7 @@
  */
 #ifndef MACHINE_H
 #define MACHINE_H
-#include "Abstract_state.h"
+#include "machine_state_pattern/machine_states/Abstract_state.h"
 
 /**
  * @brief Clase para base para la implementación de una máquina de estados finita.

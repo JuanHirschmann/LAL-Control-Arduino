@@ -10,7 +10,7 @@
  */
 #ifndef TEMPERATURE_OBSERVER_H
 #define TEMPERATURE_OBSERVER_H
-#include "System_observer.h"
+#include "observer_pattern/observers/System_observer.h"
 #include "Arduino.h"
 #include "Control_system.h"
 #include "system_settings.h"

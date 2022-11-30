@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2022
  *
  */
-#include "Motor.h"
+#include "drivers/Motor.h"
 Motor::Motor(int motor_pin) // Tiene que tener pwm en el pinout
 {
     pinMode(motor_pin, OUTPUT);

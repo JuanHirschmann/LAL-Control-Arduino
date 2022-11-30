@@ -25,4 +25,5 @@ void setup_int0_interrupt(uint8_t pin, uint8_t mode, void (*callback)(), int int
  *
  */
 void setup_timer1_interrupt();
+void setup_pinct_portb_interrupt();
 #endif

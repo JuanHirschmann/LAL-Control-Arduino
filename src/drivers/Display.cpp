@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2022
  *
  */
-#include "Display.h"
+#include "drivers/Display.h"
 Display::Display()
 {
     // No inicializar objecto de interfaz de pantalla en el constructor.

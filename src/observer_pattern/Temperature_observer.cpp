@@ -1,4 +1,4 @@
-#include "Temperature_observer.h"
+#include "observer_pattern/observers/Temperature_observer.h"
 void Temperature_observer::update(Control_system *subject)
 {
     if (subject->is_poll_sensors_requested()) // Agregar histéresis?

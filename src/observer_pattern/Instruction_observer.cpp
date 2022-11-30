@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2022
  *
  */
-#include "Instruction_observer.h"
+#include "observer_pattern/observers/Instruction_observer.h"
 void Instruction_observer::update(Control_system *subject)
 {
     if (subject->is_next_step_requested() && !subject->is_next_step_overriden())

@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2022
  *
  */
-#include "Temperature_sensor.h"
+#include "drivers/Temperature_sensor.h"
 // Uso -127 para avisar error
 Temperature_sensor::Temperature_sensor(int one_wire_bus) : one_wire_interface(one_wire_bus), DS18B20_sensor(&one_wire_interface)
 {

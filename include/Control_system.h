@@ -1,18 +1,17 @@
 #ifndef CONTROL_SYSTEM_H
 #define CONTROL_SYSTEM_H
-#include "Subject.h"
-#include "Machine.h"
-#include "Display.h"
+#include "observer_pattern/subjects/Subject.h"
+#include "machine_state_pattern/Machine.h"
+#include "drivers/Display.h"
 #include "user_messages.h"
-#include "System_observer.h"
-#include "Temperature_sensor.h"
-#include "Moisture_sensor.h"
+#include "observer_pattern/observers/System_observer.h"
+#include "drivers/Temperature_sensor.h"
+#include "drivers/Moisture_sensor.h"
 #include "types.h"
-#include "Buzzer.h"
-#include "Motor.h"
-#include "Dual_led.h"
-#include "Shutdown_state.h"
-#include "utils.h"
+#include "drivers/Buzzer.h"
+#include "drivers/Motor.h"
+#include "drivers/Dual_led.h"
+#include "machine_state_pattern/machine_states/Shutdown_state.h"
 class Control_system : public Subject, public Machine
 {
     friend class Idle_state;

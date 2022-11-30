@@ -1,8 +1,8 @@
 #ifndef SHUTDOWN_STATE_H
 #define SHUTDOWN_STATE_H
 #include "Control_system.h"
-#include "Abstract_state.h"
-#include "Idle_state.h"
+#include "machine_state_pattern/machine_states/Abstract_state.h"
+#include "machine_state_pattern/machine_states/Idle_state.h"
 class Shutdown_state : public Abstract_state
 {
 private:

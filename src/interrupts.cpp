@@ -18,3 +18,10 @@ void setup_timer1_interrupt()
     TIMSK1 = (1 << OCIE1A);              // habilita interrupciones
     sei();
 }
+void setup_pinct_portb_interrupt()
+{
+    cli();
+    PCICR|=0x01; //Port b
+    PCMSK0|=0x03; //Pines D9 y D8;
+    sei();
+}
