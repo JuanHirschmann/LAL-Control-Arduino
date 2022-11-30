@@ -1,5 +1,5 @@
-<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Subject.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Subject.h">
-<area shape="rect" id="node1" title=" " coords="53,5,251,75"/>
-<area shape="rect" id="node2" href="$_subject__interface_8h_source.html" title=" " coords="5,123,139,148"/>
-<area shape="rect" id="node3" href="$_observer__interface_8h.html" title=" " coords="163,123,303,148"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/observer_pattern/subjects/Subject.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/observer_pattern/subjects/Subject.h">
+<area shape="rect" id="node1" title=" " coords="73,5,306,75"/>
+<area shape="rect" id="node2" href="$_subject__interface_8h.html" title="Clase para interfaz para implementar el sujeto." coords="5,123,176,163"/>
+<area shape="rect" id="node3" href="$_observer__interface_8h.html" title="Clase para interfaz para implementar el observador." coords="200,123,376,163"/>
 </map>

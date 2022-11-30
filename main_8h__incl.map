@@ -1,0 +1,37 @@
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/main.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/main.h">
+<area shape="rect" id="node1" title="Archivo principal del programa." coords="1439,5,1681,60"/>
+<area shape="rect" id="node2" title=" " coords="2129,387,2207,412"/>
+<area shape="rect" id="node3" href="$_control__system_8h_source.html" title=" " coords="1095,196,1219,221"/>
+<area shape="rect" id="node19" href="$system__settings_8h.html" title="Archivo para la definición de constantes del sistema." coords="1737,387,1866,412"/>
+<area shape="rect" id="node32" href="$interrupts_8h.html" title="Configuración de interrupciones." coords="2343,196,2430,221"/>
+<area shape="rect" id="node33" href="$_instruction__observer_8h.html" title="Observador de instrucciones." coords="1021,108,1197,148"/>
+<area shape="rect" id="node34" href="$_temperature__observer_8h.html" title="Observador del sensor de temperatura." coords="1272,108,1448,148"/>
+<area shape="rect" id="node35" href="$_moisture__observer_8h.html" title="Observador del sensor de temperatura." coords="1472,108,1648,148"/>
+<area shape="rect" id="node4" href="$_subject_8h.html" title=" " coords="2231,379,2401,419"/>
+<area shape="rect" id="node7" href="$_machine_8h.html" title="Clase de máquina abstracta." coords="43,482,197,522"/>
+<area shape="rect" id="node9" href="$_display_8h.html" title="Controlador de LCD hd44780 por interfaz I2C." coords="799,284,916,309"/>
+<area shape="rect" id="node14" href="$user__messages_8h.html" title="Archivo para la configuración de interfaz con el usuario." coords="940,284,1065,309"/>
+<area shape="rect" id="node16" href="$_system__observer_8h.html" title="Clase observador del sistema de control." coords="5,277,181,317"/>
+<area shape="rect" id="node18" href="$_temperature__sensor_8h.html" title="Controlador para sensor de temperatura DS18B20." coords="1090,277,1225,317"/>
+<area shape="rect" id="node22" href="$_moisture__sensor_8h.html" title="Controlador de sensor de humedad analógico." coords="2108,284,2279,309"/>
+<area shape="rect" id="node23" href="$types_8h.html" title="Archivo de definición de tipos de dato." coords="1647,387,1713,412"/>
+<area shape="rect" id="node24" href="$_buzzer_8h.html" title="Controlador de Buzzer de 12 milimetros." coords="1839,284,1953,309"/>
+<area shape="rect" id="node26" href="$_motor_8h.html" title="Controlador de motor de 220 VAC." coords="1977,284,2084,309"/>
+<area shape="rect" id="node27" href="$_dual___l_e_d_8h.html" title="Controlador de LED RG." coords="1402,284,1526,309"/>
+<area shape="rect" id="node28" href="$_cooler_8h.html" title="Controlador de ventilador de 12 volts y 5 milímteros." coords="1653,284,1763,309"/>
+<area shape="rect" id="node29" href="$_shutdown__state_8h.html" title="Clase de estado de apagado del sistema." coords="561,269,740,324"/>
+<area shape="rect" id="node5" href="$_subject__interface_8h.html" title="Clase para interfaz para implementar el sujeto." coords="1867,482,2037,522"/>
+<area shape="rect" id="node6" href="$_observer__interface_8h.html" title="Clase para interfaz para implementar el observador." coords="1279,482,1455,522"/>
+<area shape="rect" id="node8" href="$_abstract__state_8h.html" title="Clase de estado abstracta." coords="271,577,441,632"/>
+<area shape="rect" id="node10" title=" " coords="702,387,762,412"/>
+<area shape="rect" id="node11" title=" " coords="787,387,869,412"/>
+<area shape="rect" id="node12" title=" " coords="894,379,1061,419"/>
+<area shape="rect" id="node13" href="$display__settings_8h.html" title="Archivo de configuración de la pantalla." coords="1085,387,1211,412"/>
+<area shape="rect" id="node15" title=" " coords="1235,387,1349,412"/>
+<area shape="rect" id="node17" href="$_observer_8h.html" title="Clase observador." coords="501,379,677,419"/>
+<area shape="rect" id="node20" title=" " coords="1373,387,1457,412"/>
+<area shape="rect" id="node21" title=" " coords="1481,387,1623,412"/>
+<area shape="rect" id="node25" href="$port__config_8h.html" title="Archivo de configuración para los puertos de la placa donde se implementará el sistema." coords="1937,387,2033,412"/>
+<area shape="rect" id="node30" href="$_idle__state_8h.html" title="Clase de estado de reposo." coords="272,372,427,427"/>
+<area shape="rect" id="node31" href="$_motor__control__state_8h.html" title="Clase de estado de control del motor." coords="221,475,376,529"/>
+</map>

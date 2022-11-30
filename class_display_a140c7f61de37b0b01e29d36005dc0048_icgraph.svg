@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" target="_top" xlink:title="Método que se llama al ingresar al estado.">
+<g id="a_node2"><a xlink:href="class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" target="_top" xlink:title="Entrada al estado, apaga los LEDS, la pantalla y apaga el motor.">
 <polygon fill="white" stroke="#666666" points="114,-19 0,-19 0,0 114,0 114,-19"/>
 <text text-anchor="middle" x="57" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Shutdown_state::enter</text>
 </a>

@@ -4,6 +4,7 @@ var annotated_dup =
     [ "Buzzer", "class_buzzer.html", "class_buzzer" ],
     [ "Context_t", "struct_context__t.html", null ],
     [ "Control_system", "class_control__system.html", "class_control__system" ],
+    [ "Cooler", "class_cooler.html", null ],
     [ "Display", "class_display.html", "class_display" ],
     [ "Dual_LED", "class_dual___l_e_d.html", "class_dual___l_e_d" ],
     [ "Idle_state", "class_idle__state.html", "class_idle__state" ],

@@ -7,6 +7,7 @@ var hierarchy =
     ] ],
     [ "Buzzer", "class_buzzer.html", null ],
     [ "Context_t", "struct_context__t.html", null ],
+    [ "Cooler", "class_cooler.html", null ],
     [ "Display", "class_display.html", null ],
     [ "Dual_LED", "class_dual___l_e_d.html", null ],
     [ "Machine", "class_machine.html", [

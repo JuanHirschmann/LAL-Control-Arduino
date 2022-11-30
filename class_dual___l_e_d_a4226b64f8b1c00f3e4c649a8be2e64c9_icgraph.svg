@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" target="_top" xlink:title="Método que se llama al ingresar al estado.">
+<g id="a_node2"><a xlink:href="class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" target="_top" xlink:title="Entrada al estado, apaga los LEDS, la pantalla y apaga el motor.">
 <polygon fill="white" stroke="#666666" points="254,-142 140,-142 140,-123 254,-123 254,-142"/>
 <text text-anchor="middle" x="197" y="-130" font-family="Helvetica,sans-Serif" font-size="10.00">Shutdown_state::enter</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b" target="_top" xlink:title="Método que se llama al salir del estado.">
+<g id="a_node5"><a xlink:href="class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b" target="_top" xlink:title="Salida del estado, apaga LEDs y Buzzer.">
 <polygon fill="white" stroke="#666666" points="248.5,-67.5 145.5,-67.5 145.5,-37.5 248.5,-37.5 248.5,-67.5"/>
 <text text-anchor="start" x="153.5" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="197" y="-44.5" font-family="Helvetica,sans-Serif" font-size="10.00">::exit</text>
@@ -96,7 +96,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb" target="_top" xlink:title="Método para cambiar de estado.">
+<g id="a_node6"><a xlink:href="class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb" target="_top" xlink:title="Transición de estados.">
 <polygon fill="white" stroke="#666666" points="103.5,-67.5 0.5,-67.5 0.5,-37.5 103.5,-37.5 103.5,-67.5"/>
 <text text-anchor="start" x="8.5" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">Motor_control_state</text>
 <text text-anchor="middle" x="52" y="-44.5" font-family="Helvetica,sans-Serif" font-size="10.00">::transition</text>

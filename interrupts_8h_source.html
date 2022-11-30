@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LAL_control<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">LAL_control<span id="projectnumber">&#160;0.2</span>
    </div>
   </td>
  </tr>
@@ -100,7 +100,8 @@ $(document).ready(function(){initNavTree('interrupts_8h_source.html',''); initRe
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="interrupts_8h.html#a7151cd85a371816bdc91bbf05ae1825f">setup_int0_interrupt</a>(uint8_t pin, uint8_t mode, <span class="keywordtype">void</span> (*callback)(), <span class="keywordtype">int</span> interrupt_mode);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="interrupts_8h.html#a7677b0aead77a2f0b17f45fca7f6b0c5">setup_timer1_interrupt</a>();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> setup_pinct_portb_interrupt();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterrupts_8h_html_a7151cd85a371816bdc91bbf05ae1825f"><div class="ttname"><a href="interrupts_8h.html#a7151cd85a371816bdc91bbf05ae1825f">setup_int0_interrupt</a></div><div class="ttdeci">void setup_int0_interrupt(uint8_t pin, uint8_t mode, void(*callback)(), int interrupt_mode)</div><div class="ttdoc">configura la interrupción interna en int0</div><div class="ttdef"><b>Definition:</b> interrupts.cpp:2</div></div>
 <div class="ttc" id="ainterrupts_8h_html_a7677b0aead77a2f0b17f45fca7f6b0c5"><div class="ttname"><a href="interrupts_8h.html#a7677b0aead77a2f0b17f45fca7f6b0c5">setup_timer1_interrupt</a></div><div class="ttdeci">void setup_timer1_interrupt()</div><div class="ttdoc">Configura la interrupción del timer 1 para realizarse cada 1 segundo.</div><div class="ttdef"><b>Definition:</b> interrupts.cpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->

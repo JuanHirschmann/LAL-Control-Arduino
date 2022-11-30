@@ -1,9 +1,9 @@
 <map id="Dual_LED::turn_off" name="Dual_LED::turn_off">
 <area shape="rect" id="node1" title="Apaga el LED." coords="392,84,523,109"/>
-<area shape="rect" id="node2" href="$class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" title="Método que se llama al ingresar al estado." coords="192,5,344,31"/>
+<area shape="rect" id="node2" href="$class_shutdown__state.html#a2756e0a67cb9371a3c8d722b2a661efa" title="Entrada al estado, apaga los LEDS, la pantalla y apaga el motor." coords="192,5,344,31"/>
 <area shape="rect" id="node3" href="$class_idle__state.html#aad83cf5a4d37cbb4b45b64dd6d632c53" title="Método llamada al salir del estado. Apaga los led indicadores y el buzzer." coords="215,55,321,80"/>
-<area shape="rect" id="node5" href="$class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b" title="Método que se llama al salir del estado." coords="199,105,337,145"/>
+<area shape="rect" id="node5" href="$class_motor__control__state.html#aad1d65bba61eca448757e07e4e7dcb2b" title="Salida del estado, apaga LEDs y Buzzer." coords="199,105,337,145"/>
 <area shape="rect" id="node7" href="$class_dual___l_e_d.html#ac56cb66fdbb2a682a90091f2f9a0d385" title="Permuta el estado del LED." coords="207,169,329,195"/>
 <area shape="rect" id="node4" href="$class_idle__state.html#a422b51d100fee2411f6ea972b13cc2e8" title="Transición hacia nuevo estado." coords="5,55,144,80"/>
-<area shape="rect" id="node6" href="$class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb" title="Método para cambiar de estado." coords="6,105,143,145"/>
+<area shape="rect" id="node6" href="$class_motor__control__state.html#a399ab3c70b5a5d98f7b6ca5f5dfd5ecb" title="Transición de estados." coords="6,105,143,145"/>
 </map>

@@ -1,5 +1,5 @@
-<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Temperature_sensor.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/Temperature_sensor.h">
-<area shape="rect" id="node1" title="Módulo de gestión de sensores de temperatura por interfaz OneWire." coords="101,5,300,75"/>
+<map id="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/drivers/Temperature_sensor.h" name="C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/drivers/Temperature_sensor.h">
+<area shape="rect" id="node1" title="Controlador para sensor de temperatura DS18B20." coords="101,5,300,75"/>
 <area shape="rect" id="node2" href="$system__settings_8h.html" title="Archivo para la definición de constantes del sistema." coords="5,123,135,148"/>
 <area shape="rect" id="node3" title=" " coords="159,123,243,148"/>
 <area shape="rect" id="node4" title=" " coords="267,123,409,148"/>

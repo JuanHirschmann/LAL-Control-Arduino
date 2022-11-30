@@ -1,12 +1,9 @@
 <map id="Dual_LED::turn_on" name="Dual_LED::turn_on">
-<area shape="rect" id="node1" title="Enciende el LED en el color actual." coords="431,109,561,135"/>
-<area shape="rect" id="node2" href="$class_shutdown__state.html#accbc4c856709e26453e2e23c5c1e4f8e" title="Método que se llama al salir del estado." coords="234,7,378,32"/>
-<area shape="rect" id="node4" href="$class_dual___l_e_d.html#ac56cb66fdbb2a682a90091f2f9a0d385" title="Permuta el estado del LED." coords="245,60,367,85"/>
-<area shape="rect" id="node5" href="$class_dual___l_e_d.html#ab1cd238e00901ca9556914a38d3a064c" title="Enciende el LED en verde." coords="231,109,381,135"/>
-<area shape="rect" id="node9" href="$class_dual___l_e_d.html#a8734a816df04661d86e3ccbf88159eb0" title="Enciende el LED en rojo." coords="239,159,373,184"/>
-<area shape="rect" id="node10" href="$class_dual___l_e_d.html#aabc0462521bcc08ea7f6f04642f7e89d" title="Enciende el LED en amarillo. El comportamiento es indefinido para pines no PWM." coords="229,208,383,233"/>
-<area shape="rect" id="node3" href="$class_shutdown__state.html#ae02b2fd80173aa50afcd73faba01b9be" title="Método para cambiar de estado." coords="5,5,181,31"/>
-<area shape="rect" id="node6" href="$class_idle__state.html#ad6d70e591dd39da724656a4261013e4f" title="Método llamado al ingresar al estado. Actualiza la pantalla con el paso del procedimiento actual." coords="36,55,151,80"/>
-<area shape="rect" id="node7" href="$class_motor__control__state.html#af0415304cf9bd1ac5c8de677c6156793" title="Método que se llama al ingresar al estado." coords="25,105,162,145"/>
-<area shape="rect" id="node8" href="$class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" title="Método para actualizar el estado." coords="25,169,162,209"/>
+<area shape="rect" id="node1" title="Enciende el LED en el color actual." coords="392,80,523,105"/>
+<area shape="rect" id="node2" href="$class_dual___l_e_d.html#ac56cb66fdbb2a682a90091f2f9a0d385" title="Permuta el estado del LED." coords="206,5,329,31"/>
+<area shape="rect" id="node3" href="$class_dual___l_e_d.html#ab1cd238e00901ca9556914a38d3a064c" title="Enciende el LED en verde." coords="193,55,342,80"/>
+<area shape="rect" id="node5" href="$class_dual___l_e_d.html#a8734a816df04661d86e3ccbf88159eb0" title="Enciende el LED en rojo." coords="200,153,335,179"/>
+<area shape="rect" id="node7" href="$class_dual___l_e_d.html#aabc0462521bcc08ea7f6f04642f7e89d" title="Enciende el LED en amarillo. El comportamiento es indefinido para pines no PWM." coords="191,104,344,129"/>
+<area shape="rect" id="node4" href="$class_motor__control__state.html#a958e3393b9937ddea35e85efdd21e342" title="Actualización, cambia el color del LED según el estado del motor y hace sonar la alarma...." coords="5,89,143,129"/>
+<area shape="rect" id="node6" href="$class_motor__control__state.html#af0415304cf9bd1ac5c8de677c6156793" title="Entrada al estado, enciende el LED de estado del motor." coords="5,153,143,193"/>
 </map>
