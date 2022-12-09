@@ -20,6 +20,7 @@ void Control_system::init_display()
 }
 void Control_system::update()
 {
+
     this->transition_state();
     this->current_state->update(this);
 }
