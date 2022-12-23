@@ -9,21 +9,25 @@
  *
  */
 #include "drivers/Buzzer.h"
-Buzzer::Buzzer(int buzzer_pin, unsigned int frequency) // Tiene que tener pwm en el pinout
+Buzzer::Buzzer(int buzzer_pin) // Tiene que tener pwm en el pinout
 {
     pinMode(buzzer_pin, OUTPUT);
     this->buzzer_pin = buzzer_pin;
-    this->frequency = frequency;
 }
-void Buzzer::turn_on(unsigned long duration = 0)
+void Buzzer::turn_on(unsigned long duration)
 {
     this->is_ringing = true;
-    tone(this->buzzer_pin, this->frequency, duration); // USA TIMER2, ROMPE el color del LED conectado en 3 u 11.
+    digitalWrite(this->buzzer_pin, HIGH);
+    if (duration != 0)
+    {
+        delay(duration);
+        this->turn_off();
+    }
 };
 void Buzzer::turn_off()
 {
     this->is_ringing = false;
-    noTone(this->buzzer_pin);
+    digitalWrite(this->buzzer_pin, LOW);
 };
 void Buzzer::toggle(unsigned int duration = 0)
 {
@@ -35,11 +39,6 @@ void Buzzer::toggle(unsigned int duration = 0)
     {
         this->turn_off();
     }
-};
-void Buzzer::set_frequency(unsigned int new_frequency)
-{
-    noTone(this->buzzer_pin);
-    this->frequency = new_frequency;
 };
 bool Buzzer::is_active()
 {

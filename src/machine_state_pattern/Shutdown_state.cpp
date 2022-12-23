@@ -1,11 +1,12 @@
 #include "machine_state_pattern/machine_states/Shutdown_state.h"
+#include "Arduino.h"
 void Shutdown_state::update(Control_system *machine)
 {
+    Serial.println(F("Estado shutdowm"));
 }
 void Shutdown_state::enter(Control_system *machine)
 {
 
-    Serial.println("Estado shutdown");
     // poner no bloqueante
     machine->display.turn_off();
     machine->motor_status_led.turn_off();

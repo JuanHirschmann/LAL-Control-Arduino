@@ -16,19 +16,19 @@ Temperature_sensor::Temperature_sensor(int one_wire_bus) : one_wire_interface(on
 }
 float Temperature_sensor::get_reading()
 {
-  //  ¿SMA?
   this->update_readings();
-  // float var = 0;
   float mean = 0;
   int count = this->available_ds18_devices;
   if (count <= 0)
   {
     mean = -127;
+    count=1;
   }
   for (int i = 0; i < count; i++)
   {
     mean += this->readings[i];
   }
+  Serial.println(mean);
   mean = mean / count;
   return mean;
 }

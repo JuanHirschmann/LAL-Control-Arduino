@@ -62,5 +62,6 @@ void setup()
 void loop()
 {
     control.update();
-    delay(1000);
+    //  delay(1000);
+    //  Serial.println("Vivo");
 };

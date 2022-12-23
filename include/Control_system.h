@@ -14,11 +14,13 @@
 
 #include "drivers/Cooler.h"
 #include "machine_state_pattern/machine_states/Shutdown_state.h"
+#include "machine_state_pattern/machine_states/Check_instruction_state.h"
 class Control_system : public Subject, public Machine
 {
     friend class Idle_state;
     friend class Motor_control_state;
     friend class Shutdown_state;
+    friend class Check_instruction_state;
 
 public:
     void init();
@@ -28,31 +30,53 @@ public:
         {
         case OVERTEMP_ALARM:
             this->context.shutdown_request = true;
+            this->rear_cooler.turn_on(1);
+            this->front_cooler.turn_on(1);
+
+            this->motor_status_led.turn_red();
+            this->motor.turn_off();
             this->show_error_msg();
             break;
 
         case HUMIDITY_ALARM:
+            this->motor.turn_off();
+            this->motor_status_led.turn_red();
             this->context.shutdown_request = true;
+            this->rear_cooler.turn_off();
+            this->front_cooler.turn_off();
             this->show_error_msg();
             break;
         case HALTED_FAN_ALARM:
+            this->motor.turn_off();
+            this->motor_status_led.turn_red();
             this->context.shutdown_request = true;
+            this->rear_cooler.turn_off();
+            this->front_cooler.turn_off();
             this->show_error_msg();
             break;
         case NO_TEMP_SENSOR_ALARM:
+            this->motor.turn_off();
+            this->motor_status_led.turn_red();
             this->show_error_msg();
             this->context.shutdown_request = true;
+            break;
         case OVERTEMP_WARNING:
+            this->motor_status_led.turn_yellow();
+            this->rear_cooler.turn_on(0.75);
+            this->front_cooler.turn_on(0.75);
             break;
         case SLOW_FAN_WARNING:
             break;
         case NO_ALARM:
+
+            this->motor_status_led.turn_green();
             break;
         default:
             this->display.set_text("No se reconoció el error");
             break;
         }
     }
+
     void update();
     void wake()
     {
@@ -72,6 +96,13 @@ public:
         this->context.shutdown_request = false;
         this->context.warning_request = false;
         this->context.next_step_request = false;
+
+        this->front_cooler.turn_off();
+        this->rear_cooler.turn_off();
+        this->front_cooler_led.turn_red();
+        this->rear_cooler_led.turn_red();
+        this->motor_status_led.turn_off();
+        this->water_intake_led.turn_red();
     }
     void count_cooler_rotation()
     {
@@ -125,6 +156,10 @@ private:
     Motor motor;
     Moisture_sensor mois_sensor;
     Dual_LED motor_status_led;
+    Dual_LED water_intake_led;
+    Dual_LED rear_cooler_led;
+    Dual_LED front_cooler_led;
+
     Cooler rear_cooler;
     Cooler front_cooler;
 };

@@ -27,7 +27,7 @@ public:
      * @param buzzer_pin Pin elegido para conectar el buzzer, sólo sálida digital.
      * @param frequency Frecuencia del tono a emitir.
      */
-    Buzzer(int buzzer_pin, unsigned int frequency);
+    Buzzer(int buzzer_pin);
     /**
      * @brief Enciende el buzzer con con una duración en milisegundos duration,
      *  por defecto enciende el buzzer por un tiempo indefinido.
@@ -48,12 +48,6 @@ public:
      */
     void toggle(unsigned int duration = 0);
     /**
-     * @brief Fija la nueva frequencia, no emite el sonido.
-     *
-     * @param new_frequency nueva frecuencia a emitir
-     */
-    void set_frequency(unsigned int new_frequency);
-    /**
      * @brief Devuelve el estado del buzzer
      *
      * @return true El buzzer está activo.
@@ -64,6 +58,5 @@ public:
 private:
     bool is_ringing = false;
     int buzzer_pin;
-    float frequency = 0;
 };
 #endif
