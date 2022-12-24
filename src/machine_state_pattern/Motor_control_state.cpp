@@ -41,11 +41,11 @@ Abstract_state *Motor_control_state::transition(Control_system *machine)
             this->exit(machine);
             return new Check_instruction_state();
         }
-        else
+        /* else
         {
             this->exit(machine);
             return new Idle_state();
-        }
+        } */
     }
     else if (machine->context.shutdown_request)
     {

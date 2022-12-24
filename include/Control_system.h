@@ -86,6 +86,42 @@ public:
     {
         return this->context.shutdown_request;
     }
+    void display_cooler_speed(float rear_cooler_speed, float front_cooler_speed)
+    {
+        this->display.set_fan_speed_pct(rear_cooler_speed, front_cooler_speed);
+    }
+    bool is_cooler_active(COOLER_TYPES cooler)
+    {
+        bool is_active = false;
+        switch (cooler)
+        {
+        case REAR_COOLER:
+            is_active = this->rear_cooler.is_active();
+            break;
+        case FRONT_COOLER:
+            is_active = this->rear_cooler.is_active();
+            break;
+        default:
+            break;
+        }
+        return is_active;
+    }
+    unsigned long int get_cooler_count(COOLER_TYPES cooler)
+    {
+        unsigned long int value = 0;
+        switch (cooler)
+        {
+        case REAR_COOLER:
+            value = this->rear_cooler.get_rotation_count();
+            break;
+        case FRONT_COOLER:
+            value = this->front_cooler.get_rotation_count();
+            break;
+        default:
+            break;
+        }
+        return value;
+    }
     void reset_context()
     {
         this->context.alarm_request = false;
@@ -109,6 +145,33 @@ public:
         if (this->front_cooler.rotation_detected() == HIGH)
         {
             this->front_cooler.count_rotation();
+        }
+        if (this->front_cooler.rotation_detected() == HIGH)
+        {
+
+            this->rear_cooler.count_rotation();
+        }
+    }
+    void set_cooler_speed(float rear_cooler_speed, float front_cooler_speed)
+    {
+        this->front_cooler.turn_on(front_cooler_speed);
+        this->rear_cooler.turn_on(rear_cooler_speed);
+        if (rear_cooler_speed == 0)
+        {
+            this->rear_cooler_led.turn_red();
+        }
+        else
+        {
+            this->rear_cooler_led.turn_green();
+        }
+        if (front_cooler_speed == 0)
+        {
+
+            this->front_cooler_led.turn_red();
+        }
+        else
+        {
+            this->front_cooler_led.turn_green();
         }
     }
     void show_current_step()

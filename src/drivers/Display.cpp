@@ -29,11 +29,33 @@ void Display::set_temp(float new_temp)
         this->update_needed = true;
     }
 }
-void Display::set_fan_speed_pct(int new_speed_pct)
+void Display::set_fan_speed_pct(float back_speed_pct, float front_speed_pct)
 {
-    if (this->on_screen_fan_speed_pct != new_speed_pct)
+    float cooler_speed_variation = 1;
+    if (back_speed_pct != 0)
     {
-        this->on_screen_fan_speed_pct = new_speed_pct;
+        cooler_speed_variation = abs(this->on_screen_fan_speed_pct[0] - back_speed_pct) / back_speed_pct;
+    }
+    else if (this->on_screen_fan_speed_pct[0] == 0)
+    {
+        cooler_speed_variation = 0;
+    }
+    if (cooler_speed_variation > SPEED_VARIATION_UPDATE_THRESHOLD)
+    {
+        this->on_screen_fan_speed_pct[0] = back_speed_pct;
+        this->update_needed = true;
+    }
+    if (front_speed_pct != 0)
+    {
+        cooler_speed_variation = abs(this->on_screen_fan_speed_pct[1] - front_speed_pct) / front_speed_pct;
+    }
+    else if (this->on_screen_fan_speed_pct[1] == 0)
+    {
+        cooler_speed_variation = 0;
+    }
+    if (cooler_speed_variation > SPEED_VARIATION_UPDATE_THRESHOLD)
+    {
+        this->on_screen_fan_speed_pct[1] = front_speed_pct;
         this->update_needed = true;
     }
 }
@@ -48,6 +70,7 @@ void Display::set_text(const char *string_out)
 }
 void Display::update()
 {
+
     if (this->update_needed)
     {
         this->screen_interface.clear();
@@ -57,7 +80,11 @@ void Display::update()
         this->screen_interface.setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0], TEMP_INDICATOR_CURSOR_OFFSET[1]);
         this->screen_interface.print(this->on_screen_temp, 1);
         this->screen_interface.setCursor(FAN_INDICATOR_CURSOR_OFFSET[0], FAN_INDICATOR_CURSOR_OFFSET[1]);
-        this->screen_interface.print(this->on_screen_fan_speed_pct);
+        this->screen_interface.print(this->on_screen_fan_speed_pct[0], 3);
+        this->screen_interface.setCursor(FAN_INDICATOR_CURSOR_OFFSET[0] + 7, FAN_INDICATOR_CURSOR_OFFSET[1]);
+
+        this->screen_interface.print(this->on_screen_fan_speed_pct[1], 3);
+
         this->update_needed = false;
     }
 }

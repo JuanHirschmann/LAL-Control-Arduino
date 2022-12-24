@@ -25,6 +25,11 @@ enum STEPS
     WATER_OFF_STEP = 6,
     LAST_STEP = 7,
 };
+enum COOLER_TYPES
+{
+    FRONT_COOLER = 0,
+    REAR_COOLER,
+};
 /**
  * @brief Tipos de alarmas y advertencias del sistema
  *

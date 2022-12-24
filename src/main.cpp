@@ -5,7 +5,7 @@ Control_system control;
 Instruction_observer inst_obs;
 Temperature_observer temp_obs;
 Moisture_observer mois_obs;
-
+Cooler_observer cooler_obs;
 void int0_callback()
 {
     cli();
@@ -36,13 +36,8 @@ ISR(TIMER1_COMPA_vect)
 }
 ISR(PCINT0_vect)
 {
-    control.count_cooler_rotation();
-}
-void count_rotation()
-{
     cli();
-    Serial.print("ACA");
-    // cooler.count_rotation();
+    control.count_cooler_rotation();
     sei();
 }
 void setup()
@@ -57,6 +52,7 @@ void setup()
     control.attach(&inst_obs);
     control.attach(&temp_obs);
     control.attach(&mois_obs);
+    control.attach(&cooler_obs);
     //   sei();
 }
 void loop()

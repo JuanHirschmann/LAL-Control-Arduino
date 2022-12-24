@@ -22,13 +22,12 @@ float Temperature_sensor::get_reading()
   if (count <= 0)
   {
     mean = -127;
-    count=1;
+    count = 1;
   }
   for (int i = 0; i < count; i++)
   {
     mean += this->readings[i];
   }
-  Serial.println(mean);
   mean = mean / count;
   return mean;
 }

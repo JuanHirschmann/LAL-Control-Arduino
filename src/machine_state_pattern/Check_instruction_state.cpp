@@ -16,7 +16,6 @@ void Check_instruction_state::update(Control_system *machine)
 void Check_instruction_state::enter(Control_system *machine)
 {
     Serial.println(F("Estado check instruction"));
-    // machine->context.override_next_step = true;
     switch (machine->context.current_step)
     {
     case WELCOME_STEP:
@@ -33,7 +32,7 @@ void Check_instruction_state::enter(Control_system *machine)
         if (!machine->context.warning_request)
         {
             machine->motor_status_led.turn_green();
-            // machine->set_cooler_speed(0.25, 0.25);
+            machine->set_cooler_speed(0.25, 0.25);
         }
         if (!machine->context.alarm_request)
         {
@@ -44,7 +43,7 @@ void Check_instruction_state::enter(Control_system *machine)
     case MOTOR_OFF_STEP:
         if (!machine->context.warning_request)
         {
-            // machine->set_cooler_speed(0.5, 0.5);
+            machine->set_cooler_speed(0.5, 0.5);
         }
         machine->motor.turn_off();
         break;
@@ -57,7 +56,7 @@ void Check_instruction_state::enter(Control_system *machine)
 
         break;
     case WATER_OFF_STEP:
-        // machine->set_cooler_speed(0, 0);
+        machine->set_cooler_speed(0, 0);
         machine->water_intake_led.turn_red();
     default:
         break;

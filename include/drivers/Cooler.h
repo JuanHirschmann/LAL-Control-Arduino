@@ -46,27 +46,27 @@ public:
         this->is_on = false;
         analogWrite(this->power_pin, 0);
     }
-    float get_speed()
+    float get_rotation_count()
     {
-        return this->current_RPS;
+        unsigned long int value = this->rotations_in_sample_period;
+        this->reset_count();
+        return value;
     }
     bool rotation_detected()
     {
         return digitalRead(this->speed_measurement_pint);
     }
+    void reset_count()
+    {
+        this->rotations_in_sample_period = 0;
+    }
     void count_rotation()
     {
-        unsigned long current_millis_call = millis();
-        static unsigned long prev_millis_call = current_millis_call;
         this->rotations_in_sample_period++;
-        if (prev_millis_call != 0 && current_millis_call - prev_millis_call > FAN_SPEED_SAMPLE_PERIOD)
-        {
-            unsigned int time_diff = current_millis_call - prev_millis_call;
-            prev_millis_call = current_millis_call;
-            this->rotations_in_sample_period /= 2;                                   // 2 estados altos por rotación.
-            this->current_RPS = float(this->rotations_in_sample_period) / time_diff; // 6000/2
-            this->rotations_in_sample_period = 0;
-        }
+    }
+    bool is_active()
+    {
+        return this->is_on;
     }
 
 private:
@@ -75,5 +75,4 @@ private:
     int power_pin;
     int speed_measurement_pint;
     float current_duty_cycle = 0;
-    float current_RPS = 0;
 };
