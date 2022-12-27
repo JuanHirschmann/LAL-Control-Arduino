@@ -50,9 +50,9 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="class_instruction__observer.html" target="_top" xlink:title="Clase heredera de System_observer, creada para observar el estado de las instrucciones.">
-<polygon fill="white" stroke="#666666" points="459.5,-93 356.5,-93 356.5,-74 459.5,-74 459.5,-93"/>
-<text text-anchor="middle" x="408" y="-81" font-family="Helvetica,sans-Serif" font-size="10.00">Instruction_observer</text>
+<g id="a_node4"><a xlink:href="class_cooler__observer.html" target="_top" xlink:title="Clase heredera de System_observer, creada para observar el estado de las instrucciones.">
+<polygon fill="white" stroke="#666666" points="451,-93 365,-93 365,-74 451,-74 451,-93"/>
+<text text-anchor="middle" x="408" y="-81" font-family="Helvetica,sans-Serif" font-size="10.00">Cooler_observer</text>
 </a>
 </g>
 </g>

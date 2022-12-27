@@ -2,7 +2,6 @@
 #include "main.h"
 
 Control_system control;
-Instruction_observer inst_obs;
 Temperature_observer temp_obs;
 Moisture_observer mois_obs;
 Cooler_observer cooler_obs;
@@ -21,7 +20,7 @@ void int0_callback()
         else
         {
 
-            control.set_next_step_flag(true);
+            control.request_next_step();
         }
     }
     last_interrupt_time = interrupt_time;
@@ -49,7 +48,6 @@ void setup()
     setup_int0_interrupt(BUTTON_PIN, INPUT_PULLUP, int0_callback, HIGH);
     setup_pinct_portb_interrupt();
     control.init();
-    control.attach(&inst_obs);
     control.attach(&temp_obs);
     control.attach(&mois_obs);
     control.attach(&cooler_obs);

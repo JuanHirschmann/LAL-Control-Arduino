@@ -17,7 +17,7 @@ void Shutdown_state::enter(Control_system *machine)
 }
 void Shutdown_state::exit(Control_system *machine)
 {
-    machine->reset_context();
+    machine->reset();
     machine->init_display();
     // machine->display.turn_on();
     // machine->motor_status_led.turn_on();

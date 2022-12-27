@@ -23,7 +23,7 @@ Abstract_state *Idle_state::transition(Control_system *machine)
     { /*Estado de warning*/
 
         this->exit(machine);
-        return new Motor_control_state();
+        return new Alarm_state();
     }
     else if (machine->context.next_step_request)
     {

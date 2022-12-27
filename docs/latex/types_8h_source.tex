@@ -1,5 +1,5 @@
 \hypertarget{types_8h_source}{}\doxysection{types.\+h}
-\label{types_8h_source}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL\_Control/include/types.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL\_Control/include/types.h}}
+\label{types_8h_source}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/types.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/types.h}}
 \mbox{\hyperlink{types_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
@@ -16,37 +16,42 @@
 \DoxyCodeLine{25     WATER\_OFF\_STEP = 6,}
 \DoxyCodeLine{26     LAST\_STEP = 7,}
 \DoxyCodeLine{27 \};}
-\DoxyCodeLine{32 \textcolor{keyword}{enum} \mbox{\hyperlink{types_8h_a71ef44a7b1de581d625d82b37bed6c80}{ALARM\_TYPES}}}
-\DoxyCodeLine{33 \{}
-\DoxyCodeLine{34     NO\_ALARM = 0,}
-\DoxyCodeLine{35     OVERTEMP\_ALARM,}
-\DoxyCodeLine{36     HUMIDITY\_ALARM,}
-\DoxyCodeLine{37     HALTED\_FAN\_ALARM,}
-\DoxyCodeLine{38     NO\_TEMP\_SENSOR\_ALARM,}
-\DoxyCodeLine{39     OVERTEMP\_WARNING,}
-\DoxyCodeLine{40     SLOW\_FAN\_WARNING,}
-\DoxyCodeLine{41 \};}
-\DoxyCodeLine{55 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
-\DoxyCodeLine{56 \{}
-\DoxyCodeLine{57     \textcolor{keywordtype}{float} temperature;}
-\DoxyCodeLine{58     \textcolor{keywordtype}{int} current\_step;}
-\DoxyCodeLine{59     \textcolor{keywordtype}{bool} shutdown\_request;}
-\DoxyCodeLine{60     \textcolor{keywordtype}{bool} warning\_request;}
-\DoxyCodeLine{61     \textcolor{keywordtype}{bool} alarm\_request;}
-\DoxyCodeLine{62     \textcolor{keywordtype}{bool} next\_step\_request;}
-\DoxyCodeLine{63     \textcolor{keywordtype}{bool} poll\_sensors\_request;}
-\DoxyCodeLine{64     \textcolor{keywordtype}{bool} override\_next\_step;}
-\DoxyCodeLine{65     \mbox{\hyperlink{types_8h_a71ef44a7b1de581d625d82b37bed6c80}{ALARM\_TYPES}} current\_alarm;}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{67 \} \mbox{\hyperlink{struct_context__t}{Context\_t}};}
-\DoxyCodeLine{68 }
-\DoxyCodeLine{69 \textcolor{keyword}{enum} COLOR\_TYPES}
-\DoxyCodeLine{70 \{}
-\DoxyCodeLine{71     RED,}
-\DoxyCodeLine{72     YELLOW,}
-\DoxyCodeLine{73     GREEN,}
-\DoxyCodeLine{74 }
-\DoxyCodeLine{75 \};}
-\DoxyCodeLine{76 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{28 \textcolor{keyword}{enum} COOLER\_TYPES}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30     FRONT\_COOLER = 0,}
+\DoxyCodeLine{31     REAR\_COOLER,}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{37 \textcolor{keyword}{enum} \mbox{\hyperlink{types_8h_a71ef44a7b1de581d625d82b37bed6c80}{ALARM\_TYPES}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39     NO\_ALARM = 0,}
+\DoxyCodeLine{40     OVERTEMP\_ALARM,}
+\DoxyCodeLine{41     HUMIDITY\_ALARM,}
+\DoxyCodeLine{42     HALTED\_FAN\_ALARM,}
+\DoxyCodeLine{43     NO\_TEMP\_SENSOR\_ALARM,}
+\DoxyCodeLine{44     OVERTEMP\_WARNING,}
+\DoxyCodeLine{45     SLOW\_FAN\_WARNING,}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{60 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{61 \{}
+\DoxyCodeLine{62     \textcolor{keywordtype}{float} temperature;}
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} current\_step;}
+\DoxyCodeLine{64     \textcolor{keywordtype}{bool} shutdown\_request;}
+\DoxyCodeLine{65     \textcolor{keywordtype}{bool} warning\_request;}
+\DoxyCodeLine{66     \textcolor{keywordtype}{bool} alarm\_request;}
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} next\_step\_request;}
+\DoxyCodeLine{68     \textcolor{keywordtype}{bool} poll\_sensors\_request;}
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} override\_next\_step;}
+\DoxyCodeLine{70     \mbox{\hyperlink{types_8h_a71ef44a7b1de581d625d82b37bed6c80}{ALARM\_TYPES}} current\_alarm;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \} \mbox{\hyperlink{struct_context__t}{Context\_t}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{enum} COLOR\_TYPES}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76     RED,}
+\DoxyCodeLine{77     YELLOW,}
+\DoxyCodeLine{78     GREEN,}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \};}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

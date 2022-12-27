@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LAL_control<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">LAL_control<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
  </tr>
@@ -176,6 +176,12 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="class_abstract__state.html#a1c001b0cb46c11126cb9ff77f8ad3016">Abstract_state</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_idle__state_ad6d70e591dd39da724656a4261013e4f_cgraph.svg" width="492" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -213,11 +219,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_abstract__state.html#ae91c3148b1f2337e1f9465bc27f7ef63">Abstract_state</a>.</p>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_idle__state_aad83cf5a4d37cbb4b45b64dd6d632c53_cgraph.svg" width="296" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_idle__state_aad83cf5a4d37cbb4b45b64dd6d632c53_icgraph.svg" width="304" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -250,7 +251,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Transición hacia nuevo estado. </p>
-<p >Transiciones posibles: Si se solicito una advertencia, una alarma o el sistema se encuentra entre los pasos MOTOR_ON_STEP y MOTOR_COOLDOWN_STEP la transición es hacia <a class="el" href="class_motor__control__state.html">Motor_control_state</a>. Si se solicitó un apagado del sistema y no se transiciona hacia <a class="el" href="class_motor__control__state.html">Motor_control_state</a>, la transición es hacia <a class="el" href="class_shutdown__state.html">Shutdown_state</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Transiciones posibles: Si se solicito una advertencia, una alarma o el sistema se encuentra entre los pasos MOTOR_ON_STEP y MOTOR_COOLDOWN_STEP la transición es hacia <a class="el" href="class_alarm__state.html">Alarm_state</a>. Si se solicitó un apagado del sistema y no se transiciona hacia <a class="el" href="class_alarm__state.html">Alarm_state</a>, la transición es hacia <a class="el" href="class_shutdown__state.html">Shutdown_state</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">machine</td><td>máquina de estados. </td></tr>
   </table>
@@ -262,7 +263,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_idle__state_a422b51d100fee2411f6ea972b13cc2e8_cgraph.svg" width="483" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_idle__state_a422b51d100fee2411f6ea972b13cc2e8_cgraph.svg" width="304" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -303,15 +305,15 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_idle__state_a92217c98eda8e3bd47eb3a8ff602efc2_cgraph.svg" width="336" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_idle__state_a92217c98eda8e3bd47eb3a8ff602efc2_cgraph.svg" width="100%" height="461"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/machine_state_pattern/machine_states/<a class="el" href="_idle__state_8h_source.html">Idle_state.h</a></li>
-<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/src/machine_state_pattern/Idle_state.cpp</li>
+<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/machine_state_pattern/machine_states/<a class="el" href="_idle__state_8h_source.html">Idle_state.h</a></li>
+<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/src/machine_state_pattern/Idle_state.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

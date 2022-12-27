@@ -14,7 +14,6 @@
 #include "Control_system.h"
 #include "system_settings.h"
 #include "interrupts.h"
-#include "observer_pattern/observers/Instruction_observer.h"
 #include "observer_pattern/observers/Temperature_observer.h"
 #include "observer_pattern/observers/Moisture_observer.h"
 #include "observer_pattern/observers/Cooler_observer.h"

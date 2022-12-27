@@ -63,7 +63,7 @@ public:
      */
     void update();
     /**
-     * @brief limpia los caracteres de la pantalla y apaga la retroiluminación, no inhibe la escritura en pantalla.
+     * @brief limpia los caracteres de la pantalla y apaga la retroiluminación, no inhabilita la escritura en pantalla.
      *
      */
     void turn_off();

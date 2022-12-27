@@ -15,8 +15,7 @@
 
 class Buzzer
 /**
- * @brief Clase para el manejo del buzzer por PWM manual,
- *  no utiliza pines PWM de Arduino. Sólo admite pines digitales.
+ * @brief Clase para el manejo del buzzer activo. Sólo admite pines digitales.
  *
  */
 {
@@ -25,14 +24,13 @@ public:
      * @brief Construye un nuevo objecto Buzzer
      *
      * @param buzzer_pin Pin elegido para conectar el buzzer, sólo sálida digital.
-     * @param frequency Frecuencia del tono a emitir.
      */
     Buzzer(int buzzer_pin);
     /**
      * @brief Enciende el buzzer con con una duración en milisegundos duration,
      *  por defecto enciende el buzzer por un tiempo indefinido.
      *
-     * @param duration Duración del encendido en milisegundos.
+     * @param duration Duración del encendido en milisegundos (bloqueante).
      */
     void turn_on(unsigned long duration = 0);
     /**

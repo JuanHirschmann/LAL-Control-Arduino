@@ -1,0 +1,23 @@
+\hypertarget{_cooler__observer_8h_source}{}\doxysection{Cooler\+\_\+observer.\+h}
+\label{_cooler__observer_8h_source}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/observer\_pattern/observers/Cooler\_observer.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/observer\_pattern/observers/Cooler\_observer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_COOLER\_OBSERVER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_COOLER\_OBSERVER\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_system__observer_8h}{observer\_pattern/observers/System\_observer.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_control__system_8h}{Control\_system.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{keyword}{const} \textcolor{keywordtype}{int} SAMPLE\_PERIOD = 1; \textcolor{comment}{//[s]}}
+\DoxyCodeLine{11 \textcolor{comment}{}\textcolor{keyword}{class }\mbox{\hyperlink{class_cooler__observer}{Cooler\_observer}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_system__observer}{System\_observer}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_cooler__observer}{Cooler\_observer}}()\{\};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cooler__observer_aca9bdbbc11981c1ec178090622caaee4}{update}}(\mbox{\hyperlink{class_control__system}{Control\_system}} *subject);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} update\_speed(\mbox{\hyperlink{class_control__system}{Control\_system}} *subject);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     \textcolor{keywordtype}{double} speed[TOTAL\_COOLERS] = \{0, 0\};}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

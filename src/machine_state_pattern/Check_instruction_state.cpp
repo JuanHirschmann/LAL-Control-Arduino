@@ -7,7 +7,7 @@ void Check_instruction_state::update(Control_system *machine)
 {
     if (machine->context.shutdown_request)
     {
-        machine->reset_context();
+        machine->reset();
     }
 
     machine->notify_observers();
@@ -32,7 +32,7 @@ void Check_instruction_state::enter(Control_system *machine)
         if (!machine->context.warning_request)
         {
             machine->motor_status_led.turn_green();
-            machine->set_cooler_speed(0.25, 0.25);
+            machine->set_cooler_speed(0.35, 0.35);
         }
         if (!machine->context.alarm_request)
         {
@@ -43,7 +43,7 @@ void Check_instruction_state::enter(Control_system *machine)
     case MOTOR_OFF_STEP:
         if (!machine->context.warning_request)
         {
-            machine->set_cooler_speed(0.5, 0.5);
+            machine->set_cooler_speed(1, 1);
         }
         machine->motor.turn_off();
         break;

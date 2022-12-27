@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['display_0',['Display',['../class_display.html#ae972fffea6f7ca1d627ef48c3d841bb3',1,'Display']]],
-  ['dual_5fled_1',['Dual_LED',['../class_dual___l_e_d.html#a65de2d03435b8b0db30985bb9370b817',1,'Dual_LED']]]
+  ['control_5fsystem_0',['Control_system',['../class_control__system.html#adcad523150aadd0ca8521779d2befd3d',1,'Control_system']]],
+  ['cooler_1',['Cooler',['../class_cooler.html#a75e59637f392117e58310e3096da4a63',1,'Cooler']]],
+  ['count_5fcooler_5frotation_2',['count_cooler_rotation',['../class_control__system.html#af5cf3969d3f7b995cc7b9421839db415',1,'Control_system']]],
+  ['count_5frotation_3',['count_rotation',['../class_cooler.html#a9802a2d1e34a4b377280fd3369f68d58',1,'Cooler']]]
 ];
