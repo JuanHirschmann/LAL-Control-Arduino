@@ -1,8 +1,9 @@
 var hierarchy =
 [
     [ "Abstract_state", "class_abstract__state.html", [
+      [ "Alarm_state", "class_alarm__state.html", null ],
+      [ "Check_instruction_state", "class_check__instruction__state.html", null ],
       [ "Idle_state", "class_idle__state.html", null ],
-      [ "Motor_control_state", "class_motor__control__state.html", null ],
       [ "Shutdown_state", "class_shutdown__state.html", null ]
     ] ],
     [ "Buzzer", "class_buzzer.html", null ],
@@ -18,7 +19,7 @@ var hierarchy =
     [ "Observer_interface", "class_observer__interface.html", [
       [ "Observer", "class_observer.html", [
         [ "System_observer", "class_system__observer.html", [
-          [ "Instruction_observer", "class_instruction__observer.html", null ],
+          [ "Cooler_observer", "class_cooler__observer.html", null ],
           [ "Moisture_observer", "class_moisture__observer.html", null ],
           [ "Temperature_observer", "class_temperature__observer.html", null ]
         ] ]

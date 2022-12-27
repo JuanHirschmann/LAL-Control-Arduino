@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buzzer_0',['Buzzer',['../class_buzzer.html#a56dd86f6c72edd9fb0dbc4ec6687d8e6',1,'Buzzer']]]
+  ['buzzer_0',['Buzzer',['../class_buzzer.html#adb79b40d4a38b34dfd8d89c2bb35f1af',1,'Buzzer']]]
 ];

@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LAL_control<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">LAL_control<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
  </tr>
@@ -97,30 +97,250 @@ $(document).ready(function(){initNavTree('class_cooler.html',''); initResizable(
   <div class="headertitle"><div class="title">Cooler Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Clase para el control de un ventilador de 3 terminales.  
+ <a href="class_cooler.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_cooler_8h_source.html">Cooler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a75e59637f392117e58310e3096da4a63"><td class="memItemLeft" align="right" valign="top"><a id="a75e59637f392117e58310e3096da4a63" name="a75e59637f392117e58310e3096da4a63"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Cooler</b> (int power_pin, int speed_measurement_pin)</td></tr>
+<tr class="memitem:a75e59637f392117e58310e3096da4a63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cooler.html#a75e59637f392117e58310e3096da4a63">Cooler</a> (int power_pin, int speed_measurement_pin)</td></tr>
+<tr class="memdesc:a75e59637f392117e58310e3096da4a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construye un nuevo objecto <a class="el" href="class_cooler.html" title="Clase para el control de un ventilador de 3 terminales.">Cooler</a>.  <a href="class_cooler.html#a75e59637f392117e58310e3096da4a63">More...</a><br /></td></tr>
 <tr class="separator:a75e59637f392117e58310e3096da4a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa98fd302dc7933fc21c046ca3ea48346"><td class="memItemLeft" align="right" valign="top"><a id="aa98fd302dc7933fc21c046ca3ea48346" name="aa98fd302dc7933fc21c046ca3ea48346"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>turn_on</b> (float duty_cycle=1.0)</td></tr>
+<tr class="memitem:aa98fd302dc7933fc21c046ca3ea48346"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cooler.html#aa98fd302dc7933fc21c046ca3ea48346">turn_on</a> (float duty_cycle=1.0)</td></tr>
+<tr class="memdesc:aa98fd302dc7933fc21c046ca3ea48346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enciende el ventilador. Si el ciclo de trabajo deseado es menor que FAN_MINIMUM_DUTY_CYCLE apaga el ventilador. Si el ciclo de trabajo es mayor al umbral mínimo pero menor a FAN_AUTONOMOUS_DUTY_CYCLE enciende el ventilador durante DEFAULT_DELAY milisegundos a máximo ciclo de trabajo (bloqueante) y luego reduce la velocidad.  <a href="class_cooler.html#aa98fd302dc7933fc21c046ca3ea48346">More...</a><br /></td></tr>
 <tr class="separator:aa98fd302dc7933fc21c046ca3ea48346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aa26bc227fa7a2bdcff9fe607990104"><td class="memItemLeft" align="right" valign="top"><a id="a3aa26bc227fa7a2bdcff9fe607990104" name="a3aa26bc227fa7a2bdcff9fe607990104"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>turn_off</b> ()</td></tr>
+<tr class="memitem:a3aa26bc227fa7a2bdcff9fe607990104"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cooler.html#a3aa26bc227fa7a2bdcff9fe607990104">turn_off</a> ()</td></tr>
+<tr class="memdesc:a3aa26bc227fa7a2bdcff9fe607990104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apaga el ventilador.  <a href="class_cooler.html#a3aa26bc227fa7a2bdcff9fe607990104">More...</a><br /></td></tr>
 <tr class="separator:a3aa26bc227fa7a2bdcff9fe607990104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf13e81f1929d7af9a4c233940e93f81"><td class="memItemLeft" align="right" valign="top"><a id="abf13e81f1929d7af9a4c233940e93f81" name="abf13e81f1929d7af9a4c233940e93f81"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>get_speed</b> ()</td></tr>
-<tr class="separator:abf13e81f1929d7af9a4c233940e93f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad41634aa63d31e334815f35eebdcf5b2"><td class="memItemLeft" align="right" valign="top"><a id="ad41634aa63d31e334815f35eebdcf5b2" name="ad41634aa63d31e334815f35eebdcf5b2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>rotation_detected</b> ()</td></tr>
+<tr class="memitem:ad02531fc9e59b2ddd7f618703e99871b"><td class="memItemLeft" align="right" valign="top">unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cooler.html#ad02531fc9e59b2ddd7f618703e99871b">get_rotation_count</a> ()</td></tr>
+<tr class="memdesc:ad02531fc9e59b2ddd7f618703e99871b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la cantidad de rotaciones desde el último llamado de la función.  <a href="class_cooler.html#ad02531fc9e59b2ddd7f618703e99871b">More...</a><br /></td></tr>
+<tr class="separator:ad02531fc9e59b2ddd7f618703e99871b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad41634aa63d31e334815f35eebdcf5b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cooler.html#ad41634aa63d31e334815f35eebdcf5b2">rotation_detected</a> ()</td></tr>
+<tr class="memdesc:ad41634aa63d31e334815f35eebdcf5b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lectura el pin de medición de velocidad.  <a href="class_cooler.html#ad41634aa63d31e334815f35eebdcf5b2">More...</a><br /></td></tr>
 <tr class="separator:ad41634aa63d31e334815f35eebdcf5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9802a2d1e34a4b377280fd3369f68d58"><td class="memItemLeft" align="right" valign="top"><a id="a9802a2d1e34a4b377280fd3369f68d58" name="a9802a2d1e34a4b377280fd3369f68d58"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>count_rotation</b> ()</td></tr>
+<tr class="memitem:a9802a2d1e34a4b377280fd3369f68d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cooler.html#a9802a2d1e34a4b377280fd3369f68d58">count_rotation</a> ()</td></tr>
+<tr class="memdesc:a9802a2d1e34a4b377280fd3369f68d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment el contador de mediciones.  <a href="class_cooler.html#a9802a2d1e34a4b377280fd3369f68d58">More...</a><br /></td></tr>
 <tr class="separator:a9802a2d1e34a4b377280fd3369f68d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f58f8d6ffd3a78be821a0cc5d9e4f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cooler.html#a18f58f8d6ffd3a78be821a0cc5d9e4f1">is_active</a> ()</td></tr>
+<tr class="memdesc:a18f58f8d6ffd3a78be821a0cc5d9e4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estado del ventilador. No utiliza la medición de velocidad si no que, si se llamó a la función <a class="el" href="class_cooler.html#aa98fd302dc7933fc21c046ca3ea48346" title="Enciende el ventilador. Si el ciclo de trabajo deseado es menor que FAN_MINIMUM_DUTY_CYCLE apaga el v...">turn_on()</a>, el estado del ventilador será true independientemente de si este está rotando o no.  <a href="class_cooler.html#a18f58f8d6ffd3a78be821a0cc5d9e4f1">More...</a><br /></td></tr>
+<tr class="separator:a18f58f8d6ffd3a78be821a0cc5d9e4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/drivers/<a class="el" href="_cooler_8h_source.html">Cooler.h</a></li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Clase para el control de un ventilador de 3 terminales. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a75e59637f392117e58310e3096da4a63" name="a75e59637f392117e58310e3096da4a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e59637f392117e58310e3096da4a63">&#9670;&#160;</a></span>Cooler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cooler::Cooler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>power_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed_measurement_pin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construye un nuevo objecto <a class="el" href="class_cooler.html" title="Clase para el control de un ventilador de 3 terminales.">Cooler</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">power_pin</td><td>Pin de control de velocidad del ventilador </td></tr>
+    <tr><td class="paramname">speed_measurement_pin</td><td>Pin de medición de velocidad del ventilador </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9802a2d1e34a4b377280fd3369f68d58" name="a9802a2d1e34a4b377280fd3369f68d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9802a2d1e34a4b377280fd3369f68d58">&#9670;&#160;</a></span>count_rotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cooler::count_rotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increment el contador de mediciones. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_cooler_a9802a2d1e34a4b377280fd3369f68d58_icgraph.svg" width="362" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad02531fc9e59b2ddd7f618703e99871b" name="ad02531fc9e59b2ddd7f618703e99871b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02531fc9e59b2ddd7f618703e99871b">&#9670;&#160;</a></span>get_rotation_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long int Cooler::get_rotation_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la cantidad de rotaciones desde el último llamado de la función. </p>
+<dl class="section return"><dt>Returns</dt><dd>Rotaciones desde último llamado. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_cooler_ad02531fc9e59b2ddd7f618703e99871b_icgraph.svg" width="332" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a18f58f8d6ffd3a78be821a0cc5d9e4f1" name="a18f58f8d6ffd3a78be821a0cc5d9e4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f58f8d6ffd3a78be821a0cc5d9e4f1">&#9670;&#160;</a></span>is_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Cooler::is_active </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estado del ventilador. No utiliza la medición de velocidad si no que, si se llamó a la función <a class="el" href="class_cooler.html#aa98fd302dc7933fc21c046ca3ea48346" title="Enciende el ventilador. Si el ciclo de trabajo deseado es menor que FAN_MINIMUM_DUTY_CYCLE apaga el v...">turn_on()</a>, el estado del ventilador será true independientemente de si este está rotando o no. </p>
+<dl class="section return"><dt>Returns</dt><dd>true El ventilador esta encendido. </dd>
+<dd>
+false El ventilador está apagado. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_cooler_a18f58f8d6ffd3a78be821a0cc5d9e4f1_icgraph.svg" width="516" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad41634aa63d31e334815f35eebdcf5b2" name="ad41634aa63d31e334815f35eebdcf5b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad41634aa63d31e334815f35eebdcf5b2">&#9670;&#160;</a></span>rotation_detected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Cooler::rotation_detected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lectura el pin de medición de velocidad. </p>
+<dl class="section return"><dt>Returns</dt><dd>true El pin de medición de rotación está en estado alto. </dd>
+<dd>
+false El pin de medición de rotación está en estado bajo. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_cooler_ad41634aa63d31e334815f35eebdcf5b2_icgraph.svg" width="379" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3aa26bc227fa7a2bdcff9fe607990104" name="a3aa26bc227fa7a2bdcff9fe607990104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa26bc227fa7a2bdcff9fe607990104">&#9670;&#160;</a></span>turn_off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cooler::turn_off </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apaga el ventilador. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_cooler_a3aa26bc227fa7a2bdcff9fe607990104_icgraph.svg" width="100%" height="540"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa98fd302dc7933fc21c046ca3ea48346" name="aa98fd302dc7933fc21c046ca3ea48346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98fd302dc7933fc21c046ca3ea48346">&#9670;&#160;</a></span>turn_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cooler::turn_on </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>duty_cycle</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enciende el ventilador. Si el ciclo de trabajo deseado es menor que FAN_MINIMUM_DUTY_CYCLE apaga el ventilador. Si el ciclo de trabajo es mayor al umbral mínimo pero menor a FAN_AUTONOMOUS_DUTY_CYCLE enciende el ventilador durante DEFAULT_DELAY milisegundos a máximo ciclo de trabajo (bloqueante) y luego reduce la velocidad. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duty_cycle</td><td>Ciclo de trabajo </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_cooler_aa98fd302dc7933fc21c046ca3ea48346_cgraph.svg" width="279" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_cooler_aa98fd302dc7933fc21c046ca3ea48346_icgraph.svg" width="539" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/drivers/<a class="el" href="_cooler_8h_source.html">Cooler.h</a></li>
+<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/src/drivers/<a class="el" href="_cooler_8cpp.html">Cooler.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

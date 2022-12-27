@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LAL_control: C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/port_config.h Source File</title>
+<title>LAL_control: C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/port_config.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LAL_control<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">LAL_control<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
  </tr>
@@ -98,28 +98,27 @@ $(document).ready(function(){initNavTree('port__config_8h_source.html',''); init
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef PORT_CONFIG_H</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define PORT_CONFIG_H</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">const</span> <span class="keywordtype">int</span> ONE_WIRE_BUS = 12; <span class="comment">// D9 como digital in</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">const</span> <span class="keywordtype">int</span> BUTTON_PIN = 3;    <span class="comment">// D3, tiene que corresponder a una interrupción externa</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">const</span> <span class="keywordtype">int</span> BUZZER_PIN = 7;    <span class="comment">// D8, no necesita PWM</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">const</span> <span class="keywordtype">int</span> MOTOR_CONTROL_PIN = 2;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">const</span> <span class="keywordtype">int</span> MOTOR_RED_LED_PIN = 10;   <span class="comment">// D10</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">const</span> <span class="keywordtype">int</span> MOTOR_GREEN_LED_PIN = 11; <span class="comment">// D11, Ambos con PWM</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">const</span> <span class="keywordtype">int</span> MOISTURE_SENSOR_PIN = A6;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">const</span> <span class="keywordtype">int</span> FAN_2_STATE_RED_LED = A3;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">const</span> <span class="keywordtype">int</span> FAN_2_STATE_GREEN_LED = A2;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">const</span> <span class="keywordtype">int</span> FAN_1_STATE_RED_LED = A1;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">const</span> <span class="keywordtype">int</span> FAN_1_STATE_GREEN_LED = A0;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">const</span> <span class="keywordtype">int</span> REAR_COOLER_CONTROL_PIN = 6; <span class="comment">// Con PWM</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">const</span> <span class="keywordtype">int</span> REAR_COOLER_SPEED_MEAS_PIN = 8;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">const</span> <span class="keywordtype">int</span> FRONT_COOLER_CONTROL_PIN = 5; <span class="comment">// Con PWM</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">const</span> <span class="keywordtype">int</span> FRONT_COOLER_SPEED_MEAS_PIN = 9;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">const</span> <span class="keywordtype">int</span> BUTTON_PIN = 2;               <span class="comment">// D3, tiene que corresponder a una interrupción externa</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">const</span> <span class="keywordtype">int</span> MOTOR_CONTROL_PIN = 3;        <span class="comment">// reservo PWM para posible control de temperatura.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">const</span> <span class="keywordtype">int</span> FRONT_COOLER_CONTROL_PIN = 5; <span class="comment">// Con PWM</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">const</span> <span class="keywordtype">int</span> REAR_COOLER_CONTROL_PIN = 6;  <span class="comment">// Con PWM</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">const</span> <span class="keywordtype">int</span> ONE_WIRE_BUS = 7;             <span class="comment">// D9 como digital in</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">const</span> <span class="keywordtype">int</span> REAR_COOLER_SPEED_MEAS_PIN = 8;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">const</span> <span class="keywordtype">int</span> FRONT_COOLER_SPEED_MEAS_PIN = 9;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">const</span> <span class="keywordtype">int</span> BUZZER_PIN = 12; <span class="comment">// D8, no necesita PWM</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">const</span> <span class="keywordtype">int</span> MOISTURE_SENSOR_PIN = A6;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">const</span> <span class="keywordtype">int</span> MOTOR_RED_LED_PIN = 11;   <span class="comment">// D10</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">const</span> <span class="keywordtype">int</span> MOTOR_GREEN_LED_PIN = 10; <span class="comment">// D11, Ambos con PWM</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">const</span> <span class="keywordtype">int</span> WATER_INTAKE_RED_LED = 4;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">const</span> <span class="keywordtype">int</span> WATER_INTAKE_GREEN_LED = 13;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">const</span> <span class="keywordtype">int</span> REAR_COOLER_RED_LED = A3;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">const</span> <span class="keywordtype">int</span> REAR_COOLER_GREEN_LED = A2;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">const</span> <span class="keywordtype">int</span> FRONT_COOLER_RED_LED = A1;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">const</span> <span class="keywordtype">int</span> FRONT_COOLER_GREEN_LED = A0;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

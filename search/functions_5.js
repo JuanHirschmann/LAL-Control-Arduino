@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['init_0',['init',['../class_display.html#aacbf91b9f8c57fc2cb892c45fd44e655',1,'Display']]],
-  ['is_5factive_1',['is_active',['../class_buzzer.html#a84d72ddf080ab87d9f13885edb5ac5d9',1,'Buzzer::is_active()'],['../class_motor.html#a20180eb7ef0d0bce876ee0ab220451f0',1,'Motor::is_active()']]]
+  ['get_5fcooler_5fcount_0',['get_cooler_count',['../class_control__system.html#aa6929312cc42f67207d6d5e74f6fe83a',1,'Control_system']]],
+  ['get_5freading_1',['get_reading',['../class_moisture__sensor.html#acd72c51f63ca144ecb419b7cca849974',1,'Moisture_sensor::get_reading()'],['../class_temperature__sensor.html#a43bcc39aa92d0bdb58defd6e4aefb3d5',1,'Temperature_sensor::get_reading()']]],
+  ['get_5frotation_5fcount_2',['get_rotation_count',['../class_cooler.html#ad02531fc9e59b2ddd7f618703e99871b',1,'Cooler']]]
 ];

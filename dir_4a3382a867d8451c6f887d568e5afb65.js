@@ -1,6 +1,6 @@
 var dir_4a3382a867d8451c6f887d568e5afb65 =
 [
-    [ "Instruction_observer.h", "_instruction__observer_8h.html", "_instruction__observer_8h" ],
+    [ "Cooler_observer.h", "_cooler__observer_8h_source.html", null ],
     [ "Moisture_observer.h", "_moisture__observer_8h.html", "_moisture__observer_8h" ],
     [ "Observer.h", "_observer_8h.html", "_observer_8h" ],
     [ "Observer_interface.h", "_observer__interface_8h.html", "_observer__interface_8h" ],

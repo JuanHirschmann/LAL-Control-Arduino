@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LAL_control<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">LAL_control<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
  </tr>
@@ -114,9 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe8e63e4def12a48cde5679ce008f402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#abe8e63e4def12a48cde5679ce008f402">set_temp</a> (float new_temperature)</td></tr>
 <tr class="memdesc:abe8e63e4def12a48cde5679ce008f402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fija el valor de temperatura a actualizar (no la imprime en pantalla), la ubicación se da con las constantes de offset de temperatura definidas en <a class="el" href="display__settings_8h.html" title="Archivo de configuración de la pantalla.">display_settings.h</a>.  <a href="class_display.html#abe8e63e4def12a48cde5679ce008f402">More...</a><br /></td></tr>
 <tr class="separator:abe8e63e4def12a48cde5679ce008f402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2d0336f6a6b970a057e1ce910366175"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#ab2d0336f6a6b970a057e1ce910366175">set_fan_speed_pct</a> (int new_speed_pct)</td></tr>
-<tr class="memdesc:ab2d0336f6a6b970a057e1ce910366175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fija el valor del porcentaje de velocidad, no lo imprie en pantalla. La ubicación se da con las constantes de offset de temperatura definidas en <a class="el" href="display__settings_8h.html" title="Archivo de configuración de la pantalla.">display_settings.h</a>.  <a href="class_display.html#ab2d0336f6a6b970a057e1ce910366175">More...</a><br /></td></tr>
-<tr class="separator:ab2d0336f6a6b970a057e1ce910366175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c22cf2f0125cb737bf93136caa32de3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a4c22cf2f0125cb737bf93136caa32de3">set_fan_speed_pct</a> (float back_speed_pct, float front_speed_pct)</td></tr>
+<tr class="memdesc:a4c22cf2f0125cb737bf93136caa32de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fija la velocidad en RPS, no lo imprie en pantalla excepto que la variación de velocidades sea lo suficientemente grande. La ubicación se da con las constantes de offset de velocidad definidas en <a class="el" href="display__settings_8h.html" title="Archivo de configuración de la pantalla.">display_settings.h</a>.  <a href="class_display.html#a4c22cf2f0125cb737bf93136caa32de3">More...</a><br /></td></tr>
+<tr class="separator:a4c22cf2f0125cb737bf93136caa32de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87d1e7bf73a1d14b5e76c9ab647a9e93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a87d1e7bf73a1d14b5e76c9ab647a9e93">set_text</a> (const char *string_out)</td></tr>
 <tr class="memdesc:a87d1e7bf73a1d14b5e76c9ab647a9e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fija el el texto a actualizar, no lo imprime en pantalla. La ubicación se da con las constantes de offset de temperatura definidas en <a class="el" href="display__settings_8h.html" title="Archivo de configuración de la pantalla.">display_settings.h</a>.  <a href="class_display.html#a87d1e7bf73a1d14b5e76c9ab647a9e93">More...</a><br /></td></tr>
 <tr class="separator:a87d1e7bf73a1d14b5e76c9ab647a9e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,7 +124,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad2740b779d61e461c4dcaaf34f1fcd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza los valores en pantalla con los parámetros previamente fijados. Solo actualiza la pantalla cuando uno o más valores hayan cambiado.  <a href="class_display.html#ad2740b779d61e461c4dcaaf34f1fcd8f">More...</a><br /></td></tr>
 <tr class="separator:ad2740b779d61e461c4dcaaf34f1fcd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a140c7f61de37b0b01e29d36005dc0048"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a140c7f61de37b0b01e29d36005dc0048">turn_off</a> ()</td></tr>
-<tr class="memdesc:a140c7f61de37b0b01e29d36005dc0048"><td class="mdescLeft">&#160;</td><td class="mdescRight">limpia los caracteres de la pantalla y apaga la retroiluminación, no inhibe la escritura en pantalla.  <a href="class_display.html#a140c7f61de37b0b01e29d36005dc0048">More...</a><br /></td></tr>
+<tr class="memdesc:a140c7f61de37b0b01e29d36005dc0048"><td class="mdescLeft">&#160;</td><td class="mdescRight">limpia los caracteres de la pantalla y apaga la retroiluminación, no inhabilita la escritura en pantalla.  <a href="class_display.html#a140c7f61de37b0b01e29d36005dc0048">More...</a><br /></td></tr>
 <tr class="separator:a140c7f61de37b0b01e29d36005dc0048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2763dd7748bd3de2c0c24bc6d89011e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#ac2763dd7748bd3de2c0c24bc6d89011e">turn_on</a> ()</td></tr>
 <tr class="memdesc:ac2763dd7748bd3de2c0c24bc6d89011e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enciende la retroiluminación y limpia los caracteres de la pantalla.  <a href="class_display.html#ac2763dd7748bd3de2c0c24bc6d89011e">More...</a><br /></td></tr>
@@ -169,11 +169,17 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Método para inicializar el objeto, sólo se puede luego o en setup(). </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_display_aacbf91b9f8c57fc2cb892c45fd44e655_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
-<a id="ab2d0336f6a6b970a057e1ce910366175" name="ab2d0336f6a6b970a057e1ce910366175"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d0336f6a6b970a057e1ce910366175">&#9670;&#160;</a></span>set_fan_speed_pct()</h2>
+<a id="a4c22cf2f0125cb737bf93136caa32de3" name="a4c22cf2f0125cb737bf93136caa32de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c22cf2f0125cb737bf93136caa32de3">&#9670;&#160;</a></span>set_fan_speed_pct()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,20 +187,37 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Display::set_fan_speed_pct </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>new_speed_pct</em></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>back_speed_pct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>front_speed_pct</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Fija el valor del porcentaje de velocidad, no lo imprie en pantalla. La ubicación se da con las constantes de offset de temperatura definidas en <a class="el" href="display__settings_8h.html" title="Archivo de configuración de la pantalla.">display_settings.h</a>. </p>
+<p>Fija la velocidad en RPS, no lo imprie en pantalla excepto que la variación de velocidades sea lo suficientemente grande. La ubicación se da con las constantes de offset de velocidad definidas en <a class="el" href="display__settings_8h.html" title="Archivo de configuración de la pantalla.">display_settings.h</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">new_speed_pct</td><td>Nuevo valor a fijar </td></tr>
+    <tr><td class="paramname">back_speed_pct</td><td>Velocidad ventilador trasero [RPS] </td></tr>
+    <tr><td class="paramname">front_speed_pct</td><td>Velocidad ventilador delantero [RPS] </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_display_a4c22cf2f0125cb737bf93136caa32de3_icgraph.svg" width="404" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -221,6 +244,12 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_display_abe8e63e4def12a48cde5679ce008f402_icgraph.svg" width="554" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -247,6 +276,12 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_display_a87d1e7bf73a1d14b5e76c9ab647a9e93_icgraph.svg" width="100%" height="488"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -265,7 +300,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>limpia los caracteres de la pantalla y apaga la retroiluminación, no inhibe la escritura en pantalla. </p>
+<p>limpia los caracteres de la pantalla y apaga la retroiluminación, no inhabilita la escritura en pantalla. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -313,15 +348,15 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_display_ad2740b779d61e461c4dcaaf34f1fcd8f_icgraph.svg" width="308" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_display_ad2740b779d61e461c4dcaaf34f1fcd8f_icgraph.svg" width="334" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/include/drivers/<a class="el" href="_display_8h_source.html">Display.h</a></li>
-<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL_Control/src/drivers/<a class="el" href="_display_8cpp.html">Display.cpp</a></li>
+<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/drivers/<a class="el" href="_display_8h_source.html">Display.h</a></li>
+<li>C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/src/drivers/<a class="el" href="_display_8cpp.html">Display.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
