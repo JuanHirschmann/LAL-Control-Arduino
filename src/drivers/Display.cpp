@@ -80,10 +80,10 @@ void Display::update()
         this->screen_interface.setCursor(TEMP_INDICATOR_CURSOR_OFFSET[0], TEMP_INDICATOR_CURSOR_OFFSET[1]);
         this->screen_interface.print(this->on_screen_temp, 1);
         this->screen_interface.setCursor(FAN_INDICATOR_CURSOR_OFFSET[0], FAN_INDICATOR_CURSOR_OFFSET[1]);
-        this->screen_interface.print(this->on_screen_fan_speed_pct[0], 3);
+        this->screen_interface.print(this->on_screen_fan_speed_pct[0], 0);
         this->screen_interface.setCursor(FAN_INDICATOR_CURSOR_OFFSET[0] + 7, FAN_INDICATOR_CURSOR_OFFSET[1]);
 
-        this->screen_interface.print(this->on_screen_fan_speed_pct[1], 3);
+        this->screen_interface.print(this->on_screen_fan_speed_pct[1], 0);
 
         this->update_needed = false;
     }

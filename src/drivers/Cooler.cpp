@@ -20,7 +20,7 @@ void Cooler::turn_on(float duty_cycle = 1.0)
 {
     if (duty_cycle < FAN_MINIMUM_DUTY_CYCLE) //
     {
-        Serial.println("Te apague");
+        // Serial.println("Te apague");
         this->turn_off();
     }
     else
@@ -28,7 +28,7 @@ void Cooler::turn_on(float duty_cycle = 1.0)
         if (!this->is_on && duty_cycle < FAN_AUTONOMOUS_DUTY_CYCLE)
         {
 
-            Serial.println("Te ayudé");
+            // Serial.println("Te ayudé");
             this->turn_on(1.0); // Necesita inercia
             delay(DEFAULT_DELAY);
         }
@@ -44,7 +44,7 @@ void Cooler::turn_off()
 }
 unsigned long int Cooler::get_rotation_count()
 {
-    unsigned long int value = this->rotations_in_sample_period / 2;
+    unsigned long int value = this->pulses_in_sample_period / 2;
     this->reset_count();
     return value;
 }
@@ -54,11 +54,11 @@ bool Cooler::rotation_detected()
 }
 void Cooler::reset_count()
 {
-    this->rotations_in_sample_period = 0;
+    this->pulses_in_sample_period = 0;
 }
 void Cooler::count_rotation()
 {
-    this->rotations_in_sample_period++;
+    this->pulses_in_sample_period++;
 }
 bool Cooler::is_active()
 {

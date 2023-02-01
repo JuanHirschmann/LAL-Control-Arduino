@@ -148,15 +148,20 @@ void Control_system::reset()
 }
 void Control_system::count_cooler_rotation()
 {
-    if (this->front_cooler.rotation_detected() == HIGH)
+    static bool rear_cooler_previous_state = false;
+    bool rear_cooler_current_state = digitalRead(REAR_COOLER_SPEED_MEAS_PIN);
+    if (rear_cooler_previous_state != rear_cooler_current_state && rear_cooler_current_state == LOW) // Falling edge
+    {
+        this->rear_cooler.count_rotation();
+    }
+    rear_cooler_previous_state = rear_cooler_current_state;
+    static bool front_cooler_previous_state = false;
+    bool front_cooler_current_state = digitalRead(FRONT_COOLER_SPEED_MEAS_PIN);
+    if (front_cooler_previous_state != front_cooler_current_state && front_cooler_current_state == LOW) // Falling edge
     {
         this->front_cooler.count_rotation();
     }
-    if (this->front_cooler.rotation_detected() == HIGH)
-    {
-
-        this->rear_cooler.count_rotation();
-    }
+    front_cooler_previous_state = front_cooler_current_state;
 }
 void Control_system::set_cooler_speed(float rear_cooler_speed, float front_cooler_speed)
 {
@@ -271,7 +276,7 @@ void Control_system::request_warning(ALARM_TYPES type_of_warning)
     this->context.warning_request = true;
     this->context.current_alarm = type_of_warning;
 }
- void Control_system::set_warning_flag(bool new_state)
+void Control_system::set_warning_flag(bool new_state)
 {
     if (this->context.warning_request != new_state)
     {

@@ -11,9 +11,9 @@
 #ifndef SYSTEM_SETTINGS_H
 #define SYSTEM_SETTINGS_H
 /* Constantes temporales*/
-const int DEBOUNCE_CONSTANT = 200; //[ms]
+const int DEBOUNCE_CONSTANT = 100; //[ms]
 const int DEFAULT_DELAY = 100;
-
+const int SWITCH_TIMEOUT_CONSTANT = 2000; //[ms]
 /* Comunicación serie*/
 const int DEFAULT_BAUD_RATE = 9600;
 const bool DEBUGGING = true;
@@ -42,5 +42,5 @@ const int MAX_ANALOG_WRITE_VALUE = 255;
 const float FAN_MINIMUM_DUTY_CYCLE = 0.3;     // Ciclo de trabajo a partir del cual el cooler puede mantener su rotación si ya estaba encendido.
 const float FAN_AUTONOMOUS_DUTY_CYCLE = 0.77; // Ciclo de trabajo a partir del cual el cooler puede mantener su rotación partiendo del reposo.
 const int TOTAL_COOLERS = 2;
-const float SPEED_VARIATION_UPDATE_THRESHOLD = 0.01; // Umbral porcentual para actualizar la velocidad
+const float SPEED_VARIATION_UPDATE_THRESHOLD = 0.05; // Umbral porcentual para actualizar la velocidad
 #endif

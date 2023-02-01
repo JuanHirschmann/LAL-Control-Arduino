@@ -68,7 +68,7 @@ public:
 
 private:
     bool is_on = false;
-    unsigned long int rotations_in_sample_period = 0;
+    unsigned long int pulses_in_sample_period = 0;
     int power_pin;
     int speed_measurement_pint;
     float current_duty_cycle = 0;
