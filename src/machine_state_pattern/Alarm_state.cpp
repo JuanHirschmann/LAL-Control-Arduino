@@ -2,7 +2,7 @@
 #include "Arduino.h"
 void Alarm_state::enter(Control_system *machine)
 {
-    Serial.println(F("Estado motor control"));
+    Serial.println(F("Estado alarm state"));
 }
 void Alarm_state::update(Control_system *machine)
 {
@@ -12,7 +12,7 @@ void Alarm_state::update(Control_system *machine)
         machine->context.override_next_step = false;
         if (!machine->context.warning_request)
         {
-
+            machine->context.current_alarm = NO_ALARM;
             machine->motor_status_led.turn_green();
         }
 
@@ -41,11 +41,12 @@ Abstract_state *Alarm_state::transition(Control_system *machine)
             this->exit(machine);
             return new Check_instruction_state();
         }
-        /* else
+        else if (machine->context.current_alarm == NO_ALARM)
         {
+            machine->set_cooler_speed(0, 0);
             this->exit(machine);
             return new Idle_state();
-        } */
+        }
     }
     else if (machine->context.shutdown_request)
     {

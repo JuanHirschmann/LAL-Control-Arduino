@@ -31,11 +31,11 @@ void Check_instruction_state::enter(Control_system *machine)
     case MOTOR_ON_STEP:
         if (!machine->context.warning_request)
         {
-            machine->motor_status_led.turn_green();
             machine->set_cooler_speed(0.35, 0.35);
         }
         if (!machine->context.alarm_request)
         {
+            machine->motor_status_led.turn_green();
             machine->motor.turn_on();
         }
         break;

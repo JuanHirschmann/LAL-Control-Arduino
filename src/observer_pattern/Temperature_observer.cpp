@@ -5,20 +5,14 @@ void Temperature_observer::update(Control_system *subject)
     {
 
         float temperature = subject->measure_temperature();
-        Serial.print(millis());
-        Serial.print(",");
-        Serial.println(temperature);
+        // Serial.print(millis());
+        // Serial.print(",");
+        // Serial.println(temperature);
         if (temperature < HYSTERESIS_PERCENT * OVERTEMP_WARNING_THRESHOLD)
         {
             subject->set_warning_flag(false);
         }
-        else if (temperature < HYSTERESIS_PERCENT * OVERTEMP_ALARM_THRESHOLD) // Histeresis
-        {
-
-            // subject->set_alarm_flag(false); ¿La alarma obliga a apgagar el sistema?
-        }
-
-        if (temperature == ERROR_TEMPERATURE)
+        else if (temperature == ERROR_TEMPERATURE)
         {
             subject->request_alarm(NO_TEMP_SENSOR_ALARM);
         }

@@ -49,7 +49,8 @@ void Dual_LED::turn_yellow()
 void Dual_LED::turn_on()
 {
     this->is_on = true;
-    int value = (this->green_led_duty_cycle * MAX_ANALOG_WRITE_VALUE);
+    int value = int(this->green_led_duty_cycle * MAX_ANALOG_WRITE_VALUE);
+    // Serial.println(value);
     analogWrite(this->green_led_pin, value);
     value = int(this->red_led_duty_cycle * MAX_ANALOG_WRITE_VALUE);
     analogWrite(this->red_led_pin, value);

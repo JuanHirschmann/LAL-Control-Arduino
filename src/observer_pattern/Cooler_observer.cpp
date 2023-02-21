@@ -11,13 +11,12 @@ void Cooler_observer::update(Control_system *subject)
 
             if (this->speed[i] == 0 && subject->is_cooler_active(static_cast<COOLER_TYPES>(i)) == true)
             { // Utilizar previous call.
-                /* delay(DEFAULT_DELAY * 10);
+                delay(DEFAULT_DELAY);
                 this->update_speed(subject);
                 if (this->speed[i] == 0 && subject->is_cooler_active(static_cast<COOLER_TYPES>(i)) == true)
                 {
                     subject->request_alarm(HALTED_FAN_ALARM);
                 }
-            } */
             }
         }
     }
@@ -30,8 +29,8 @@ void Cooler_observer::update_speed(Control_system *subject)
     if (time_diff > SAMPLE_PERIOD)
     {
         this->speed[REAR_COOLER] = (60000) * float(subject->get_cooler_count(REAR_COOLER)) / time_diff;
-        Serial.println(this->speed[REAR_COOLER]);
-        Serial.println(this->speed[FRONT_COOLER]);
+        // Serial.println(this->speed[REAR_COOLER]);
+        // Serial.println(this->speed[FRONT_COOLER]);
         this->speed[FRONT_COOLER] = (60000) * float(subject->get_cooler_count(FRONT_COOLER)) / time_diff;
         previous_call_time = current_call_time;
     }

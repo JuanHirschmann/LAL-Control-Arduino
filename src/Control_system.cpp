@@ -72,7 +72,7 @@ void Control_system::handle_alarm()
         break;
     case NO_ALARM:
 
-        this->motor_status_led.turn_green();
+        // this->motor_status_led.turn_green();
         break;
     default:
         this->display.set_text("No se reconoció el error");

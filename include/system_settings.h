@@ -35,7 +35,7 @@ const int MOISTURE_ALARM_THRESHOLD = 255;
 
 /* LED dual*/
 const float RED_COLOR_DUTY_CYCLE[] = {0, 1}; //{0, 1};
-const float YELLOW_COLOR_DUTY_CYCLE[] = {0.5, 0.5};
+const float YELLOW_COLOR_DUTY_CYCLE[] = {0.9, 0.9};
 const float GREEN_COLOR_DUTY_CYCLE[] = {1, 0}; //{1, 0};
 const int MAX_ANALOG_WRITE_VALUE = 255;
 
