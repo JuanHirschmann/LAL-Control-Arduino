@@ -45,14 +45,22 @@ void Control_system::handle_alarm()
         this->motor.turn_off();
         this->motor_status_led.turn_red();
         this->context.shutdown_request = true;
-        this->rear_cooler.turn_off();
-        this->front_cooler.turn_off();
+        this->rear_cooler.turn_on(1);
+        this->front_cooler.turn_on(1);
         this->show_error_msg();
         break;
     case HALTED_FAN_ALARM:
         this->motor.turn_off();
-        this->motor_status_led.turn_red();
+        this->motor_status_led.turn_off();
         this->context.shutdown_request = true;
+        if (this->is_cooler_active(REAR_COOLER))
+        {
+            this->rear_cooler_led.turn_red();
+        }
+        else
+        {
+            this->front_cooler_led.turn_red();
+        }
         this->rear_cooler.turn_off();
         this->front_cooler.turn_off();
         this->show_error_msg();
@@ -141,10 +149,10 @@ void Control_system::reset()
 
     this->front_cooler.turn_off();
     this->rear_cooler.turn_off();
-    this->front_cooler_led.turn_red();
-    this->rear_cooler_led.turn_red();
+    this->front_cooler_led.turn_off();
+    this->rear_cooler_led.turn_off();
     this->motor_status_led.turn_off();
-    this->water_intake_led.turn_red();
+    // this->water_intake_led.turn_red();
 }
 void Control_system::count_cooler_rotation()
 {
@@ -169,7 +177,7 @@ void Control_system::set_cooler_speed(float rear_cooler_speed, float front_coole
     this->rear_cooler.turn_on(rear_cooler_speed);
     if (rear_cooler_speed == 0)
     {
-        this->rear_cooler_led.turn_red();
+        this->rear_cooler_led.turn_off();
     }
     else
     {
@@ -178,7 +186,7 @@ void Control_system::set_cooler_speed(float rear_cooler_speed, float front_coole
     if (front_cooler_speed == 0)
     {
 
-        this->front_cooler_led.turn_red();
+        this->front_cooler_led.turn_off();
     }
     else
     {

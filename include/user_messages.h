@@ -17,7 +17,7 @@ const int ERROR_TYPES = 5;
 static const char PROCEDURE_MESSAGES[MAX_PROCEDURE_STEPS][MAX_MESSAGE_LENGTH] PROGMEM = {
     {"LAL: Sistema de control de procedimiento.\0"},
     {"Confirmar funcionamiento de canilla de agua.\0"},
-    {"Abrir conexión de vacío/extracción.\0"},
+    {"Abrir valvula de vacio/extraccion.\0"},
     {"Encender extractor.\0"},
     {"Apagar extractor.\0"},
     {"Motor apagado.Esperando a que baje la temperatura.\0"},

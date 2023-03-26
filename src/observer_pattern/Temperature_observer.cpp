@@ -8,13 +8,13 @@ void Temperature_observer::update(Control_system *subject)
         // Serial.print(millis());
         // Serial.print(",");
         // Serial.println(temperature);
-        if (temperature < HYSTERESIS_PERCENT * OVERTEMP_WARNING_THRESHOLD)
-        {
-            subject->set_warning_flag(false);
-        }
-        else if (temperature == ERROR_TEMPERATURE)
+        if (temperature == ERROR_TEMPERATURE)
         {
             subject->request_alarm(NO_TEMP_SENSOR_ALARM);
+        }
+        else if (temperature < HYSTERESIS_PERCENT * OVERTEMP_WARNING_THRESHOLD)
+        {
+            subject->set_warning_flag(false);
         }
         else if (temperature > OVERTEMP_ALARM_THRESHOLD)
         {

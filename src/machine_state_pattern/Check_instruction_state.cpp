@@ -31,7 +31,7 @@ void Check_instruction_state::enter(Control_system *machine)
     case MOTOR_ON_STEP:
         if (!machine->context.warning_request)
         {
-            machine->set_cooler_speed(0.35, 0.35);
+            machine->set_cooler_speed(0.5, 0.5);
         }
         if (!machine->context.alarm_request)
         {

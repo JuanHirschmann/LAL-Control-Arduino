@@ -11,7 +11,7 @@ void Cooler_observer::update(Control_system *subject)
 
             if (this->speed[i] == 0 && subject->is_cooler_active(static_cast<COOLER_TYPES>(i)) == true)
             { // Utilizar previous call.
-                delay(DEFAULT_DELAY);
+                delay(DEFAULT_DELAY * 2);
                 this->update_speed(subject);
                 if (this->speed[i] == 0 && subject->is_cooler_active(static_cast<COOLER_TYPES>(i)) == true)
                 {

@@ -20,15 +20,15 @@ const int REAR_COOLER_SPEED_MEAS_PIN = 8;
 const int FRONT_COOLER_SPEED_MEAS_PIN = 9;
 const int BUZZER_PIN = 12; // D8, no necesita PWM
 
-const int MOISTURE_SENSOR_PIN = A6;
+const int MOISTURE_SENSOR_PIN = 4;
 
-const int MOTOR_RED_LED_PIN = 11;   // D10
-const int MOTOR_GREEN_LED_PIN = 10; // D11, Ambos con PWM
-const int WATER_INTAKE_RED_LED = 4;
-const int WATER_INTAKE_GREEN_LED = 13;
-const int REAR_COOLER_RED_LED = A3;
-const int REAR_COOLER_GREEN_LED = A2;
-const int FRONT_COOLER_RED_LED = A1;
-const int FRONT_COOLER_GREEN_LED = A0;
+const int MOTOR_RED_LED_PIN = A2;      // D10 
+const int MOTOR_GREEN_LED_PIN = A1;    // D11, Ambos con PWM rojo 2
+const int WATER_INTAKE_RED_LED = 10;   // 
+const int WATER_INTAKE_GREEN_LED = A3; // 
+const int REAR_COOLER_GREEN_LED = A0;  // 
+const int REAR_COOLER_RED_LED = A6;    // 
+const int FRONT_COOLER_RED_LED = 13;   // 
+const int FRONT_COOLER_GREEN_LED = 11; // 
 
 #endif
