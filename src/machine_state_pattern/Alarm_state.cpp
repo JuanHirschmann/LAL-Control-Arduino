@@ -6,10 +6,10 @@ void Alarm_state::enter(Control_system *machine)
 }
 void Alarm_state::update(Control_system *machine)
 {
-    machine->context.override_next_step = true;
+    // machine->context.override_next_step = true;
     if (!machine->context.alarm_request)
     {
-        machine->context.override_next_step = false;
+        // machine->context.override_next_step = false;
         if (!machine->context.warning_request)
         {
             machine->context.current_alarm = NO_ALARM;
@@ -21,9 +21,9 @@ void Alarm_state::update(Control_system *machine)
     else
     {
         machine->buzzer.turn_on();
-        machine->context.override_next_step = true;
+        // machine->context.override_next_step = true;
     }
-    machine->handle_alarm();
+    // machine->handle_alarm();
     machine->notify_observers();
     machine->display.update();
 }
@@ -55,8 +55,8 @@ Abstract_state *Alarm_state::transition(Control_system *machine)
         // if (prev_millis_call != 0 && current_millis_call - prev_millis_call > 5000)
         //{
         //     prev_millis_call = current_millis_call;
-        // this->exit(machine);
-        // return new Shutdown_state();
+        this->exit(machine);
+        return new Shutdown_state();
         //}
     }
     return nullptr;

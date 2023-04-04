@@ -24,8 +24,8 @@ const int BUZZER_LOW_FREQ = 200;
 
 /* Sensor de temperatura*/
 const int MAX_SENSORS = 10;
-const float OVERTEMP_WARNING_THRESHOLD = 30;
-const float OVERTEMP_ALARM_THRESHOLD = 33;
+const float OVERTEMP_WARNING_THRESHOLD = 50;
+const float OVERTEMP_ALARM_THRESHOLD = 70;
 const float ERROR_TEMPERATURE = -127;
 const float HYSTERESIS_PERCENT = 0.95;
 const int FAN_SPEED_SAMPLE_PERIOD = 1000; //[ms]

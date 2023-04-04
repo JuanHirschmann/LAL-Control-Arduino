@@ -157,9 +157,9 @@ public:
     /**
      * @brief Obtiene la humedad del objeto mois_sensor.
      *
-     * @return int Valor analógico de la medición. (0 indica humedad, 255 sequedad máxima)
+     * @return true si detectó humedad, falso en caso contrario.
      */
-    int measure_moisture();
+    bool measure_moisture();
     /**
      * @brief Solicita avanzar hacia la siguiente instrucción. Si no hay
      * alguna alarma activa la solicitud se hará efectiva.

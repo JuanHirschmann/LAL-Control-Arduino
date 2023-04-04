@@ -30,10 +30,10 @@ Abstract_state *Idle_state::transition(Control_system *machine)
         this->exit(machine);
         return new Check_instruction_state();
     }
-    /* else if (machine->context.shutdown_request)
+    else if (machine->context.shutdown_request)
     {
         this->exit(machine);
         return new Shutdown_state();
-    } */
+    }
     return nullptr;
 }

@@ -70,7 +70,10 @@ void Display::set_text(const char *string_out)
 }
 void Display::update()
 {
-
+    if (this->on_screen_timer)
+    {
+        this->update_timer();
+    }
     if (this->update_needed)
     {
         this->screen_interface.clear();
@@ -86,6 +89,21 @@ void Display::update()
         this->screen_interface.print(this->on_screen_fan_speed_pct[1], 0);
 
         this->update_needed = false;
+        if (this->on_screen_timer)
+        {
+            this->screen_interface.setCursor(TIMER_CURSOR_OFFSET[0], TIMER_CURSOR_OFFSET[1]);
+            if (this->on_screen_minutes < 10)
+            {
+                this->screen_interface.print(0);
+            }
+            this->screen_interface.print(this->on_screen_minutes);
+            this->screen_interface.print(":");
+            if (this->on_screen_seconds < 10)
+            {
+                this->screen_interface.print(0);
+            }
+            this->screen_interface.print(this->on_screen_seconds);
+        }
     }
 }
 void Display::turn_off()
@@ -97,4 +115,35 @@ void Display::turn_on()
 {
     this->screen_interface.clear();
     this->screen_interface.backlight();
+}
+void Display::update_timer()
+{
+    unsigned long current_call = millis();
+    unsigned long timer_delta = current_call - this->millis_on_timer_call;
+
+    int seconds_elapsed = int(timer_delta / 1000);
+    if (seconds_elapsed != 0)
+    {
+        this->update_needed = true;
+        int minutes_elapsed = int(seconds_elapsed / 60);
+        seconds_elapsed = seconds_elapsed - minutes_elapsed * 60;
+        this->on_screen_minutes = this->on_screen_minutes + minutes_elapsed;
+        this->on_screen_seconds = this->on_screen_seconds + seconds_elapsed;
+        if (this->on_screen_seconds >= 60)
+        {
+            this->on_screen_minutes++;
+            this->on_screen_seconds = 0;
+        }
+        this->millis_on_timer_call = current_call;
+    }
+}
+void Display::show_timer()
+{
+    this->on_screen_timer = true;
+    this->millis_on_timer_call = millis();
+    this->update_needed = true;
+}
+void Display::hide_timer()
+{
+    this->on_screen_timer = false;
 }

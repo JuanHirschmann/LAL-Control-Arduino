@@ -5,10 +5,10 @@ void Check_instruction_state::exit(Control_system *machine){
 };
 void Check_instruction_state::update(Control_system *machine)
 {
-    if (machine->context.shutdown_request)
+    /* if (machine->context.shutdown_request)
     {
         machine->reset();
-    }
+    } */
 
     machine->notify_observers();
     machine->display.update();
@@ -29,6 +29,7 @@ void Check_instruction_state::enter(Control_system *machine)
 
         break;
     case MOTOR_ON_STEP:
+        machine->display.show_timer();
         if (!machine->context.warning_request)
         {
             machine->set_cooler_speed(0.5, 0.5);
@@ -41,6 +42,7 @@ void Check_instruction_state::enter(Control_system *machine)
         break;
 
     case MOTOR_OFF_STEP:
+        machine->display.hide_timer();
         if (!machine->context.warning_request)
         {
             machine->set_cooler_speed(1, 1);
@@ -48,12 +50,12 @@ void Check_instruction_state::enter(Control_system *machine)
         machine->motor.turn_off();
         break;
     case MOTOR_COOLDOWN_STEP:
-        machine->context.override_next_step = true;
-        if (!machine->context.warning_request)
+        /* machine->context.override_next_step = true;
+        if (machine->context.alarm_request != OVERTEMP_WARNING && machine->context.alarm_request != OVERTEMP_ALARM)
         {
             machine->context.override_next_step = false;
         }
-
+ */
         break;
     case WATER_OFF_STEP:
         machine->set_cooler_speed(0, 0);
@@ -71,6 +73,11 @@ Abstract_state *Check_instruction_state::transition(Control_system *machine)
         this->exit(machine);
 
         return new Idle_state();
+    }
+    if (machine->context.shutdown_request)
+    {
+        this->exit(machine);
+        return new Shutdown_state();
     }
     return nullptr;
 }

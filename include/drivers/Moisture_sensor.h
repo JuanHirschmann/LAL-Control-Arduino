@@ -1,7 +1,7 @@
 /**
  * @file Moisture_sensor.h
  * @author Juan Hirschmann (jhirschmann@fi.uba.ar)
- * @brief Controlador de sensor de humedad analógico.
+ * @brief Controlador de sensor de humedad digital.
  * @version 0.1
  * @date 2022-11-30
  *
@@ -12,7 +12,7 @@
 #define MOISTURE_SENSOR_H
 #include "Arduino.h"
 /**
- * @brief Clase para el manejo del sensor de humedad analógico.
+ * @brief Clase para el manejo del sensor de humedad digital.
  *
  */
 class Moisture_sensor
@@ -21,15 +21,15 @@ public:
     /**
      * @brief Construye un nuevo objecto Moisture_sensor
      *
-     * @param analog_pin pin analógico donde se conecto el sensor
+     * @param analog_pin pin digital donde se conecto el sensor
      */
-    Moisture_sensor(int analog_pin);
+    Moisture_sensor(int digital_pin);
     /**
      * @brief Devuelve la lectura realizada
      *
      * @return int lectura analógica realizada (0 indica conductividad completa, 1023 indica resistividad completa)
      */
-    int get_reading();
+    bool get_reading();
 
 private:
     /**
@@ -38,7 +38,7 @@ private:
      */
     void update_reading();
     /**
-     * @brief pin analogico donde se conectó el sensor.
+     * @brief pin digital donde se conectó el sensor.
      *
      */
     int sensor_pin = 0;
@@ -46,7 +46,7 @@ private:
      * @brief lectura realizada.
      *
      */
-    int reading = 0;
+    bool water_detected = false;
 };
 
 #endif

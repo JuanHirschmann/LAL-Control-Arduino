@@ -3,9 +3,9 @@ void Moisture_observer::update(Control_system *subject)
 {
     if (subject->is_poll_sensors_requested())
     {
-        int moisture = subject->measure_moisture();
+        bool is_water_leaking = subject->measure_moisture();
 
-        if (moisture < MOISTURE_ALARM_THRESHOLD)
+        if (is_water_leaking)
         {
 
             subject->request_alarm(HUMIDITY_ALARM);

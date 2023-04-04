@@ -29,6 +29,7 @@ void Control_system::init_display()
 }
 void Control_system::handle_alarm()
 {
+    this->context.override_next_step = true;
     switch (this->context.current_alarm)
     {
     case OVERTEMP_ALARM:
@@ -75,11 +76,15 @@ void Control_system::handle_alarm()
         this->motor_status_led.turn_yellow();
         this->rear_cooler.turn_on(0.75);
         this->front_cooler.turn_on(0.75);
+        if (this->context.current_step != MOTOR_COOLDOWN_STEP)
+        {
+            this->context.override_next_step = false;
+        }
         break;
     case SLOW_FAN_WARNING:
         break;
     case NO_ALARM:
-
+        this->context.override_next_step = false;
         // this->motor_status_led.turn_green();
         break;
     default:
@@ -239,7 +244,7 @@ float Control_system::measure_temperature()
     this->display.set_temp(new_temperature);
     return new_temperature;
 }
-int Control_system::measure_moisture()
+bool Control_system::measure_moisture()
 {
     return this->mois_sensor.get_reading();
 }
@@ -276,8 +281,8 @@ bool Control_system::is_alarm_requested()
 }
 void Control_system::request_alarm(ALARM_TYPES type_of_alarm)
 {
-    this->context.alarm_request = true;
-    this->context.current_alarm = type_of_alarm;
+    // this->context.alarm_request = true;
+    // this->context.current_alarm = type_of_alarm;
 }
 void Control_system::request_warning(ALARM_TYPES type_of_warning)
 {

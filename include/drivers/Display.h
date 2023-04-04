@@ -72,6 +72,9 @@ public:
      *
      */
     void turn_on();
+    void show_timer();
+    void hide_timer();
+    void update_timer();
 
 private:
     /**
@@ -95,5 +98,9 @@ private:
      *
      */
     float on_screen_fan_speed_pct[TOTAL_COOLERS] = {0, 0};
+    bool on_screen_timer = false;
+    int on_screen_seconds = 0;
+    int on_screen_minutes = 0;
+    unsigned long millis_on_timer_call = 0;
 };
 #endif
