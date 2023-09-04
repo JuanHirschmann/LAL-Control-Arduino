@@ -88,7 +88,6 @@ void Display::update()
 
         this->screen_interface.print(this->on_screen_fan_speed_pct[1], 0);
 
-        this->update_needed = false;
         if (this->on_screen_timer)
         {
             this->screen_interface.setCursor(TIMER_CURSOR_OFFSET[0], TIMER_CURSOR_OFFSET[1]);
@@ -104,6 +103,7 @@ void Display::update()
             }
             this->screen_interface.print(this->on_screen_seconds);
         }
+        this->update_needed = false;
     }
 }
 void Display::turn_off()

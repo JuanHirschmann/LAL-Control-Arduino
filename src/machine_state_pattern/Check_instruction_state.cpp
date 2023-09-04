@@ -32,7 +32,7 @@ void Check_instruction_state::enter(Control_system *machine)
         machine->display.show_timer();
         if (!machine->context.warning_request)
         {
-            machine->set_cooler_speed(0.5, 0.5);
+            machine->set_cooler_speed(1, 1);
         }
         if (!machine->context.alarm_request)
         {

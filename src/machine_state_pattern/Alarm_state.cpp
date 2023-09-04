@@ -23,7 +23,7 @@ void Alarm_state::update(Control_system *machine)
         machine->buzzer.turn_on();
         // machine->context.override_next_step = true;
     }
-    // machine->handle_alarm();
+    machine->handle_alarm();
     machine->notify_observers();
     machine->display.update();
 }

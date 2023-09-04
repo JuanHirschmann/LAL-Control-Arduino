@@ -55,8 +55,8 @@ void setup()
     setup_pinct_portb_interrupt();
     // LowPower.attachInterruptWakeup(digitalPinToInterrupt(BUTTON_PIN), wake_up_call, CHANGE);
     control.init();
-    control.attach(&temp_obs);
-    control.attach(&mois_obs);
+    //control.attach(&temp_obs);
+    //control.attach(&mois_obs);
     control.attach(&cooler_obs);
     //   sei();
 }

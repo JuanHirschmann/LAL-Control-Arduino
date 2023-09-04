@@ -12,8 +12,20 @@
 #define USER_MESSAGES_H
 #include <avr/pgmspace.h>
 const int MAX_MESSAGE_LENGTH = 70;
+/**
+ * @brief Maxima cantidad de carácteres en un mensaje
+ * 
+ */
 const int MAX_PROCEDURE_STEPS = 8;
-const int ERROR_TYPES = 5;
+/**
+ * @brief Cantidad total de pasos en el procedimeinto
+ * 
+ */
+const int ERROR_TYPES = 6;
+/**
+ * @brief Cantidad total de errores posibles 
+ * 
+ */
 static const char PROCEDURE_MESSAGES[MAX_PROCEDURE_STEPS][MAX_MESSAGE_LENGTH] PROGMEM = {
     {"LAL: Sistema de control de procedimiento.\0"},
     {"Confirmar funcionamiento de canilla de agua.\0"},
@@ -24,6 +36,10 @@ static const char PROCEDURE_MESSAGES[MAX_PROCEDURE_STEPS][MAX_MESSAGE_LENGTH] PR
     {"Cierre la llave de agua\0"},
     {"CONFIRMAR APAGADO\0"},
 };
+/**
+ * @brief Instrucciones al operador
+ * 
+ */
 /*enum ALARM_TYPES
 {
     NO_ALARM=0,
@@ -33,12 +49,18 @@ static const char PROCEDURE_MESSAGES[MAX_PROCEDURE_STEPS][MAX_MESSAGE_LENGTH] PR
     NO_TEMP_SENSOR_ALARM,
     OVERTEMP_WARNING,
     SLOW_FAN_WARNING,
-}; DEFINIR ERROR_MESSAGES EN EL ORDEN DE LOS ALARM TYPES*/
+}; RESPETAR EL ORDEN DE LOS ERROR_MESSAGES SEGÚN EL ORDEN DE LOS ALARM TYPES*/
+
 static const char ERROR_MESSAGES[ERROR_TYPES][MAX_MESSAGE_LENGTH] PROGMEM = {
     {"No hay alarma\0"},
     {"Exceso de temperatura.\0"},
     {"Humedad en motor.\0"},
-    {"Ventilador no detectado.\0"},
+    {"Ventilador frontal detenido.\0"},
+    {"Ventilador tasero detenido.\0"},
     {"Sensor de temperatura no detectado.\0"},
 };
+/**
+ * @brief Mensajes de error.
+ * 
+ */
 #endif

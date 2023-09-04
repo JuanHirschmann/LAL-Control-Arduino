@@ -15,7 +15,14 @@ void Cooler_observer::update(Control_system *subject)
                 this->update_speed(subject);
                 if (this->speed[i] == 0 && subject->is_cooler_active(static_cast<COOLER_TYPES>(i)) == true)
                 {
-                    subject->request_alarm(HALTED_FAN_ALARM);
+                    if(i==FRONT_COOLER)
+                    {
+                        subject->request_alarm(HALTED_FRONT_FAN_ALARM);
+                    }
+                    else{
+                        subject->request_alarm(HALTED_BACK_FAN_ALARM);
+
+                    }
                 }
             }
         }
