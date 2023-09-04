@@ -12,7 +12,7 @@ var class_control__system =
     [ "is_next_step_requested", "class_control__system.html#a8b637df1ff92042b105b0ff0b607ffd3", null ],
     [ "is_off", "class_control__system.html#acdd97ce514b54c273ebfb56a1a29e020", null ],
     [ "is_poll_sensors_requested", "class_control__system.html#af7e1048dcc938de30589f961d0b14ee1", null ],
-    [ "measure_moisture", "class_control__system.html#ac57cf749db659ed80fa4a37b1f27c284", null ],
+    [ "measure_moisture", "class_control__system.html#a55adfc7d59bbfade2aa47d907dd7aa66", null ],
     [ "measure_temperature", "class_control__system.html#a4c3ebc85aafb8c9b8c0d7554bc7d6058", null ],
     [ "next_step", "class_control__system.html#aa98b33b5c57a47fb55e211516e49088b", null ],
     [ "notify_observers", "class_control__system.html#ab7912068a11d44b07eef3b3f56ce0598", null ],

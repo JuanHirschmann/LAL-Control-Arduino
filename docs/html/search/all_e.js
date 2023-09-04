@@ -1,25 +1,9 @@
 var searchData=
 [
-  ['set_5fcolor_0',['set_color',['../class_dual___l_e_d.html#aeb163748acf071a1652c56ae1dff9d52',1,'Dual_LED']]],
-  ['set_5fcooler_5fspeed_1',['set_cooler_speed',['../class_control__system.html#a46298a6a5f4ba43857baa6ae23d00dbc',1,'Control_system']]],
-  ['set_5ffan_5fspeed_5fpct_2',['set_fan_speed_pct',['../class_display.html#a4c22cf2f0125cb737bf93136caa32de3',1,'Display']]],
-  ['set_5fpoll_5fsensors_5fflag_3',['set_poll_sensors_flag',['../class_control__system.html#a251677ee7c18269d85579da7a000ceab',1,'Control_system']]],
-  ['set_5ftemp_4',['set_temp',['../class_display.html#abe8e63e4def12a48cde5679ce008f402',1,'Display']]],
-  ['set_5ftext_5',['set_text',['../class_display.html#a87d1e7bf73a1d14b5e76c9ab647a9e93',1,'Display']]],
-  ['set_5fwarning_5fflag_6',['set_warning_flag',['../class_control__system.html#a2d34912d34a642c819356bf566612686',1,'Control_system']]],
-  ['setup_5fint0_5finterrupt_7',['setup_int0_interrupt',['../interrupts_8h.html#a7151cd85a371816bdc91bbf05ae1825f',1,'interrupts.cpp']]],
-  ['setup_5ftimer1_5finterrupt_8',['setup_timer1_interrupt',['../interrupts_8h.html#a7677b0aead77a2f0b17f45fca7f6b0c5',1,'interrupts.cpp']]],
-  ['show_5fcurrent_5fstep_9',['show_current_step',['../class_control__system.html#ac1cd148e897c5ce2ef405dd45ddf964f',1,'Control_system']]],
-  ['show_5ferror_5fmsg_10',['show_error_msg',['../class_control__system.html#a62a2c6a8167ade6a6ae054393b91d381',1,'Control_system']]],
-  ['shutdown_5fstate_11',['Shutdown_state',['../class_shutdown__state.html',1,'']]],
-  ['shutdown_5fstate_2eh_12',['Shutdown_state.h',['../_shutdown__state_8h.html',1,'']]],
-  ['steps_13',['STEPS',['../types_8h.html#a6a683993505efb97736f5eebe34f3206',1,'types.h']]],
-  ['subject_14',['Subject',['../class_subject.html',1,'']]],
-  ['subject_2ecpp_15',['Subject.cpp',['../_subject_8cpp.html',1,'']]],
-  ['subject_2eh_16',['Subject.h',['../_subject_8h.html',1,'']]],
-  ['subject_5finterface_17',['Subject_interface',['../class_subject__interface.html',1,'']]],
-  ['subject_5finterface_2eh_18',['Subject_interface.h',['../_subject__interface_8h.html',1,'']]],
-  ['system_5fobserver_19',['System_observer',['../class_system__observer.html',1,'']]],
-  ['system_5fobserver_2eh_20',['System_observer.h',['../_system__observer_8h.html',1,'']]],
-  ['system_5fsettings_2eh_21',['system_settings.h',['../system__settings_8h.html',1,'']]]
+  ['red_5fcolor_5fduty_5fcycle_0',['RED_COLOR_DUTY_CYCLE',['../system__settings_8h.html#aa6ef0cf651cf0adf9570189b69593cbc',1,'system_settings.h']]],
+  ['request_5falarm_1',['request_alarm',['../class_control__system.html#af5985ea3ad848a1631ff6c12ef4b3941',1,'Control_system']]],
+  ['request_5fnext_5fstep_2',['request_next_step',['../class_control__system.html#a5c9777c9da51d24b615c1a72933db148',1,'Control_system']]],
+  ['request_5fwarning_3',['request_warning',['../class_control__system.html#a331f6ac8aca48fcc0b7cd23a3510911c',1,'Control_system']]],
+  ['reset_4',['reset',['../class_control__system.html#a4704fee6ca6fe180a5dc292315ec3b31',1,'Control_system']]],
+  ['rotation_5fdetected_5',['rotation_detected',['../class_cooler.html#ad41634aa63d31e334815f35eebdcf5b2',1,'Cooler']]]
 ];

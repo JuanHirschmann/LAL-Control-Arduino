@@ -1,52 +1,50 @@
-\hypertarget{class_moisture__sensor}{}\doxysection{Moisture\+\_\+sensor Class Reference}
-\label{class_moisture__sensor}\index{Moisture\_sensor@{Moisture\_sensor}}
+\doxysection{Moisture\+\_\+sensor Class Reference}
+\hypertarget{class_moisture__sensor}{}\label{class_moisture__sensor}\index{Moisture\_sensor@{Moisture\_sensor}}
 
 
-Clase para el manejo del sensor de humedad analógico.  
+Clase para el manejo del sensor de humedad digital.  
 
 
 
 
 {\ttfamily \#include $<$Moisture\+\_\+sensor.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_moisture__sensor_abfcbce32b28036b760dd54e2d63fc39d}{Moisture\+\_\+sensor}} (int analog\+\_\+pin)
-\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \mbox{\hyperlink{class_moisture__sensor}{Moisture\+\_\+sensor}}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_moisture__sensor_acd72c51f63ca144ecb419b7cca849974}{get\+\_\+reading}} ()
+\mbox{\hyperlink{class_moisture__sensor_a3da01162732df585b81ba1ed41092432}{Moisture\+\_\+sensor}} (int digital\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \doxylink{class_moisture__sensor}{Moisture\+\_\+sensor}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_moisture__sensor_a1b2e379ae74a5278470604d74f26abfc}{get\+\_\+reading}} ()
 \begin{DoxyCompactList}\small\item\em Devuelve la lectura realizada. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Clase para el manejo del sensor de humedad analógico. 
-
-
+Clase para el manejo del sensor de humedad digital. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_moisture__sensor_abfcbce32b28036b760dd54e2d63fc39d}\label{class_moisture__sensor_abfcbce32b28036b760dd54e2d63fc39d}} 
+\Hypertarget{class_moisture__sensor_a3da01162732df585b81ba1ed41092432}\label{class_moisture__sensor_a3da01162732df585b81ba1ed41092432} 
 \index{Moisture\_sensor@{Moisture\_sensor}!Moisture\_sensor@{Moisture\_sensor}}
 \index{Moisture\_sensor@{Moisture\_sensor}!Moisture\_sensor@{Moisture\_sensor}}
 \doxysubsubsection{\texorpdfstring{Moisture\_sensor()}{Moisture\_sensor()}}
-{\footnotesize\ttfamily Moisture\+\_\+sensor\+::\+Moisture\+\_\+sensor (\begin{DoxyParamCaption}\item[{int}]{analog\+\_\+pin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Moisture\+\_\+sensor\+::\+Moisture\+\_\+sensor (\begin{DoxyParamCaption}\item[{int}]{digital\+\_\+pin }\end{DoxyParamCaption})}
 
 
 
-Construye un nuevo objecto \mbox{\hyperlink{class_moisture__sensor}{Moisture\+\_\+sensor}}. 
+Construye un nuevo objecto \doxylink{class_moisture__sensor}{Moisture\+\_\+sensor}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em analog\+\_\+pin} & pin analógico donde se conecto el sensor \\
+{\em analog\+\_\+pin} & pin digital donde se conecto el sensor \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_moisture__sensor_acd72c51f63ca144ecb419b7cca849974}\label{class_moisture__sensor_acd72c51f63ca144ecb419b7cca849974}} 
+\Hypertarget{class_moisture__sensor_a1b2e379ae74a5278470604d74f26abfc}\label{class_moisture__sensor_a1b2e379ae74a5278470604d74f26abfc} 
 \index{Moisture\_sensor@{Moisture\_sensor}!get\_reading@{get\_reading}}
 \index{get\_reading@{get\_reading}!Moisture\_sensor@{Moisture\_sensor}}
 \doxysubsubsection{\texorpdfstring{get\_reading()}{get\_reading()}}
-{\footnotesize\ttfamily int Moisture\+\_\+sensor\+::get\+\_\+reading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Moisture\+\_\+sensor\+::get\+\_\+reading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -55,14 +53,6 @@ Devuelve la lectura realizada.
 \begin{DoxyReturn}{Returns}
 int lectura analógica realizada (0 indica conductividad completa, 1023 indica resistividad completa) 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_moisture__sensor_acd72c51f63ca144ecb419b7cca849974_icgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

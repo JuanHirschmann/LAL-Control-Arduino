@@ -1,5 +1,5 @@
-\hypertarget{class_cooler}{}\doxysection{Cooler Class Reference}
-\label{class_cooler}\index{Cooler@{Cooler}}
+\doxysection{Cooler Class Reference}
+\hypertarget{class_cooler}{}\label{class_cooler}\index{Cooler@{Cooler}}
 
 
 Clase para el control de un ventilador de 3 terminales.  
@@ -9,32 +9,32 @@ Clase para el control de un ventilador de 3 terminales.
 
 {\ttfamily \#include $<$Cooler.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_cooler_a75e59637f392117e58310e3096da4a63}{Cooler}} (int power\+\_\+pin, int speed\+\_\+measurement\+\_\+pin)
-\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \mbox{\hyperlink{class_cooler}{Cooler}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \doxylink{class_cooler}{Cooler}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}{turn\+\_\+on}} (float duty\+\_\+cycle=1.\+0)
 \begin{DoxyCompactList}\small\item\em Enciende el ventilador. Si el ciclo de trabajo deseado es menor que FAN\+\_\+\+MINIMUM\+\_\+\+DUTY\+\_\+\+CYCLE apaga el ventilador. Si el ciclo de trabajo es mayor al umbral mínimo pero menor a FAN\+\_\+\+AUTONOMOUS\+\_\+\+DUTY\+\_\+\+CYCLE enciende el ventilador durante DEFAULT\+\_\+\+DELAY milisegundos a máximo ciclo de trabajo (bloqueante) y luego reduce la velocidad. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cooler_a3aa26bc227fa7a2bdcff9fe607990104}{turn\+\_\+off}} ()
+\Hypertarget{class_cooler_a3aa26bc227fa7a2bdcff9fe607990104}\label{class_cooler_a3aa26bc227fa7a2bdcff9fe607990104} 
+void {\bfseries turn\+\_\+off} ()
 \begin{DoxyCompactList}\small\item\em Apaga el ventilador. \end{DoxyCompactList}\item 
 unsigned long int \mbox{\hyperlink{class_cooler_ad02531fc9e59b2ddd7f618703e99871b}{get\+\_\+rotation\+\_\+count}} ()
 \begin{DoxyCompactList}\small\item\em Devuelve la cantidad de rotaciones desde el último llamado de la función. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_cooler_ad41634aa63d31e334815f35eebdcf5b2}{rotation\+\_\+detected}} ()
 \begin{DoxyCompactList}\small\item\em Lectura el pin de medición de velocidad. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cooler_a9802a2d1e34a4b377280fd3369f68d58}{count\+\_\+rotation}} ()
+\Hypertarget{class_cooler_a9802a2d1e34a4b377280fd3369f68d58}\label{class_cooler_a9802a2d1e34a4b377280fd3369f68d58} 
+void {\bfseries count\+\_\+rotation} ()
 \begin{DoxyCompactList}\small\item\em Increment el contador de mediciones. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_cooler_a18f58f8d6ffd3a78be821a0cc5d9e4f1}{is\+\_\+active}} ()
-\begin{DoxyCompactList}\small\item\em Estado del ventilador. No utiliza la medición de velocidad si no que, si se llamó a la función \mbox{\hyperlink{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}{turn\+\_\+on()}}, el estado del ventilador será true independientemente de si este está rotando o no. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Estado del ventilador. No utiliza la medición de velocidad si no que, si se llamó a la función \doxylink{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}{turn\+\_\+on()}, el estado del ventilador será true independientemente de si este está rotando o no. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Clase para el control de un ventilador de 3 terminales. 
 
-
-
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_cooler_a75e59637f392117e58310e3096da4a63}\label{class_cooler_a75e59637f392117e58310e3096da4a63}} 
+\Hypertarget{class_cooler_a75e59637f392117e58310e3096da4a63}\label{class_cooler_a75e59637f392117e58310e3096da4a63} 
 \index{Cooler@{Cooler}!Cooler@{Cooler}}
 \index{Cooler@{Cooler}!Cooler@{Cooler}}
 \doxysubsubsection{\texorpdfstring{Cooler()}{Cooler()}}
@@ -42,7 +42,7 @@ Clase para el control de un ventilador de 3 terminales.
 
 
 
-Construye un nuevo objecto \mbox{\hyperlink{class_cooler}{Cooler}}. 
+Construye un nuevo objecto \doxylink{class_cooler}{Cooler}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -54,25 +54,7 @@ Construye un nuevo objecto \mbox{\hyperlink{class_cooler}{Cooler}}.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_cooler_a9802a2d1e34a4b377280fd3369f68d58}\label{class_cooler_a9802a2d1e34a4b377280fd3369f68d58}} 
-\index{Cooler@{Cooler}!count\_rotation@{count\_rotation}}
-\index{count\_rotation@{count\_rotation}!Cooler@{Cooler}}
-\doxysubsubsection{\texorpdfstring{count\_rotation()}{count\_rotation()}}
-{\footnotesize\ttfamily void Cooler\+::count\+\_\+rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Increment el contador de mediciones. 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=343pt]{class_cooler_a9802a2d1e34a4b377280fd3369f68d58_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_cooler_ad02531fc9e59b2ddd7f618703e99871b}\label{class_cooler_ad02531fc9e59b2ddd7f618703e99871b}} 
+\Hypertarget{class_cooler_ad02531fc9e59b2ddd7f618703e99871b}\label{class_cooler_ad02531fc9e59b2ddd7f618703e99871b} 
 \index{Cooler@{Cooler}!get\_rotation\_count@{get\_rotation\_count}}
 \index{get\_rotation\_count@{get\_rotation\_count}!Cooler@{Cooler}}
 \doxysubsubsection{\texorpdfstring{get\_rotation\_count()}{get\_rotation\_count()}}
@@ -85,15 +67,7 @@ Devuelve la cantidad de rotaciones desde el último llamado de la función.
 \begin{DoxyReturn}{Returns}
 Rotaciones desde último llamado. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=321pt]{class_cooler_ad02531fc9e59b2ddd7f618703e99871b_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_cooler_a18f58f8d6ffd3a78be821a0cc5d9e4f1}\label{class_cooler_a18f58f8d6ffd3a78be821a0cc5d9e4f1}} 
+\Hypertarget{class_cooler_a18f58f8d6ffd3a78be821a0cc5d9e4f1}\label{class_cooler_a18f58f8d6ffd3a78be821a0cc5d9e4f1} 
 \index{Cooler@{Cooler}!is\_active@{is\_active}}
 \index{is\_active@{is\_active}!Cooler@{Cooler}}
 \doxysubsubsection{\texorpdfstring{is\_active()}{is\_active()}}
@@ -101,22 +75,14 @@ Here is the caller graph for this function\+:
 
 
 
-Estado del ventilador. No utiliza la medición de velocidad si no que, si se llamó a la función \mbox{\hyperlink{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}{turn\+\_\+on()}}, el estado del ventilador será true independientemente de si este está rotando o no. 
+Estado del ventilador. No utiliza la medición de velocidad si no que, si se llamó a la función \doxylink{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}{turn\+\_\+on()}, el estado del ventilador será true independientemente de si este está rotando o no. 
 
 \begin{DoxyReturn}{Returns}
 true El ventilador esta encendido. 
 
 false El ventilador está apagado. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_cooler_a18f58f8d6ffd3a78be821a0cc5d9e4f1_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_cooler_ad41634aa63d31e334815f35eebdcf5b2}\label{class_cooler_ad41634aa63d31e334815f35eebdcf5b2}} 
+\Hypertarget{class_cooler_ad41634aa63d31e334815f35eebdcf5b2}\label{class_cooler_ad41634aa63d31e334815f35eebdcf5b2} 
 \index{Cooler@{Cooler}!rotation\_detected@{rotation\_detected}}
 \index{rotation\_detected@{rotation\_detected}!Cooler@{Cooler}}
 \doxysubsubsection{\texorpdfstring{rotation\_detected()}{rotation\_detected()}}
@@ -131,33 +97,7 @@ true El pin de medición de rotación está en estado alto.
 
 false El pin de medición de rotación está en estado bajo. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_cooler_ad41634aa63d31e334815f35eebdcf5b2_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_cooler_a3aa26bc227fa7a2bdcff9fe607990104}\label{class_cooler_a3aa26bc227fa7a2bdcff9fe607990104}} 
-\index{Cooler@{Cooler}!turn\_off@{turn\_off}}
-\index{turn\_off@{turn\_off}!Cooler@{Cooler}}
-\doxysubsubsection{\texorpdfstring{turn\_off()}{turn\_off()}}
-{\footnotesize\ttfamily void Cooler\+::turn\+\_\+off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Apaga el ventilador. 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_cooler_a3aa26bc227fa7a2bdcff9fe607990104_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}\label{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}} 
+\Hypertarget{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}\label{class_cooler_aa98fd302dc7933fc21c046ca3ea48346} 
 \index{Cooler@{Cooler}!turn\_on@{turn\_on}}
 \index{turn\_on@{turn\_on}!Cooler@{Cooler}}
 \doxysubsubsection{\texorpdfstring{turn\_on()}{turn\_on()}}
@@ -172,22 +112,6 @@ Enciende el ventilador. Si el ciclo de trabajo deseado es menor que FAN\+\_\+\+M
 {\em duty\+\_\+cycle} & Ciclo de trabajo \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=281pt]{class_cooler_aa98fd302dc7933fc21c046ca3ea48346_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_cooler_aa98fd302dc7933fc21c046ca3ea48346_icgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

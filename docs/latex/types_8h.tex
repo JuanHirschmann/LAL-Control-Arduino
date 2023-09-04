@@ -1,26 +1,19 @@
-\hypertarget{types_8h}{}\doxysection{C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL Control Arduino/include/types.h File Reference}
-\label{types_8h}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/types.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/types.h}}
+\doxysection{C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL Control Arduino/include/types.h File Reference}
+\hypertarget{types_8h}{}\label{types_8h}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/types.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/types.h}}
 
 
 Archivo de definición de tipos de dato.  
 
 
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{types_8h__dep__incl}
-\end{center}
-\end{figure}
-\doxysubsection*{Classes}
+\doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_context__t}{Context\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em Variables de contexto del sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Enumerations}
+\doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{types_8h_a6a683993505efb97736f5eebe34f3206}\label{types_8h_a6a683993505efb97736f5eebe34f3206} 
 enum \mbox{\hyperlink{types_8h_a6a683993505efb97736f5eebe34f3206}{STEPS}} \{ \newline
 {\bfseries WELCOME\+\_\+\+STEP} = 0
 , {\bfseries WATER\+\_\+\+ON\+\_\+\+STEP} = 1
@@ -33,23 +26,25 @@ enum \mbox{\hyperlink{types_8h_a6a683993505efb97736f5eebe34f3206}{STEPS}} \{ \ne
 , {\bfseries LAST\+\_\+\+STEP} = 7
  \}
 \begin{DoxyCompactList}\small\item\em Enumeración de pasos a realizar del procedimiento. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{types_8h_a52960a5231a04f23985ad45b6604ca72}\label{types_8h_a52960a5231a04f23985ad45b6604ca72}} 
+\Hypertarget{types_8h_a52960a5231a04f23985ad45b6604ca72}\label{types_8h_a52960a5231a04f23985ad45b6604ca72} 
 enum {\bfseries COOLER\+\_\+\+TYPES} \{ {\bfseries FRONT\+\_\+\+COOLER} = 0
 , {\bfseries REAR\+\_\+\+COOLER}
  \}
 \item 
+\Hypertarget{types_8h_a71ef44a7b1de581d625d82b37bed6c80}\label{types_8h_a71ef44a7b1de581d625d82b37bed6c80} 
 enum \mbox{\hyperlink{types_8h_a71ef44a7b1de581d625d82b37bed6c80}{ALARM\+\_\+\+TYPES}} \{ \newline
 {\bfseries NO\+\_\+\+ALARM} = 0
 , {\bfseries OVERTEMP\+\_\+\+ALARM}
 , {\bfseries HUMIDITY\+\_\+\+ALARM}
-, {\bfseries HALTED\+\_\+\+FAN\+\_\+\+ALARM}
+, {\bfseries HALTED\+\_\+\+FRONT\+\_\+\+FAN\+\_\+\+ALARM}
 , \newline
-{\bfseries NO\+\_\+\+TEMP\+\_\+\+SENSOR\+\_\+\+ALARM}
+{\bfseries HALTED\+\_\+\+BACK\+\_\+\+FAN\+\_\+\+ALARM}
+, {\bfseries NO\+\_\+\+TEMP\+\_\+\+SENSOR\+\_\+\+ALARM}
 , {\bfseries OVERTEMP\+\_\+\+WARNING}
 , {\bfseries SLOW\+\_\+\+FAN\+\_\+\+WARNING}
  \}
 \begin{DoxyCompactList}\small\item\em Tipos de alarmas y advertencias del sistema. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{types_8h_a7a38abec0d745e50d649352055373441}\label{types_8h_a7a38abec0d745e50d649352055373441}} 
+\Hypertarget{types_8h_a7a38abec0d745e50d649352055373441}\label{types_8h_a7a38abec0d745e50d649352055373441} 
 enum {\bfseries COLOR\+\_\+\+TYPES} \{ {\bfseries RED}
 , {\bfseries YELLOW}
 , {\bfseries GREEN}
@@ -72,26 +67,3 @@ Juan Hirschmann (\href{mailto:jhirschmann@fi.uba.ar}{\texttt{ jhirschmann@fi.\+u
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2022 
 \end{DoxyCopyright}
-
-
-\doxysubsection{Enumeration Type Documentation}
-\mbox{\Hypertarget{types_8h_a71ef44a7b1de581d625d82b37bed6c80}\label{types_8h_a71ef44a7b1de581d625d82b37bed6c80}} 
-\index{types.h@{types.h}!ALARM\_TYPES@{ALARM\_TYPES}}
-\index{ALARM\_TYPES@{ALARM\_TYPES}!types.h@{types.h}}
-\doxysubsubsection{\texorpdfstring{ALARM\_TYPES}{ALARM\_TYPES}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{types_8h_a71ef44a7b1de581d625d82b37bed6c80}{ALARM\+\_\+\+TYPES}}}
-
-
-
-Tipos de alarmas y advertencias del sistema. 
-
-\mbox{\Hypertarget{types_8h_a6a683993505efb97736f5eebe34f3206}\label{types_8h_a6a683993505efb97736f5eebe34f3206}} 
-\index{types.h@{types.h}!STEPS@{STEPS}}
-\index{STEPS@{STEPS}!types.h@{types.h}}
-\doxysubsubsection{\texorpdfstring{STEPS}{STEPS}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{types_8h_a6a683993505efb97736f5eebe34f3206}{STEPS}}}
-
-
-
-Enumeración de pasos a realizar del procedimiento. 
-

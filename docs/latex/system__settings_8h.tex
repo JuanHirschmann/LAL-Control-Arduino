@@ -1,84 +1,67 @@
-\hypertarget{system__settings_8h}{}\doxysection{C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL Control Arduino/include/system\+\_\+settings.h File Reference}
-\label{system__settings_8h}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/system\_settings.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/system\_settings.h}}
+\doxysection{C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL Control Arduino/include/system\+\_\+settings.h File Reference}
+\hypertarget{system__settings_8h}{}\label{system__settings_8h}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/system\_settings.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/system\_settings.h}}
 
 
 Archivo para la definición de constantes del sistema.  
 
 
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{system__settings_8h__dep__incl}
-\end{center}
-\end{figure}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{system__settings_8h_ac0a79d98a6079da20264c81f9047a59f}\label{system__settings_8h_ac0a79d98a6079da20264c81f9047a59f}} 
-const int {\bfseries DEBOUNCE\+\_\+\+CONSTANT} = 200
+\Hypertarget{system__settings_8h_ac0a79d98a6079da20264c81f9047a59f}\label{system__settings_8h_ac0a79d98a6079da20264c81f9047a59f} 
+const int {\bfseries DEBOUNCE\+\_\+\+CONSTANT} = 100
 \item 
-\mbox{\Hypertarget{system__settings_8h_a0696a16685dd184d97bb959179a858ae}\label{system__settings_8h_a0696a16685dd184d97bb959179a858ae}} 
+\Hypertarget{system__settings_8h_a0696a16685dd184d97bb959179a858ae}\label{system__settings_8h_a0696a16685dd184d97bb959179a858ae} 
 const int {\bfseries DEFAULT\+\_\+\+DELAY} = 100
-\item 
-\mbox{\Hypertarget{system__settings_8h_a14f747982b58d06b3529ce039b91d325}\label{system__settings_8h_a14f747982b58d06b3529ce039b91d325}} 
+\begin{DoxyCompactList}\small\item\em Constante de filtro de antirebote para el pulsador de avance. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a60ae91948c9a59638076d8e98c156df2}\label{system__settings_8h_a60ae91948c9a59638076d8e98c156df2} 
+const int {\bfseries SWITCH\+\_\+\+TIMEOUT\+\_\+\+CONSTANT} = 2000
+\begin{DoxyCompactList}\small\item\em Duración del retardo por defecto. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a14f747982b58d06b3529ce039b91d325}\label{system__settings_8h_a14f747982b58d06b3529ce039b91d325} 
 const int {\bfseries DEFAULT\+\_\+\+BAUD\+\_\+\+RATE} = 9600
-\item 
-\mbox{\Hypertarget{system__settings_8h_a298fe753993c6604d2d1ae1dc87e586c}\label{system__settings_8h_a298fe753993c6604d2d1ae1dc87e586c}} 
-const bool {\bfseries DEBUGGING} = true
-\item 
-\mbox{\Hypertarget{system__settings_8h_ac912dee50864e6d0880d3eaea2a539d3}\label{system__settings_8h_ac912dee50864e6d0880d3eaea2a539d3}} 
-const int {\bfseries BUZZER\+\_\+\+HIGH\+\_\+\+FREQ} = 1500
-\item 
-\mbox{\Hypertarget{system__settings_8h_aab376c30faeb3ad51849ed0b1d8a63da}\label{system__settings_8h_aab376c30faeb3ad51849ed0b1d8a63da}} 
-const int {\bfseries BUZZER\+\_\+\+LOW\+\_\+\+FREQ} = 200
-\item 
-\mbox{\Hypertarget{system__settings_8h_a69dc6415f503e358c3e455b99df2d631}\label{system__settings_8h_a69dc6415f503e358c3e455b99df2d631}} 
+\begin{DoxyCompactList}\small\item\em Duración del pulsado del botón necesaria para rechazar el pulsado. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a69dc6415f503e358c3e455b99df2d631}\label{system__settings_8h_a69dc6415f503e358c3e455b99df2d631} 
 const int {\bfseries MAX\+\_\+\+SENSORS} = 10
-\item 
-\mbox{\Hypertarget{system__settings_8h_a584b7ac27ca7c84ff908e75c3e3467d8}\label{system__settings_8h_a584b7ac27ca7c84ff908e75c3e3467d8}} 
-const float {\bfseries OVERTEMP\+\_\+\+WARNING\+\_\+\+THRESHOLD} = 30
-\item 
-\mbox{\Hypertarget{system__settings_8h_a32806c63df2c511c2636039705f7b246}\label{system__settings_8h_a32806c63df2c511c2636039705f7b246}} 
-const float {\bfseries OVERTEMP\+\_\+\+ALARM\+\_\+\+THRESHOLD} = 33
-\item 
-\mbox{\Hypertarget{system__settings_8h_a5b90ecfa38b44bd9f05509774ee3e84d}\label{system__settings_8h_a5b90ecfa38b44bd9f05509774ee3e84d}} 
+\begin{DoxyCompactList}\small\item\em Velocidad de comunicación serie por defecto. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a584b7ac27ca7c84ff908e75c3e3467d8}\label{system__settings_8h_a584b7ac27ca7c84ff908e75c3e3467d8} 
+const float {\bfseries OVERTEMP\+\_\+\+WARNING\+\_\+\+THRESHOLD} = 50
+\begin{DoxyCompactList}\small\item\em Cantidad de sensores de temperatura máxima. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a32806c63df2c511c2636039705f7b246}\label{system__settings_8h_a32806c63df2c511c2636039705f7b246} 
+const float {\bfseries OVERTEMP\+\_\+\+ALARM\+\_\+\+THRESHOLD} = 70
+\begin{DoxyCompactList}\small\item\em Umbral de advertencia para temperaturas elevadas. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a5b90ecfa38b44bd9f05509774ee3e84d}\label{system__settings_8h_a5b90ecfa38b44bd9f05509774ee3e84d} 
 const float {\bfseries ERROR\+\_\+\+TEMPERATURE} = -\/127
-\item 
-\mbox{\Hypertarget{system__settings_8h_a07158a087f43649268796eefdf08930f}\label{system__settings_8h_a07158a087f43649268796eefdf08930f}} 
+\begin{DoxyCompactList}\small\item\em Umbral de advertencia para temperatura excesivas. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a07158a087f43649268796eefdf08930f}\label{system__settings_8h_a07158a087f43649268796eefdf08930f} 
 const float {\bfseries HYSTERESIS\+\_\+\+PERCENT} = 0.\+95
-\item 
-\mbox{\Hypertarget{system__settings_8h_a1d5a9090b00ef505b2a726fa4c1512a7}\label{system__settings_8h_a1d5a9090b00ef505b2a726fa4c1512a7}} 
+\begin{DoxyCompactList}\small\item\em Valor de la lectura errónea del DS18\+B20. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a1d5a9090b00ef505b2a726fa4c1512a7}\label{system__settings_8h_a1d5a9090b00ef505b2a726fa4c1512a7} 
 const int {\bfseries FAN\+\_\+\+SPEED\+\_\+\+SAMPLE\+\_\+\+PERIOD} = 1000
-\item 
-\mbox{\Hypertarget{system__settings_8h_a01503d2c532ea6e1e7148677d470e45b}\label{system__settings_8h_a01503d2c532ea6e1e7148677d470e45b}} 
-const int {\bfseries MOISTURE\+\_\+\+ALARM\+\_\+\+THRESHOLD} = 255
-\item 
-\mbox{\Hypertarget{system__settings_8h_aa6ef0cf651cf0adf9570189b69593cbc}\label{system__settings_8h_aa6ef0cf651cf0adf9570189b69593cbc}} 
+\begin{DoxyCompactList}\small\item\em Porcentaje de histéresis de la advertencia de temperatura elevada. Si la temperatura excede el umbral, la advertencia se descarta cuando la temperatura es menor a HYSTERESIS\+\_\+\+PERCENT\texorpdfstring{$\ast$}{*}\+OVERTEMP\+\_\+\+WARNING\+\_\+\+THRESHOLD. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_aa6ef0cf651cf0adf9570189b69593cbc}\label{system__settings_8h_aa6ef0cf651cf0adf9570189b69593cbc} 
 const float {\bfseries RED\+\_\+\+COLOR\+\_\+\+DUTY\+\_\+\+CYCLE} \mbox{[}$\,$\mbox{]} = \{0, 1\}
-\item 
-\mbox{\Hypertarget{system__settings_8h_ad51dd6cf288f6be185c37a753324a4b1}\label{system__settings_8h_ad51dd6cf288f6be185c37a753324a4b1}} 
-const float {\bfseries YELLOW\+\_\+\+COLOR\+\_\+\+DUTY\+\_\+\+CYCLE} \mbox{[}$\,$\mbox{]} = \{0.\+5, 0.\+5\}
-\item 
-\mbox{\Hypertarget{system__settings_8h_ae194853062e2e8994113bd4693d89ee8}\label{system__settings_8h_ae194853062e2e8994113bd4693d89ee8}} 
+\begin{DoxyCompactList}\small\item\em Periodo de muestro de velocidad para el ventilador. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_ad51dd6cf288f6be185c37a753324a4b1}\label{system__settings_8h_ad51dd6cf288f6be185c37a753324a4b1} 
+const float {\bfseries YELLOW\+\_\+\+COLOR\+\_\+\+DUTY\+\_\+\+CYCLE} \mbox{[}$\,$\mbox{]} = \{0.\+9, 0.\+9\}
+\begin{DoxyCompactList}\small\item\em Valor del ciclo de trabajo para generar el color rojo. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_ae194853062e2e8994113bd4693d89ee8}\label{system__settings_8h_ae194853062e2e8994113bd4693d89ee8} 
 const float {\bfseries GREEN\+\_\+\+COLOR\+\_\+\+DUTY\+\_\+\+CYCLE} \mbox{[}$\,$\mbox{]} = \{1, 0\}
-\item 
-\mbox{\Hypertarget{system__settings_8h_aa8c7d3e8968a2530da8c70dd5004a4a8}\label{system__settings_8h_aa8c7d3e8968a2530da8c70dd5004a4a8}} 
+\begin{DoxyCompactList}\small\item\em Valor del ciclo de trabajo para generar el color amarillo. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_aa8c7d3e8968a2530da8c70dd5004a4a8}\label{system__settings_8h_aa8c7d3e8968a2530da8c70dd5004a4a8} 
 const int {\bfseries MAX\+\_\+\+ANALOG\+\_\+\+WRITE\+\_\+\+VALUE} = 255
-\item 
-\mbox{\Hypertarget{system__settings_8h_a2d8be59a8aa34e31f124bed1d1cf596d}\label{system__settings_8h_a2d8be59a8aa34e31f124bed1d1cf596d}} 
+\begin{DoxyCompactList}\small\item\em Valor del ciclo de trabajo para generar el color verde. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a2d8be59a8aa34e31f124bed1d1cf596d}\label{system__settings_8h_a2d8be59a8aa34e31f124bed1d1cf596d} 
 const float {\bfseries FAN\+\_\+\+MINIMUM\+\_\+\+DUTY\+\_\+\+CYCLE} = 0.\+3
-\item 
-\mbox{\Hypertarget{system__settings_8h_a8175fba4949f98a47a7d574bb4eb8c4b}\label{system__settings_8h_a8175fba4949f98a47a7d574bb4eb8c4b}} 
+\begin{DoxyCompactList}\small\item\em Maximo valor de escritura analógica para el Arduino Nano. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a8175fba4949f98a47a7d574bb4eb8c4b}\label{system__settings_8h_a8175fba4949f98a47a7d574bb4eb8c4b} 
 const float {\bfseries FAN\+\_\+\+AUTONOMOUS\+\_\+\+DUTY\+\_\+\+CYCLE} = 0.\+77
-\item 
-\mbox{\Hypertarget{system__settings_8h_ac0d8627df12467e497aedabfcc02d7f0}\label{system__settings_8h_ac0d8627df12467e497aedabfcc02d7f0}} 
+\begin{DoxyCompactList}\small\item\em Ciclo de trabajo a partir del cual el cooler puede mantener su rotación si ya estaba encendido. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_ac0d8627df12467e497aedabfcc02d7f0}\label{system__settings_8h_ac0d8627df12467e497aedabfcc02d7f0} 
 const int {\bfseries TOTAL\+\_\+\+COOLERS} = 2
-\item 
-\mbox{\Hypertarget{system__settings_8h_a0b4e6c6c9367294da8e09f236b9aef00}\label{system__settings_8h_a0b4e6c6c9367294da8e09f236b9aef00}} 
+\begin{DoxyCompactList}\small\item\em Ciclo de trabajo a partir del cual el cooler puede mantener su rotación partiendo del reposo. \end{DoxyCompactList}\item 
+\Hypertarget{system__settings_8h_a0b4e6c6c9367294da8e09f236b9aef00}\label{system__settings_8h_a0b4e6c6c9367294da8e09f236b9aef00} 
 const float {\bfseries SPEED\+\_\+\+VARIATION\+\_\+\+UPDATE\+\_\+\+THRESHOLD} = 0.\+01
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Cantidad de Coolers del sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

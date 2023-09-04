@@ -1,73 +1,54 @@
-\hypertarget{class_display}{}\doxysection{Display Class Reference}
-\label{class_display}\index{Display@{Display}}
+\doxysection{Display Class Reference}
+\hypertarget{class_display}{}\label{class_display}\index{Display@{Display}}
 
 
-Clase \mbox{\hyperlink{class_display}{Display}}, internamente utiliza la clase hd44780io\+Class para resolver la interfaz i2c con el monitor.  
+Clase \doxylink{class_display}{Display}, internamente utiliza la clase hd44780io\+Class para resolver la interfaz i2c con el monitor.  
 
 
 
 
 {\ttfamily \#include $<$Display.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_display_aacbf91b9f8c57fc2cb892c45fd44e655}{init}} ()
+\Hypertarget{class_display_aacbf91b9f8c57fc2cb892c45fd44e655}\label{class_display_aacbf91b9f8c57fc2cb892c45fd44e655} 
+void {\bfseries init} ()
 \begin{DoxyCompactList}\small\item\em Método para inicializar el objeto, sólo se puede luego o en setup(). \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_display_ae972fffea6f7ca1d627ef48c3d841bb3}{Display}} ()
-\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \mbox{\hyperlink{class_display}{Display}}. \end{DoxyCompactList}\item 
+\Hypertarget{class_display_ae972fffea6f7ca1d627ef48c3d841bb3}\label{class_display_ae972fffea6f7ca1d627ef48c3d841bb3} 
+{\bfseries Display} ()
+\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \doxylink{class_display}{Display}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_display_abe8e63e4def12a48cde5679ce008f402}{set\+\_\+temp}} (float new\+\_\+temperature)
-\begin{DoxyCompactList}\small\item\em Fija el valor de temperatura a actualizar (no la imprime en pantalla), la ubicación se da con las constantes de offset de temperatura definidas en \mbox{\hyperlink{display__settings_8h}{display\+\_\+settings.\+h}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fija el valor de temperatura a actualizar (no la imprime en pantalla), la ubicación se da con las constantes de offset de temperatura definidas en \doxylink{display__settings_8h}{display\+\_\+settings.\+h}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_display_a4c22cf2f0125cb737bf93136caa32de3}{set\+\_\+fan\+\_\+speed\+\_\+pct}} (float back\+\_\+speed\+\_\+pct, float front\+\_\+speed\+\_\+pct)
-\begin{DoxyCompactList}\small\item\em Fija la velocidad en RPS, no lo imprie en pantalla excepto que la variación de velocidades sea lo suficientemente grande. La ubicación se da con las constantes de offset de velocidad definidas en \mbox{\hyperlink{display__settings_8h}{display\+\_\+settings.\+h}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_display_a87d1e7bf73a1d14b5e76c9ab647a9e93}{set\+\_\+text}} (const char $\ast$string\+\_\+out)
-\begin{DoxyCompactList}\small\item\em Fija el el texto a actualizar, no lo imprime en pantalla. La ubicación se da con las constantes de offset de temperatura definidas en \mbox{\hyperlink{display__settings_8h}{display\+\_\+settings.\+h}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_display_ad2740b779d61e461c4dcaaf34f1fcd8f}{update}} ()
+\begin{DoxyCompactList}\small\item\em Fija la velocidad en RPS, no lo imprie en pantalla excepto que la variación de velocidades sea lo suficientemente grande. La ubicación se da con las constantes de offset de velocidad definidas en \doxylink{display__settings_8h}{display\+\_\+settings.\+h}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_a87d1e7bf73a1d14b5e76c9ab647a9e93}{set\+\_\+text}} (const char \texorpdfstring{$\ast$}{*}string\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Fija el el texto a actualizar, no lo imprime en pantalla. La ubicación se da con las constantes de offset de temperatura definidas en \doxylink{display__settings_8h}{display\+\_\+settings.\+h}. \end{DoxyCompactList}\item 
+\Hypertarget{class_display_ad2740b779d61e461c4dcaaf34f1fcd8f}\label{class_display_ad2740b779d61e461c4dcaaf34f1fcd8f} 
+void {\bfseries update} ()
 \begin{DoxyCompactList}\small\item\em Actualiza los valores en pantalla con los parámetros previamente fijados. Solo actualiza la pantalla cuando uno o más valores hayan cambiado. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_display_a140c7f61de37b0b01e29d36005dc0048}{turn\+\_\+off}} ()
+\Hypertarget{class_display_a140c7f61de37b0b01e29d36005dc0048}\label{class_display_a140c7f61de37b0b01e29d36005dc0048} 
+void {\bfseries turn\+\_\+off} ()
 \begin{DoxyCompactList}\small\item\em limpia los caracteres de la pantalla y apaga la retroiluminación, no inhabilita la escritura en pantalla. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_display_ac2763dd7748bd3de2c0c24bc6d89011e}{turn\+\_\+on}} ()
-\begin{DoxyCompactList}\small\item\em Enciende la retroiluminación y limpia los caracteres de la pantalla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\Hypertarget{class_display_ac2763dd7748bd3de2c0c24bc6d89011e}\label{class_display_ac2763dd7748bd3de2c0c24bc6d89011e} 
+void {\bfseries turn\+\_\+on} ()
+\begin{DoxyCompactList}\small\item\em Enciende la retroiluminación y limpia los caracteres de la pantalla. \end{DoxyCompactList}\item 
+\Hypertarget{class_display_af56d9a7db2025a85d0f21e22c7d557ce}\label{class_display_af56d9a7db2025a85d0f21e22c7d557ce} 
+void {\bfseries show\+\_\+timer} ()
+\item 
+\Hypertarget{class_display_a7f9d6d4e6f1faed1b35111cc20b8b0e4}\label{class_display_a7f9d6d4e6f1faed1b35111cc20b8b0e4} 
+void {\bfseries hide\+\_\+timer} ()
+\item 
+\Hypertarget{class_display_a1a08b966274b1a09dfeef37a8b4d2303}\label{class_display_a1a08b966274b1a09dfeef37a8b4d2303} 
+void {\bfseries update\+\_\+timer} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Clase \mbox{\hyperlink{class_display}{Display}}, internamente utiliza la clase hd44780io\+Class para resolver la interfaz i2c con el monitor. 
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_display_ae972fffea6f7ca1d627ef48c3d841bb3}\label{class_display_ae972fffea6f7ca1d627ef48c3d841bb3}} 
-\index{Display@{Display}!Display@{Display}}
-\index{Display@{Display}!Display@{Display}}
-\doxysubsubsection{\texorpdfstring{Display()}{Display()}}
-{\footnotesize\ttfamily Display\+::\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Construye un nuevo objecto \mbox{\hyperlink{class_display}{Display}}. 
-
-
+Clase \doxylink{class_display}{Display}, internamente utiliza la clase hd44780io\+Class para resolver la interfaz i2c con el monitor. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_display_aacbf91b9f8c57fc2cb892c45fd44e655}\label{class_display_aacbf91b9f8c57fc2cb892c45fd44e655}} 
-\index{Display@{Display}!init@{init}}
-\index{init@{init}!Display@{Display}}
-\doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily void Display\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Método para inicializar el objeto, sólo se puede luego o en setup(). 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_display_aacbf91b9f8c57fc2cb892c45fd44e655_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_display_a4c22cf2f0125cb737bf93136caa32de3}\label{class_display_a4c22cf2f0125cb737bf93136caa32de3}} 
+\Hypertarget{class_display_a4c22cf2f0125cb737bf93136caa32de3}\label{class_display_a4c22cf2f0125cb737bf93136caa32de3} 
 \index{Display@{Display}!set\_fan\_speed\_pct@{set\_fan\_speed\_pct}}
 \index{set\_fan\_speed\_pct@{set\_fan\_speed\_pct}!Display@{Display}}
 \doxysubsubsection{\texorpdfstring{set\_fan\_speed\_pct()}{set\_fan\_speed\_pct()}}
@@ -75,7 +56,7 @@ Here is the caller graph for this function\+:
 
 
 
-Fija la velocidad en RPS, no lo imprie en pantalla excepto que la variación de velocidades sea lo suficientemente grande. La ubicación se da con las constantes de offset de velocidad definidas en \mbox{\hyperlink{display__settings_8h}{display\+\_\+settings.\+h}}. 
+Fija la velocidad en RPS, no lo imprie en pantalla excepto que la variación de velocidades sea lo suficientemente grande. La ubicación se da con las constantes de offset de velocidad definidas en \doxylink{display__settings_8h}{display\+\_\+settings.\+h}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -84,15 +65,7 @@ Fija la velocidad en RPS, no lo imprie en pantalla excepto que la variación de 
 {\em front\+\_\+speed\+\_\+pct} & Velocidad ventilador delantero \mbox{[}RPS\mbox{]} \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_display_a4c22cf2f0125cb737bf93136caa32de3_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_display_abe8e63e4def12a48cde5679ce008f402}\label{class_display_abe8e63e4def12a48cde5679ce008f402}} 
+\Hypertarget{class_display_abe8e63e4def12a48cde5679ce008f402}\label{class_display_abe8e63e4def12a48cde5679ce008f402} 
 \index{Display@{Display}!set\_temp@{set\_temp}}
 \index{set\_temp@{set\_temp}!Display@{Display}}
 \doxysubsubsection{\texorpdfstring{set\_temp()}{set\_temp()}}
@@ -100,90 +73,28 @@ Here is the caller graph for this function\+:
 
 
 
-Fija el valor de temperatura a actualizar (no la imprime en pantalla), la ubicación se da con las constantes de offset de temperatura definidas en \mbox{\hyperlink{display__settings_8h}{display\+\_\+settings.\+h}}. 
+Fija el valor de temperatura a actualizar (no la imprime en pantalla), la ubicación se da con las constantes de offset de temperatura definidas en \doxylink{display__settings_8h}{display\+\_\+settings.\+h}. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em new\+\_\+temperature} & Nueva temperatura a fijar. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_display_abe8e63e4def12a48cde5679ce008f402_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_display_a87d1e7bf73a1d14b5e76c9ab647a9e93}\label{class_display_a87d1e7bf73a1d14b5e76c9ab647a9e93}} 
+\Hypertarget{class_display_a87d1e7bf73a1d14b5e76c9ab647a9e93}\label{class_display_a87d1e7bf73a1d14b5e76c9ab647a9e93} 
 \index{Display@{Display}!set\_text@{set\_text}}
 \index{set\_text@{set\_text}!Display@{Display}}
 \doxysubsubsection{\texorpdfstring{set\_text()}{set\_text()}}
-{\footnotesize\ttfamily void Display\+::set\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string\+\_\+out }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Display\+::set\+\_\+text (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string\+\_\+out }\end{DoxyParamCaption})}
 
 
 
-Fija el el texto a actualizar, no lo imprime en pantalla. La ubicación se da con las constantes de offset de temperatura definidas en \mbox{\hyperlink{display__settings_8h}{display\+\_\+settings.\+h}}. 
+Fija el el texto a actualizar, no lo imprime en pantalla. La ubicación se da con las constantes de offset de temperatura definidas en \doxylink{display__settings_8h}{display\+\_\+settings.\+h}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em string\+\_\+out} & Nuevo texto a fijar, no puede exceder el máximo establecido en \mbox{\hyperlink{display__settings_8h}{display\+\_\+settings.\+h}} \\
+{\em string\+\_\+out} & Nuevo texto a fijar, no puede exceder el máximo establecido en \doxylink{display__settings_8h}{display\+\_\+settings.\+h} \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_display_a87d1e7bf73a1d14b5e76c9ab647a9e93_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_display_a140c7f61de37b0b01e29d36005dc0048}\label{class_display_a140c7f61de37b0b01e29d36005dc0048}} 
-\index{Display@{Display}!turn\_off@{turn\_off}}
-\index{turn\_off@{turn\_off}!Display@{Display}}
-\doxysubsubsection{\texorpdfstring{turn\_off()}{turn\_off()}}
-{\footnotesize\ttfamily void Display\+::turn\+\_\+off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-limpia los caracteres de la pantalla y apaga la retroiluminación, no inhabilita la escritura en pantalla. 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=316pt]{class_display_a140c7f61de37b0b01e29d36005dc0048_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_display_ac2763dd7748bd3de2c0c24bc6d89011e}\label{class_display_ac2763dd7748bd3de2c0c24bc6d89011e}} 
-\index{Display@{Display}!turn\_on@{turn\_on}}
-\index{turn\_on@{turn\_on}!Display@{Display}}
-\doxysubsubsection{\texorpdfstring{turn\_on()}{turn\_on()}}
-{\footnotesize\ttfamily void Display\+::turn\+\_\+on (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Enciende la retroiluminación y limpia los caracteres de la pantalla. 
-
-\mbox{\Hypertarget{class_display_ad2740b779d61e461c4dcaaf34f1fcd8f}\label{class_display_ad2740b779d61e461c4dcaaf34f1fcd8f}} 
-\index{Display@{Display}!update@{update}}
-\index{update@{update}!Display@{Display}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Display\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Actualiza los valores en pantalla con los parámetros previamente fijados. Solo actualiza la pantalla cuando uno o más valores hayan cambiado. 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=322pt]{class_display_ad2740b779d61e461c4dcaaf34f1fcd8f_icgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

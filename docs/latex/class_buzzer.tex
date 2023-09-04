@@ -1,5 +1,5 @@
-\hypertarget{class_buzzer}{}\doxysection{Buzzer Class Reference}
-\label{class_buzzer}\index{Buzzer@{Buzzer}}
+\doxysection{Buzzer Class Reference}
+\hypertarget{class_buzzer}{}\label{class_buzzer}\index{Buzzer@{Buzzer}}
 
 
 Clase para el manejo del buzzer activo. Sólo admite pines digitales.  
@@ -9,14 +9,15 @@ Clase para el manejo del buzzer activo. Sólo admite pines digitales.
 
 {\ttfamily \#include $<$Buzzer.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_buzzer_adb79b40d4a38b34dfd8d89c2bb35f1af}{Buzzer}} (int buzzer\+\_\+pin)
-\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \mbox{\hyperlink{class_buzzer}{Buzzer}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \doxylink{class_buzzer}{Buzzer}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_buzzer_a9ba28d9ca8b3dd80541d9a13a8b0f625}{turn\+\_\+on}} (unsigned long duration=0)
 \begin{DoxyCompactList}\small\item\em Enciende el buzzer con con una duración en milisegundos duration, por defecto enciende el buzzer por un tiempo indefinido. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_buzzer_a5809a2b7b52e74f509c31214257f3af0}{turn\+\_\+off}} ()
+\Hypertarget{class_buzzer_a5809a2b7b52e74f509c31214257f3af0}\label{class_buzzer_a5809a2b7b52e74f509c31214257f3af0} 
+void {\bfseries turn\+\_\+off} ()
 \begin{DoxyCompactList}\small\item\em Apaga el buzzer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_buzzer_a7d0275af89ab487903752edc29a5bf2c}{toggle}} (unsigned int duration=0)
 \begin{DoxyCompactList}\small\item\em Permuta el estado del led, si estaba encendido pasará a apagado y viceversa. \end{DoxyCompactList}\item 
@@ -27,10 +28,8 @@ bool \mbox{\hyperlink{class_buzzer_a84d72ddf080ab87d9f13885edb5ac5d9}{is\+\_\+ac
 \doxysubsection{Detailed Description}
 Clase para el manejo del buzzer activo. Sólo admite pines digitales. 
 
-
-
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_buzzer_adb79b40d4a38b34dfd8d89c2bb35f1af}\label{class_buzzer_adb79b40d4a38b34dfd8d89c2bb35f1af}} 
+\Hypertarget{class_buzzer_adb79b40d4a38b34dfd8d89c2bb35f1af}\label{class_buzzer_adb79b40d4a38b34dfd8d89c2bb35f1af} 
 \index{Buzzer@{Buzzer}!Buzzer@{Buzzer}}
 \index{Buzzer@{Buzzer}!Buzzer@{Buzzer}}
 \doxysubsubsection{\texorpdfstring{Buzzer()}{Buzzer()}}
@@ -38,7 +37,7 @@ Clase para el manejo del buzzer activo. Sólo admite pines digitales.
 
 
 
-Construye un nuevo objecto \mbox{\hyperlink{class_buzzer}{Buzzer}}. 
+Construye un nuevo objecto \doxylink{class_buzzer}{Buzzer}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -48,7 +47,7 @@ Construye un nuevo objecto \mbox{\hyperlink{class_buzzer}{Buzzer}}.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_buzzer_a84d72ddf080ab87d9f13885edb5ac5d9}\label{class_buzzer_a84d72ddf080ab87d9f13885edb5ac5d9}} 
+\Hypertarget{class_buzzer_a84d72ddf080ab87d9f13885edb5ac5d9}\label{class_buzzer_a84d72ddf080ab87d9f13885edb5ac5d9} 
 \index{Buzzer@{Buzzer}!is\_active@{is\_active}}
 \index{is\_active@{is\_active}!Buzzer@{Buzzer}}
 \doxysubsubsection{\texorpdfstring{is\_active()}{is\_active()}}
@@ -63,7 +62,7 @@ true El buzzer está activo.
 
 false El buzzer está inactivo. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_buzzer_a7d0275af89ab487903752edc29a5bf2c}\label{class_buzzer_a7d0275af89ab487903752edc29a5bf2c}} 
+\Hypertarget{class_buzzer_a7d0275af89ab487903752edc29a5bf2c}\label{class_buzzer_a7d0275af89ab487903752edc29a5bf2c} 
 \index{Buzzer@{Buzzer}!toggle@{toggle}}
 \index{toggle@{toggle}!Buzzer@{Buzzer}}
 \doxysubsubsection{\texorpdfstring{toggle()}{toggle()}}
@@ -78,33 +77,7 @@ Permuta el estado del led, si estaba encendido pasará a apagado y viceversa.
 {\em duration} & Duración del encendido en milisegundos. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_buzzer_a7d0275af89ab487903752edc29a5bf2c_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_buzzer_a5809a2b7b52e74f509c31214257f3af0}\label{class_buzzer_a5809a2b7b52e74f509c31214257f3af0}} 
-\index{Buzzer@{Buzzer}!turn\_off@{turn\_off}}
-\index{turn\_off@{turn\_off}!Buzzer@{Buzzer}}
-\doxysubsubsection{\texorpdfstring{turn\_off()}{turn\_off()}}
-{\footnotesize\ttfamily void Buzzer\+::turn\+\_\+off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Apaga el buzzer. 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_buzzer_a5809a2b7b52e74f509c31214257f3af0_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_buzzer_a9ba28d9ca8b3dd80541d9a13a8b0f625}\label{class_buzzer_a9ba28d9ca8b3dd80541d9a13a8b0f625}} 
+\Hypertarget{class_buzzer_a9ba28d9ca8b3dd80541d9a13a8b0f625}\label{class_buzzer_a9ba28d9ca8b3dd80541d9a13a8b0f625} 
 \index{Buzzer@{Buzzer}!turn\_on@{turn\_on}}
 \index{turn\_on@{turn\_on}!Buzzer@{Buzzer}}
 \doxysubsubsection{\texorpdfstring{turn\_on()}{turn\_on()}}
@@ -119,22 +92,6 @@ Enciende el buzzer con con una duración en milisegundos duration, por defecto e
 {\em duration} & Duración del encendido en milisegundos (bloqueante). \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=287pt]{class_buzzer_a9ba28d9ca8b3dd80541d9a13a8b0f625_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_buzzer_a9ba28d9ca8b3dd80541d9a13a8b0f625_icgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

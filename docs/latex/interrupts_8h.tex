@@ -1,35 +1,20 @@
-\hypertarget{interrupts_8h}{}\doxysection{C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL Control Arduino/include/interrupts.h File Reference}
-\label{interrupts_8h}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/interrupts.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/interrupts.h}}
+\doxysection{C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL Control Arduino/include/interrupts.h File Reference}
+\hypertarget{interrupts_8h}{}\label{interrupts_8h}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/interrupts.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/interrupts.h}}
 
 
 Configuración de interrupciones.  
 
 
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
-Include dependency graph for interrupts.\+h\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=229pt]{interrupts_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=229pt]{interrupts_8h__dep__incl}
-\end{center}
-\end{figure}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f}{setup\+\_\+int0\+\_\+interrupt}} (uint8\+\_\+t pin, uint8\+\_\+t mode, void($\ast$callback)(), int interrupt\+\_\+mode)
+void \mbox{\hyperlink{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f}{setup\+\_\+int0\+\_\+interrupt}} (uint8\+\_\+t pin, uint8\+\_\+t mode, void(\texorpdfstring{$\ast$}{*}callback)(), int interrupt\+\_\+mode)
 \begin{DoxyCompactList}\small\item\em configura la interrupción interna en int0 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{interrupts_8h_a7677b0aead77a2f0b17f45fca7f6b0c5}{setup\+\_\+timer1\+\_\+interrupt}} ()
+\Hypertarget{interrupts_8h_a7677b0aead77a2f0b17f45fca7f6b0c5}\label{interrupts_8h_a7677b0aead77a2f0b17f45fca7f6b0c5} 
+void {\bfseries setup\+\_\+timer1\+\_\+interrupt} ()
 \begin{DoxyCompactList}\small\item\em Configura la interrupción del timer 1 para realizarse cada 1 segundo. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{interrupts_8h_a170c14b4a8721745f9816e7a7824c711}\label{interrupts_8h_a170c14b4a8721745f9816e7a7824c711}} 
+\Hypertarget{interrupts_8h_a170c14b4a8721745f9816e7a7824c711}\label{interrupts_8h_a170c14b4a8721745f9816e7a7824c711} 
 void {\bfseries setup\+\_\+pinct\+\_\+portb\+\_\+interrupt} ()
 \end{DoxyCompactItemize}
 
@@ -52,11 +37,11 @@ Copyright (c) 2022
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f}\label{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f}} 
+\Hypertarget{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f}\label{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f} 
 \index{interrupts.h@{interrupts.h}!setup\_int0\_interrupt@{setup\_int0\_interrupt}}
 \index{setup\_int0\_interrupt@{setup\_int0\_interrupt}!interrupts.h@{interrupts.h}}
 \doxysubsubsection{\texorpdfstring{setup\_int0\_interrupt()}{setup\_int0\_interrupt()}}
-{\footnotesize\ttfamily void setup\+\_\+int0\+\_\+interrupt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode,  }\item[{void($\ast$)()}]{callback,  }\item[{int}]{interrupt\+\_\+mode }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void setup\+\_\+int0\+\_\+interrupt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode,  }\item[{void(\texorpdfstring{$\ast$}{*})()}]{callback,  }\item[{int}]{interrupt\+\_\+mode }\end{DoxyParamCaption})}
 
 
 
@@ -73,41 +58,3 @@ configura la interrupción interna en int0
 {\em interrupt\+\_\+mode} & modo de la interrupción (HIGH,LOW,RISING,FALLING) \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=182pt]{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=182pt]{interrupts_8h_a7151cd85a371816bdc91bbf05ae1825f_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{interrupts_8h_a7677b0aead77a2f0b17f45fca7f6b0c5}\label{interrupts_8h_a7677b0aead77a2f0b17f45fca7f6b0c5}} 
-\index{interrupts.h@{interrupts.h}!setup\_timer1\_interrupt@{setup\_timer1\_interrupt}}
-\index{setup\_timer1\_interrupt@{setup\_timer1\_interrupt}!interrupts.h@{interrupts.h}}
-\doxysubsubsection{\texorpdfstring{setup\_timer1\_interrupt()}{setup\_timer1\_interrupt()}}
-{\footnotesize\ttfamily void setup\+\_\+timer1\+\_\+interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Configura la interrupción del timer 1 para realizarse cada 1 segundo. 
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=193pt]{interrupts_8h_a7677b0aead77a2f0b17f45fca7f6b0c5_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=193pt]{interrupts_8h_a7677b0aead77a2f0b17f45fca7f6b0c5_icgraph}
-\end{center}
-\end{figure}

@@ -22,6 +22,8 @@ Para ser cargado en la placa de desarrollo el sistema requiere utilizar el plugi
 ## Documentación
 Toda la documentación del código está disponible en este [enlace](https://juanhirschmann.github.io/LAL-Control-Arduino/).
 
+El manual del equipo está disponible en este [enlace](C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca\Proyecto/LAL Control Arduino/docs/Manual.html)
+
 
 ## Licencia
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)

@@ -8,7 +8,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "interrupts.h", "interrupts_8h.html", "interrupts_8h" ],
     [ "main.h", "main_8h.html", null ],
     [ "port_config.h", "port__config_8h.html", null ],
-    [ "system_settings.h", "system__settings_8h.html", null ],
+    [ "system_settings.h", "system__settings_8h.html", "system__settings_8h" ],
     [ "types.h", "types_8h.html", "types_8h" ],
-    [ "user_messages.h", "user__messages_8h.html", null ]
+    [ "user_messages.h", "user__messages_8h.html", "user__messages_8h" ]
 ];

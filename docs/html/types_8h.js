@@ -5,7 +5,8 @@ var types_8h =
       [ "NO_ALARM", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80a19fc6d3d946f63117c386f6c9dd24e55", null ],
       [ "OVERTEMP_ALARM", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80a719b8879013ab15724a974b9d400a387", null ],
       [ "HUMIDITY_ALARM", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80a24e848419e5ad68dff3be31577593abc", null ],
-      [ "HALTED_FAN_ALARM", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80ac93489c6e03628ed351ecaeae400acc9", null ],
+      [ "HALTED_FRONT_FAN_ALARM", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80aae3ede2ed9e91aff9c4e314d1e6ebe65", null ],
+      [ "HALTED_BACK_FAN_ALARM", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80aecac0f6fc05e784348cecd890cce4ab5", null ],
       [ "NO_TEMP_SENSOR_ALARM", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80a25cc7cbe824f4db7f8b3c554c16b8d5f", null ],
       [ "OVERTEMP_WARNING", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80a5b001d73e0359869596f4fdb47bc3344", null ],
       [ "SLOW_FAN_WARNING", "types_8h.html#a71ef44a7b1de581d625d82b37bed6c80ade6ded1797d26094b5649f44d9da78fd", null ]

@@ -1,5 +1,5 @@
-\hypertarget{class_motor}{}\doxysection{Motor Class Reference}
-\label{class_motor}\index{Motor@{Motor}}
+\doxysection{Motor Class Reference}
+\hypertarget{class_motor}{}\label{class_motor}\index{Motor@{Motor}}
 
 
 Clase para el manejo del motor salida digital.  
@@ -9,14 +9,16 @@ Clase para el manejo del motor salida digital.
 
 {\ttfamily \#include $<$Motor.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_motor_a0fd1b745d8c0e61e5be01b1ead3dc120}{Motor}} (int motor\+\_\+pin)
-\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \mbox{\hyperlink{class_motor}{Motor}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_motor_a3a871f05d0b017ff32052eb946a56f38}{turn\+\_\+on}} ()
+\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \doxylink{class_motor}{Motor}. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a3a871f05d0b017ff32052eb946a56f38}\label{class_motor_a3a871f05d0b017ff32052eb946a56f38} 
+void {\bfseries turn\+\_\+on} ()
 \begin{DoxyCompactList}\small\item\em Enciende el motor con con una duración en milisegundos duration, por defecto enciende el motor por un tiempo indefinido. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_motor_a9a1613b24a5dd07a8c515e82d8e0edeb}{turn\+\_\+off}} ()
+\Hypertarget{class_motor_a9a1613b24a5dd07a8c515e82d8e0edeb}\label{class_motor_a9a1613b24a5dd07a8c515e82d8e0edeb} 
+void {\bfseries turn\+\_\+off} ()
 \begin{DoxyCompactList}\small\item\em Apaga el motor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_motor_a20180eb7ef0d0bce876ee0ab220451f0}{is\+\_\+active}} ()
 \begin{DoxyCompactList}\small\item\em Devuelve el estado del motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -25,10 +27,8 @@ bool \mbox{\hyperlink{class_motor_a20180eb7ef0d0bce876ee0ab220451f0}{is\+\_\+act
 \doxysubsection{Detailed Description}
 Clase para el manejo del motor salida digital. 
 
-
-
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_motor_a0fd1b745d8c0e61e5be01b1ead3dc120}\label{class_motor_a0fd1b745d8c0e61e5be01b1ead3dc120}} 
+\Hypertarget{class_motor_a0fd1b745d8c0e61e5be01b1ead3dc120}\label{class_motor_a0fd1b745d8c0e61e5be01b1ead3dc120} 
 \index{Motor@{Motor}!Motor@{Motor}}
 \index{Motor@{Motor}!Motor@{Motor}}
 \doxysubsubsection{\texorpdfstring{Motor()}{Motor()}}
@@ -36,7 +36,7 @@ Clase para el manejo del motor salida digital.
 
 
 
-Construye un nuevo objecto \mbox{\hyperlink{class_motor}{Motor}}. 
+Construye un nuevo objecto \doxylink{class_motor}{Motor}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -46,7 +46,7 @@ Construye un nuevo objecto \mbox{\hyperlink{class_motor}{Motor}}.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_motor_a20180eb7ef0d0bce876ee0ab220451f0}\label{class_motor_a20180eb7ef0d0bce876ee0ab220451f0}} 
+\Hypertarget{class_motor_a20180eb7ef0d0bce876ee0ab220451f0}\label{class_motor_a20180eb7ef0d0bce876ee0ab220451f0} 
 \index{Motor@{Motor}!is\_active@{is\_active}}
 \index{is\_active@{is\_active}!Motor@{Motor}}
 \doxysubsubsection{\texorpdfstring{is\_active()}{is\_active()}}
@@ -61,49 +61,6 @@ true El motor está activo.
 
 false El motor está inactivo. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=315pt]{class_motor_a20180eb7ef0d0bce876ee0ab220451f0_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_motor_a9a1613b24a5dd07a8c515e82d8e0edeb}\label{class_motor_a9a1613b24a5dd07a8c515e82d8e0edeb}} 
-\index{Motor@{Motor}!turn\_off@{turn\_off}}
-\index{turn\_off@{turn\_off}!Motor@{Motor}}
-\doxysubsubsection{\texorpdfstring{turn\_off()}{turn\_off()}}
-{\footnotesize\ttfamily void Motor\+::turn\+\_\+off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Apaga el motor. 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_motor_a9a1613b24a5dd07a8c515e82d8e0edeb_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_motor_a3a871f05d0b017ff32052eb946a56f38}\label{class_motor_a3a871f05d0b017ff32052eb946a56f38}} 
-\index{Motor@{Motor}!turn\_on@{turn\_on}}
-\index{turn\_on@{turn\_on}!Motor@{Motor}}
-\doxysubsubsection{\texorpdfstring{turn\_on()}{turn\_on()}}
-{\footnotesize\ttfamily void Motor\+::turn\+\_\+on (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Enciende el motor con con una duración en milisegundos duration, por defecto enciende el motor por un tiempo indefinido. 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=318pt]{class_motor_a3a871f05d0b017ff32052eb946a56f38_icgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

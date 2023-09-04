@@ -1,50 +1,41 @@
-\hypertarget{class_temperature__observer}{}\doxysection{Temperature\+\_\+observer Class Reference}
-\label{class_temperature__observer}\index{Temperature\_observer@{Temperature\_observer}}
+\doxysection{Temperature\+\_\+observer Class Reference}
+\hypertarget{class_temperature__observer}{}\label{class_temperature__observer}\index{Temperature\_observer@{Temperature\_observer}}
 
 
-Clase heredera de \mbox{\hyperlink{class_system__observer}{System\+\_\+observer}}, creada para observar el estado de los sensores de temperatura.  
+Clase heredera de \doxylink{class_system__observer}{System\+\_\+observer}, creada para observar el estado de los sensores de temperatura.  
 
 
 
 
 {\ttfamily \#include $<$Temperature\+\_\+observer.\+h$>$}
 
-
-
-Inheritance diagram for Temperature\+\_\+observer\+:\nopagebreak
-\begin{figure}[H]
+Inheritance diagram for Temperature\+\_\+observer\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=192pt]{class_temperature__observer__inherit__graph}
+\includegraphics[height=4.000000cm]{class_temperature__observer}
 \end{center}
 \end{figure}
-
-
-Collaboration diagram for Temperature\+\_\+observer\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=192pt]{class_temperature__observer__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_temperature__observer_ab90488fcff2880baae583cfe7aefb3d8}{update}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$subject)
+void \mbox{\hyperlink{class_temperature__observer_ab90488fcff2880baae583cfe7aefb3d8}{update}} (\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} \texorpdfstring{$\ast$}{*}subject)
 \begin{DoxyCompactList}\small\item\em Actualización del observador, mide la temperatura\+: si excede el umbral OVERTEMP\+\_\+\+ALARM\+\_\+\+TRESHOLD, solicita una alarma del tipo OVERTEMP\+\_\+\+ALARM. si excede el umbral OVERTEMP\+\_\+\+WARNING\+\_\+\+TRESHOLD, solicita una advertencia del tipo OVERTEMP\+\_\+\+WARNING. Para desactivar las alarmas, la temperatura debe HYSTERESIS\+\_\+\+PERCENT veces menor del umbral que le corresponde. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_observer_ad4d0ac3f205a60258fab7b5099dbfbc4}{update}} (\mbox{\hyperlink{class_subject__interface}{Subject\+\_\+interface}} \texorpdfstring{$\ast$}{*}subject\+\_\+interface)
+\begin{DoxyCompactList}\small\item\em Implementación vacía del método de actualización, necesaria para instanciar clases concretas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Clase heredera de \mbox{\hyperlink{class_system__observer}{System\+\_\+observer}}, creada para observar el estado de los sensores de temperatura. 
-
-
+Clase heredera de \doxylink{class_system__observer}{System\+\_\+observer}, creada para observar el estado de los sensores de temperatura. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_temperature__observer_ab90488fcff2880baae583cfe7aefb3d8}\label{class_temperature__observer_ab90488fcff2880baae583cfe7aefb3d8}} 
+\Hypertarget{class_temperature__observer_ab90488fcff2880baae583cfe7aefb3d8}\label{class_temperature__observer_ab90488fcff2880baae583cfe7aefb3d8} 
 \index{Temperature\_observer@{Temperature\_observer}!update@{update}}
 \index{update@{update}!Temperature\_observer@{Temperature\_observer}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Temperature\+\_\+observer\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} $\ast$}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Temperature\+\_\+observer\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control__system}{Control\+\_\+system}} \texorpdfstring{$\ast$}{*}}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -59,14 +50,6 @@ Actualización del observador, mide la temperatura\+: si excede el umbral OVERTE
 
 Implements \mbox{\hyperlink{class_system__observer}{System\+\_\+observer}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_temperature__observer_ab90488fcff2880baae583cfe7aefb3d8_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
