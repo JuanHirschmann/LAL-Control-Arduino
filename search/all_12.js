@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7emachine_0',['~Machine',['../class_machine.html#a18ba54cbad39e992fb62dac4e054c6fb',1,'Machine']]]
+  ['wake_0',['wake',['../class_control__system.html#a1a879a0b587423d7e485de333f35a566',1,'Control_system']]]
 ];
