@@ -1,0 +1,28 @@
+\doxysection{Cooler.\+h}
+\hypertarget{_cooler_8h_source}{}\label{_cooler_8h_source}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/drivers/Cooler.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/drivers/Cooler.h}}
+\mbox{\hyperlink{_cooler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Arduino.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{system__settings_8h}{system\_settings.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cooler}{Cooler}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_cooler}{Cooler}}(\textcolor{keywordtype}{int}\ power\_pin,\ \textcolor{keywordtype}{int}\ speed\_measurement\_pin);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cooler_aa98fd302dc7933fc21c046ca3ea48346}{turn\_on}}(\textcolor{keywordtype}{float}\ duty\_cycle\ =\ 1.0);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cooler_a3aa26bc227fa7a2bdcff9fe607990104}{turn\_off}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cooler_ad02531fc9e59b2ddd7f618703e99871b}{get\_rotation\_count}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cooler_ad41634aa63d31e334815f35eebdcf5b2}{rotation\_detected}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cooler_a9802a2d1e34a4b377280fd3369f68d58}{count\_rotation}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cooler_a18f58f8d6ffd3a78be821a0cc5d9e4f1}{is\_active}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_on\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ pulses\_in\_sample\_period\ =\ 0;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ power\_pin;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ speed\_measurement\_pint;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ current\_duty\_cycle\ =\ 0;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ reset\_count();}
+\DoxyCodeLine{00080\ \};}
+
+\end{DoxyCode}

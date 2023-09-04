@@ -1,0 +1,21 @@
+\doxysection{Subject\+\_\+interface.\+h}
+\hypertarget{_subject__interface_8h_source}{}\label{_subject__interface_8h_source}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/observer\_pattern/subjects/Subject\_interface.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/observer\_pattern/subjects/Subject\_interface.h}}
+\mbox{\hyperlink{_subject__interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ \_SUBJECT\_INTERFACE\_H\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_SUBJECT\_INTERFACE\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MAX\_OBSERVERS\ =\ 10;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_observer__interface}{Observer\_interface}};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_subject__interface}{Subject\_interface}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_observer__interface}{Observer\_interface}}\ *\mbox{\hyperlink{class_subject__interface_a283b443a975a65e2f7f73e3377750df2}{observers}}[MAX\_OBSERVERS];}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_subject__interface_a6167416fcf891796e974f65318fca8d3}{attach}}(\mbox{\hyperlink{class_observer__interface}{Observer\_interface}}\ *obs)\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_subject__interface_a0ccc901c01cb515babedaaeec8c4cbe3}{notify\_observers}}()\ =\ 0;}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

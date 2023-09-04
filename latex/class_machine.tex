@@ -1,0 +1,44 @@
+\doxysection{Machine Class Reference}
+\hypertarget{class_machine}{}\label{class_machine}\index{Machine@{Machine}}
+
+
+Clase para base para la implementación de una máquina de estados finita.  
+
+
+
+
+{\ttfamily \#include $<$Machine.\+h$>$}
+
+Inheritance diagram for Machine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_machine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_machine_a99427b767b7c15ceb33e391166cd7d68}\label{class_machine_a99427b767b7c15ceb33e391166cd7d68} 
+{\bfseries Machine} ()
+\begin{DoxyCompactList}\small\item\em Construye un nuevo objecto \doxylink{class_machine}{Machine}. \end{DoxyCompactList}\item 
+\Hypertarget{class_machine_ac24c7b8e9ad18361306a5c4862a695ed}\label{class_machine_ac24c7b8e9ad18361306a5c4862a695ed} 
+virtual void {\bfseries transition\+\_\+state} ()=0
+\begin{DoxyCompactList}\small\item\em Método virtual para llamar al método de transición del estado actual. \end{DoxyCompactList}\item 
+\Hypertarget{class_machine_a18ba54cbad39e992fb62dac4e054c6fb}\label{class_machine_a18ba54cbad39e992fb62dac4e054c6fb} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Machine} ()=0
+\begin{DoxyCompactList}\small\item\em Destruye el objecto \doxylink{class_machine}{Machine}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_machine_a56eaaa6f43995782642f8d2002fec6d2}\label{class_machine_a56eaaa6f43995782642f8d2002fec6d2} 
+\mbox{\hyperlink{class_abstract__state}{Abstract\+\_\+state}} \texorpdfstring{$\ast$}{*} {\bfseries current\+\_\+state} = nullptr
+\begin{DoxyCompactList}\small\item\em Puntero al estado actual del objeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase para base para la implementación de una máquina de estados finita. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL Control Arduino/include/machine\+\_\+state\+\_\+pattern/\mbox{\hyperlink{_machine_8h}{Machine.\+h}}\item 
+C\+:/\+Users/juanh/\+One\+Drive/\+Escritorio/\+Facultad/\+Beca/\+Proyecto/\+LAL Control Arduino/src/machine\+\_\+state\+\_\+pattern/Machine.\+cpp\end{DoxyCompactItemize}

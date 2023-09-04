@@ -1,0 +1,23 @@
+\doxysection{Cooler\+\_\+observer.\+h}
+\hypertarget{include_2observer__pattern_2observers_2_cooler__observer_8h_source}{}\label{include_2observer__pattern_2observers_2_cooler__observer_8h_source}\index{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/observer\_pattern/observers/Cooler\_observer.h@{C:/Users/juanh/OneDrive/Escritorio/Facultad/Beca/Proyecto/LAL Control Arduino/include/observer\_pattern/observers/Cooler\_observer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_COOLER\_OBSERVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_COOLER\_OBSERVER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_system__observer_8h}{observer\_pattern/observers/System\_observer.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_control__system_8h}{Control\_system.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ SAMPLE\_PERIOD\ =\ 1000;\ \textcolor{comment}{//[ms]}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cooler__observer}{Cooler\_observer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_system__observer}{System\_observer}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_cooler__observer}{Cooler\_observer}}()\{\};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cooler__observer_a77d618bb5116d0e0c6cf9dc5b107fcad}{update}}(\mbox{\hyperlink{class_control__system}{Control\_system}}\ *subject);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ update\_speed(\mbox{\hyperlink{class_control__system}{Control\_system}}\ *subject);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{double}\ speed[\mbox{\hyperlink{system__settings_8h_ac0d8627df12467e497aedabfcc02d7f0}{TOTAL\_COOLERS}}]\ =\ \{0,\ 0\};}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
